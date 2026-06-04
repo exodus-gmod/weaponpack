@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 			"models\weapons\tfa_ins2\upgrades\optic_compm4s\killflash"
+	
+	"$translucent" 	"1"
+	"$model" 	"1"	
+	
+}

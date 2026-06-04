@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models/weapons/tfa_ins2/deserteagle/de-d"
+	$bumpmap		"models/weapons/tfa_ins2/deserteagle/de-n"
+	$phongexponenttexture	"models/weapons/tfa_ins2/deserteagle/de-m"
+
+	$color2	"[.5 .5 .5]"
+
+	$phong	"1"
+	$phongboost	"12"
+	$phongfresnelranges	"[.575 .55 1]"
+	$phongexponent	"33"
+	$phongtint	"[.765 .59 .27]"
+
+	$envmap	"env_cubemap"
+	$envmaptint	"[.765 .59 .27]"
+	$normalmapalphaenvmapmask	"1"
+
+	$selfillum	"1"
+	$selfillummask	"models/weapons/tfa_ins2/deserteagle/de-g"
+	$selfillumtint	"[0 1 0]"
+}

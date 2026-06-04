@@ -1,0 +1,31 @@
+"UnlitGeneric"
+{
+	"$basetexture"	   "models/weapons/optics/kobra_amber_dot_reticule"
+	"$detail"		   "models/weapons/tfa_ins2/optics/laser_noise"
+	"$additive"	       "1"
+	"$translucent" 	   "1"
+	"$model"		   "1"
+	"$detailblendmode" "2"
+	"$detailframe"	   "0"
+
+	$color2 "[1 0 0]"
+
+	Proxies
+	{
+		TextureScroll
+		{
+			textureScrollVar	$detailtexturetransform
+			textureScrollRate	50
+			textureScrollAngle 	180
+		}
+		TFAReticuleColor
+		{
+			resultVar $color2
+		}
+	}
+
+	UnlitGeneric_DX8
+	{
+		$detail	"models/weapons/tfa_ins2/detail_empty"
+	}
+}

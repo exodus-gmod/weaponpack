@@ -1,0 +1,24 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "req_shorty/flashlight_color"
+	"$bumpmap" "req_shorty/flashlight_normals"
+	"$normalmapalphaenvmapmask" 	1
+	//"$color2" "[0.8 0.8 0.8]"
+	
+	"$phong" 		"1"
+	"$phongexponent" "10"
+	"$phongboost" "2"
+	"$phongalbedotint" 			"1"
+	"$phongfresnelranges" "[.6 1 2]"
+	"$halflambert" "1"
+	
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"1"
+	"$envmapFresnelMinMaxExp" "[0 5 .4]"
+	//"$envmaptint" "[.15 .15  .15]"
+	"$envmaptint" "[0.07 0.07 0.07]"
+	
+	"$ambientocclusion" "1"
+	"$nocull" "1"
+	$nodecal 1
+}

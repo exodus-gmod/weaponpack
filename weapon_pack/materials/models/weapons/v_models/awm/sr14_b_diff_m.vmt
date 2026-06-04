@@ -1,0 +1,29 @@
+VertexLitGeneric
+{
+    "$basetexture"              "models\weapons\v_models\AWM\barrel_d"
+    "$bumpmap"                  "models\weapons\v_models\AWM\barrel_n"
+    "$phongExponentTexture"     "models\weapons\v_models\AWM\barrel_e"
+	"$nocull"					"1"
+	"$color2"					"[1.2 1.2 1.2]"
+
+	"$translucent"				"1"
+
+	$phong						1
+	$phongexponent				50
+	$phongboost					80
+	$phongfresnelranges			"[5 10 10]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"50"
+	
+	$envmap						"env_cubemap"
+	$envmaptint					"[ .13 .13 .13 ]"
+	"$normalmapalphaenvmapmask" "1"
+//	"$normalmapalphaphongmask"  "1"
+	
+	"$rimlight"					"1"
+	"$rimlightexponent"			"100"	
+	"$rimlightboost"			"0.65"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}

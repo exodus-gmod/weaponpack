@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\mag\T_1P_AR15_Mag_D"
+	"$bumpmap" "models\weapons\insurgency_sandstorm\ins2_sandstorm\mag\T_1P_AR15_Mag_N"
+	"$phongexponenttexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\mag\T_1P_AR15_Mag_M"
+	$color2			"[0.6 0.6 0.6]"
+	$normalmapalphaenvmapmask	"1"	
+	$phong						1
+	$phongexponent				15
+	$phongboost					2
+	$phongfresnelranges			"[0.3 0.7 1]"
+	$rimlight 1
+	$rimmask 1
+	$rimlightexponent       40
+	$rimlightboost          0.1
+}
+

@@ -1,0 +1,34 @@
+Vertexlitgeneric
+{
+	"$basetexture"			"models/weapons/tfa_ins2/upgrades/custom_silencer"
+   	"$bumpmap"   			"models/weapons/tfa_ins2/upgrades/custom_silencer_norm"
+
+	
+	"$nocull" "1"
+   "$color" 			"[.64 .66 .66] "
+
+	"$halflambert" 			"1"
+	
+	"$normalmapalphaenvmapmask" 	"1"
+	"$normalmapalphaphongmask"    	"1"
+	
+	
+
+	"$phong"  				"1"
+	"$phongexponent" 		"40"
+	
+	"$phongboost" 			"0.5"
+	"$phongfresnelranges" 	"[.6 1.2 3.2]"
+	"$phongtint"            "[.9 .99 1]"
+	"$phongalbedotint" 		"1"	
+	
+
+    "$envmaptint"				 	"[0.005 0.005 0.005]"  
+	
+	
+	$rimlight               1
+	$rimlightexponent       250
+	$rimlightboost          .02	
+	$rimmask 				1
+	
+}

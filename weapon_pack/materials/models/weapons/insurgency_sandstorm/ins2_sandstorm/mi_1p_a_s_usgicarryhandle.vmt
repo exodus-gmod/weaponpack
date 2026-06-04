@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\carry\T_1P_A_S_USGICarryHandle_D"
+	"$bumpmap" "models\weapons\insurgency_sandstorm\ins2_sandstorm\carry\T_1P_A_S_USGICarryHandle_N"
+	"$phongexponenttexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\carry\T_1P_A_S_USGICarryHandle_M"
+	$normalmapalphaenvmapmask	"1"	
+	$phong						1
+	$phongexponent				15
+	$phongboost					1
+	$phongfresnelranges			"[0.3 0.7 1]"
+	$rimlight 1
+	$rimmask 1
+	$rimlightexponent       40
+	$rimlightboost          0.2
+}

@@ -1,0 +1,6 @@
+"UnlitGeneric"
+
+{
+	"$basetexture"	"models/weapons/fas2vm/acog/elcan_reticule"
+	"$translucent" 	"1"
+}

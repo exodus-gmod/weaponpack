@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models/weapons/tfa_ins2/deserteagle/de-d"
+	$bumpmap		"models/weapons/tfa_ins2/deserteagle/de-n"
+	$phongexponenttexture	"models/weapons/tfa_ins2/deserteagle/de-m"
+
+	$phong	"1"
+	$phongboost	"1"
+	$phongfresnelranges	"[.15 .2 1]"
+	$phongexponent	"33"
+
+	$rimlight	"1"
+	$rimlightboost	".5"
+	$rimlightexponent	"400"
+}

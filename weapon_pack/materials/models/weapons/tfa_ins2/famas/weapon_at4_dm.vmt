@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\tfa_ins2\famas\weapon_at4_dm"
+	"$bumpmap" 			"models\weapons\tfa_ins2\famas\weapon_at4_nm"
+	
+	$envmap 			env_cubemap
+	$envmaptint 			"[.008 .008 .008]"
+	
+	$phongexponent 			"40"
+	$phongboost 			"600"
+	$phongfresnelranges		"[.2 1 3]"
+}

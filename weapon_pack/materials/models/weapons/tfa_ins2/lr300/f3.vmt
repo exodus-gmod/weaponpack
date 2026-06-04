@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	"$baseTexture" 	"models\weapons\tfa_ins2\lr300\f3"
+	"$bumpmap" 		"models\weapons\tfa_ins2\lr300\f3_norm"
+	"$nocull" "1"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1 
+}

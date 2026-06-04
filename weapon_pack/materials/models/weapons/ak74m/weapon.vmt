@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/ak74m/Weapon_D"
+	"$bumpmap" "models/weapons/ak74m/Weapon_N"
+	"$color2" "[0.5 0.5 0.5]"
+
+	$envmaptint 			"[0.007 0.007 0.007]"
+
+	"$phong" 					"1"
+	"$phongexponent"			"75"
+	"$phongboost" 				".5"	
+	"$phongfresnelranges"		"[1 5 3]"
+	"$phongalbedotint" 			"0"
+	"$phongtint" 			"[1 .9 .7]"
+	//$rimlight 				1
+	//$rimlightexponent       100
+	//$rimlightboost          .05
+}

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\g36\ins2_sandstorm\g36\T_1P_G36_CarryHandle_D"
+	"$bumpmap" "models\weapons\g36\ins2_sandstorm\g36\T_1P_G36_CarryHandle_N"
+	"$phongexponenttexture" "models\weapons\g36\ins2_sandstorm\g36\T_1P_G36_CarryHandle_M"
+	$color2					"[0.6 0.6 0.6]"
+	$phong						1
+	$phongexponent				15
+	$phongboost					1
+	$phongfresnelranges			"[0.3 0.5 1]"
+	$phongtint					"[0.6 0.6 0.6]"
+	"$normalmapalphaenvmapmask" 	"1"	
+}

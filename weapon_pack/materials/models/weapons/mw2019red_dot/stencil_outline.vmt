@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models\weapons\MW2019red_dot\MW2019red_dot_glass_c"
+	"$bumpmap"     "models\weapons\MW2019red_dot\MW2019red_dot_glass_n"
+	"$mraotexture" "models\weapons\MW2019red_dot\MW2019red_dot_glass_mrao"
+	"$translucent" "1"
+	"$model"       "1"
+}

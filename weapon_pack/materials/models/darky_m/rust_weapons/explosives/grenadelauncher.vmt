@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+   "$basetexture"   "models/darky_m/rust_weapons/explosives/GrenadeLauncher_albedo"
+   "$bumpmap"      "models/darky_m/rust_weapons/explosives/GrenadeLauncher_normals"
+
+}

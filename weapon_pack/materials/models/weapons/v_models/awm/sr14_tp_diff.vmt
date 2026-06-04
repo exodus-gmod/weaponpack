@@ -1,0 +1,23 @@
+VertexLitGeneric
+{
+    "$basetexture"              "models\weapons\v_models\AWM\sr14_tp_diff"
+    "$bumpmap"                  "models\weapons\v_models\AWM\sr14_tp_ddn"
+    "$phongExponentTexture"     "models\weapons\v_models\AWM\sr14_tp_spec"
+	"$nocull"					"1"
+
+	$phong						"1"
+	$phongexponent				"40"
+	$phongboost					".1"
+	$phongfresnelranges			"[5 10 10]"
+	
+	$envmap						"env_cubemap"
+	$envmaptint					"[ .005 .005 .005 ]"
+	$normalmapalphaenvmapmask	"1"	
+	
+	"$rimlight"					"1"
+	"$rimlightexponent"			"150"	
+	"$rimlightboost"			"0.65"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}

@@ -1,0 +1,10 @@
+TFA.AddFireSound("Weapon_HL_FML_FMG.Pew", { "weapons/fml_hl_fmg/fire.wav"} )
+TFA.AddFireSound("Weapon_HL_FML_FMG.Pew2", { "weapons/fml_hl_fmg/mp5k_suppressed_fp.wav" } )
+
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.Foley1", "weapons/fml_hl_fmg/uni_weapon_raise_01.wav" )
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.Foley2", "weapons/fml_hl_fmg/uni_weapon_lower_01.wav" )
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.Foley3", "weapons/fml_hl_fmg/uni_ads_out_01.wav" )
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.Ammo", "weapons/fml_hl_fmg/ammo.wav" )
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.Out", "weapons/fml_hl_fmg/mp5k_magout.wav" )
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.In", "weapons/fml_hl_fmg/mp40_magin.wav" )
+TFA.AddWeaponSound("Weapon_HL_FML_FMG.Bolt2", "weapons/fml_hl_fmg/mp40_boltunlock.wav" )

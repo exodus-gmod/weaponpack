@@ -1,0 +1,34 @@
+// Ched Salvia was here!!!
+"VertexlitGeneric"
+{
+	"$basetexture" "req_shorty/msbg_500_d"
+	"$bumpmap" "req_shorty/msbg_500_n"
+	"$color2" "[0.9 0.9 0.9]"
+	//"$translucent" "1"
+	//"$model" "1"
+	"$nodecal" "1"
+	"$nocull" "1"
+	//"$alphatest" 1
+	//"$allowalphatocoverage" 1
+	"$halflambert" "1"
+
+	"$phong" "1"
+	"$phongboost" "5"
+	//"$phongexponent" "60"
+	"$phongfresnelranges"	"[2 4 6]"
+	"$phongexponenttexture" "req_shorty/msbg_500_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.02 0.02 0.02]"		
+	//"$phongtint" 			"[0.5 0.5 0.5]"			
+	"$PhongAlbedoTint" "1"		
+	"$phongalbedoboost" "5"	
+	
+	"$ambientocclusion" "1"
+	
+	"$rimlight"               "1"
+	"$rimlightexponent"       "250"
+	"$rimlightboost"          "0.5"
+	
+}

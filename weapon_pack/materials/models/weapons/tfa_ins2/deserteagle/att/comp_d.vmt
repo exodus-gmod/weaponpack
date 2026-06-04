@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	$basetexture			"models/weapons/tfa_ins2/deserteagle/att/comp_d"
+	$bumpmap				"models/weapons/tfa_ins2/deserteagle/att/comp_n"
+	$phongexponenttexture	"models/weapons/tfa_ins2/deserteagle/att/comp_e"
+
+	$phong	"1"
+	$phongboost	"8"
+	$phongfresnelranges	"[1 2 4]"
+	$phongalbedotint	"1"
+
+	$envmap		"env_cubemap"
+	$envmaptint	"[.25 .25 .25]"
+	$normalmapalphaenvmapmask	"1"
+}

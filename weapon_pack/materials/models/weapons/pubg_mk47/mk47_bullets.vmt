@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	$basetexture				"models\weapons\pubg_mk47\ck47_d"
+	$bumpmap					"models\weapons\pubg_mk47\ck47_n"
+              "$phongexponenttexture"		"models\weapons\pubg_mk47\ck47_s"
+              $phongwarptexture			"models\weapons\pubg_mk47\phongwrap_golden"
+                "$color2"					"[0.185 0.185 0.185]"
+//	"$color2"					"[0.035 0.025 0.025]"
+        $normalmapalphaenvmapmask	"0"
+	$envmap						env_cubemap
+	$envmaptint          "[0.05 0.025 0]"
+              $envmapfresnel		"1"			
+	$phong						1
+	$phongexponent				27
+	$phongboost					20.5
+	$phongfresnelranges             "[.3 4 5]"
+        $rimmask					"1"
+        $rimlightexponent			"45"	
+	$rimlight					"1"
+	$rimlightboost		"3.50"
+        $nocull "1"
+        $phongalbedotint			"1"
+        $detail "metal4"
+        $detailblendfactor 1.25
+        $detailblendmode 0
+}

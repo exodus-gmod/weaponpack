@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\tfa_ins2\f_ar15\a_m203_sights_dm"
+	$nocull 1
+	$translucent 1
+
+
+}

@@ -1,0 +1,25 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 			    "models\weapons\AK_pack\AK103\Magazine_d"
+	"$bumpmap" 				    "models\weapons\AK_pack\AK103\Magazine_n"
+	"$phongexponenttexture"		"models\weapons\AK_pack\AK103\Magazine_s"
+	"$nocull"                   "1"
+	"$translucent"				"1"
+
+	"$phong"                    "1"
+	"$phongboost"               "0.4"
+	"$phongexponent"		    "35"
+	"$phongfresnelranges"       "[4 9 9]"
+	"$phongtint"		        "[0.65 0.7 0.9]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"50"
+	
+	"$envmap"                   "env_cubemap"
+	"$envmaptint"               "[.012 .012 .012]"
+    "$normalmapalphaenvmapmask"	"1"
+	
+	"$rimlight"                 "1"
+	"$rimlightexponent"         "120"
+	"$rimlightboost"            ".01"	
+	"$rimmask"					"1"
+}

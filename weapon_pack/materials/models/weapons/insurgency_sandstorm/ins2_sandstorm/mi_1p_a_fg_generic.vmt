@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\foregrip\T_1P_A_FG_Generic_Blk_D"
+	"$bumpmap" "models\weapons\insurgency_sandstorm\ins2_sandstorm\foregrip\T_1P_A_FG_Generic_N"
+	"$phongexponenttexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\foregrip\T_1P_A_FG_Generic_M"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongexponent" "25"	
+	"$phongfresnelranges"  "[1 2.5 7]"
+	"$normalmapalphaenvmapmask" 	"1"
+}

@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/ak74m/Modkit_D"
+	"$bumpmap" "models/weapons/ak74m/Modkit_N"
+	"$color2" "[0.5 0.5 0.5]"
+	
+	"$phong"  				"1"
+	"$phongexponent" 		"10"
+	"$phongboost" 			".05"
+	"$phongfresnelranges" 	"[2 4 6]"
+	"$phongtint" 			"[1 .9 .7]"
+	"$phongalbedotint" 		"1"	
+	"$normalmapalphaenvmapmask" 	"1"
+	"$envmaptint"				 	"[0.001 0.001 0.001]"
+
+}

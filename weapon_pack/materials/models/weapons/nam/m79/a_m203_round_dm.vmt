@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/nam/m79/a_m203_round_dm"
+	"$bumpmap" "models/weapons/nam/m79/a_m203_round_nm"
+}

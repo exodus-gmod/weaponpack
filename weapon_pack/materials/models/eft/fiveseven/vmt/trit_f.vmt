@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models\eft\fiveseven\f_sight_D"
+	"$bumpmap"					"models\eft\fiveseven\f_sight_N"
+
+	$detail						"models\eft\fiveseven\f_sight_SI"
+    $detailscale                1
+   	$detailblendfactor 			0.5
+   	$detailblendmode			5
+}

@@ -1,0 +1,55 @@
+VertexLitGeneric 
+{ 
+	"$baseTexture" "models\weapons\fas2vm\rifles\sg55x\sg55xplrclr"
+"$basemapalphaphongmask" 	"1"
+	"$phong" 			"1"
+	"$phongtint" 			"[1 1 0.8]"
+	"$phongexponent" 		"15"
+	"$phongboost" 			"1"
+	"$phongfresnelranges"		"[0.5 0.5 3.0]"//"[0.5 1.5 3.0]"
+	"$halflambert"			"1"
+"$blendtintbybasealpha" "1"
+ 	"$blendtintcoloroverbase" "0"
+
+    "$PhongBrightnessScalar" "0.5" // see below. gets overwritten.
+
+Proxies
+{
+    PlayerWeaponColorNOPULSE
+    {
+        resultVar   $color2 // pass the player color value to Gmod
+        default     0.23 0.35 0.41 // unused for now.
+    }
+    Clamp // clamp the chosen color between 1% and 125% (usually)
+    {
+        min 0.1
+        max .625
+        srcVar1 "$color2"
+        resultVar "$color2"
+    }
+    Clamp // copy this value to phong tint, clamp it to 50% min.
+    {
+        min 0.5
+        max 1.0
+        srcVar1 "$color2"
+        resultVar "$phongtint"
+    }
+    Equals // copy $color2 value to exterior variable. this makes it
+    {      // no longer a RGB array but a single float instead (!??)
+        srcVar1 "$color2"
+        resultVar "$PhongBrightnessScalar"
+    }
+    Multiply // multiply $phongtint by this new float value.
+    {
+        srcVar1 "$phongtint"
+        srcVar2 "$phongBrightnessScalar"
+        resultVar "$phongtint"
+    }
+    Clamp // the result of this multiply doesn't go any lower than 20%
+    {
+        min 0.25
+        max 1.00
+        srcVar1 "$phongtint"
+        resultVar "$phongtint"
+    }
+}}

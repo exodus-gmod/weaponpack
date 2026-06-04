@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture"              "models\weapons\mro\T_1P_A_S_MRO_D"
+	"$bumpmap"                  "models\weapons\mro\T_1P_A_S_MRO_N"
+	"$phongexponenttexture"     "models\weapons\mro\T_1P_A_S_MRO_SPEC"
+	"$nocull"					"1"
+//	"$basemapalphaenvmapmask"   "1"	
+	"$blendtintbybasealpha"     "1"
+	
+	"$phong"					"1"
+	"$phongexponent"			"25"
+	"$phongboost"				".3"
+	"$phongfresnelranges"	    "[0.45 0.65 0.8]"
+	
+	"$envmap"					"env_cubemap"
+	"$envmaptint"				"[ .02 .02 .02 ]"
+	"$envmapfresnel"			"1"
+	"$normalmapalphaenvmapmask" "1"
+//	"$normalmapalphaphongmask"  "1"
+	
+	"$rimlight"					"1"
+	"$rimlightexponent"			"120"	
+	"$rimlightboost"			"0.1"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}

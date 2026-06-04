@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\ins2_sandstorm\glock17\T_1P_Glock17_D2"
+	"$bumpmap" "models\weapons\ins2_sandstorm\glock17\T_1P_Glock17_N"
+	"$phongexponenttexture" "models\weapons\ins2_sandstorm\glock17\T_1P_Glock17_M2"
+                "$color2"					"[0.8 0.8 0.8]"
+//	"$color2"					"[0.25 0.25 0.25]"
+        $normalmapalphaenvmapmask	"1"
+	$envmap						env_cubemap
+	$envmaptint					"[ .02 .02 .02 ]"		
+	$phong						1
+	$phongexponent				7
+	$phongboost					1.3
+	$phongfresnelranges             "[.3 4 5]"
+        $rimmask					"1"
+        $rimlightexponent			"25"	
+	$rimlight					"1"
+	$rimlightboost		".07"
+        $nocull "1"
+        $phongalbedotint			"0"
+        $phongalbedoboost 		"42"
+}

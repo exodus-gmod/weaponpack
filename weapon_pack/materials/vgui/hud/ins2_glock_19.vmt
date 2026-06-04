@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/hud/ins2_glock_19"
+	"$translucent" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"models\weapons\EOTECH_XPS3\EOTECH_XPS3_GLAS_3"
+	"$translucent" 	"1"
+}

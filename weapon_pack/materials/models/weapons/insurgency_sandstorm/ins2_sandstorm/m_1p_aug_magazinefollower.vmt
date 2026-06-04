@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\insurgency_sandstorm\ins2_sandstorm\magfollowerspring\T_1P_MagFollowerSpring_D"
+	"$bumpmap" "models\weapons\insurgency_sandstorm\ins2_sandstorm\magfollowerspring\T_1P_MagFollowerSpring_N"
+	$normalmapalphaenvmapmask	"1"	
+	$phong						1
+	$phongexponent				20
+	$phongboost					4
+	$phongfresnelranges			"[0.3 0.5 1]"
+	$rimlight 1
+	$rimmask 1
+	$rimlightexponent       50
+	$rimlightboost          0.6
+}
+

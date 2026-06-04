@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models/weapons/tfa_ins2/aa12/shg21_tp_diff"
+	$bumpmap	"models/weapons/tfa_ins2/aa12/shg21_tp_ddn"
+
+	$phong	"1"
+	$phongboost	"4"
+	$phongfresnelranges	"[.6 .4 1]"
+	$phongexponent	"10"
+
+	$envmap	"env_cubemap"
+	$envmaptint	"[.1 .1 .1]"
+	$normalmapalphaenvmapmask	"1"
+	$envmapfresnel	"1"
+}

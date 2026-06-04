@@ -1,0 +1,35 @@
+"UnlitGeneric"
+
+{
+	"$basetexture"	   "models/weapons/optics/eotech_ahos_holo_reticule"
+	"$detail"		   "models/weapons/tfa_ins2/optics/laser_noise"
+
+	"$additive"	       "1"
+	"$translucent" 	   "1"
+	"$model"		   "1"
+	"$vertexcolor"	   "0"
+	"$vertexalpha"	   "0"
+	"$detailblendmode" "2"
+	"$detailframe"	   "1"
+
+	$color2 "[1 0 0]"
+
+	Proxies
+	{
+		TFAReticuleColor
+		{
+			resultVar $color2
+		}
+		TextureScroll
+		{
+			textureScrollVar	$detailtexturetransform
+			textureScrollRate	50
+			textureScrollAngle 	180
+		}
+	}
+
+	UnlitGeneric_DX8
+	{
+		$detail	"models/weapons/tfa_ins2/detail_empty"
+	}
+}

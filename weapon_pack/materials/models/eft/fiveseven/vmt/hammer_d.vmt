@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models\eft\fiveseven\frame_D"
+	"$bumpmap"					"models\eft\fiveseven\frame_N"
+	"$phongexponenttexture"		"models\eft\fiveseven\frame_E"
+	"$roughnessmultiplier"		"0.75" 
+	"$metal"					"1" 
+}

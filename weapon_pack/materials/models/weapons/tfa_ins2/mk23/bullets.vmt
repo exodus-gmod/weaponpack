@@ -1,0 +1,30 @@
+"VertexlitGeneric"
+{
+	"$color"							"[1.0 1.0 1.0]"
+	$basetexture 						"models/weapons/tfa_ins2/mk23/Bullet_Albedo"
+	$bumpmap 							"models/weapons/tfa_ins2/mk23/Bullet_Normal"
+	$phongexponenttexture				"models/weapons/tfa_ins2/mk23/Bullet_Exponent"
+	//$nocull 1
+	"$model" 		"1"
+	//"$translucent" 	"1"
+	
+	$normalmapalphaenvmapmask			1
+	$normalmapalphaphongmask			1
+	
+	$envmap								env_cubemap
+	$envmaptint							"[0.06 0.05 0.057]"
+	$envmapfresnel						1
+	
+	$phong								1
+	$phongboost							6.2
+	$phongfresnelranges					"[0.4 0.8 1]"
+	$phongtint							"[0.93 0.65 0.58]"
+	//$phongalbedotint	                "1"
+	//$phongexponent 					"56"
+    //$basemapluminancephongmask       	"1"
+	
+	$rimlight							1
+	$rimlightboost						0.6
+	$rimlightexponent					10
+	$rimmask							1
+}

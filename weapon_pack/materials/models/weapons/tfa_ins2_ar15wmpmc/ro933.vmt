@@ -1,0 +1,36 @@
+"VertexLitGeneric"
+{
+
+
+	"$basetexture"				"models\weapons\tfa_ins2_ar15wmpmc\ro933_d"
+	"$bumpmap"					"models\weapons\tfa_ins2_ar15wmpmc\ro933_n"
+
+
+		"$nocull" "1"
+      "$color" 			"[.86 .86 .84] "
+
+	
+	
+	
+
+	"$halflambert" 			"1"
+	
+	
+	
+	
+
+	"$phong"  				"1"
+	"$phongexponent" 		"33"
+	"$phongboost" 			"1"
+	"$phongfresnelranges" 	"[.15 1.4 5]"
+	"$phongtint" 			"[1.1 1.15 1.2]"
+	"$phongalbedotint" 		"1"	
+	
+
+	
+	$rimlight               1
+	$rimlightexponent       250
+	$rimlightboost          .02	
+	$rimmask 				1
+
+}

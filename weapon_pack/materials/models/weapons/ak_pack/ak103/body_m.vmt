@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 			    "models\weapons\AK_pack\AK103\Body_d"
+	"$bumpmap" 				    "models\weapons\AK_pack\AK103\Body_n"
+	"$phongexponenttexture" 	"models\weapons\AK_pack\AK103\Body_s"
+	"$translucent"				"1"
+
+	"$phong"                    "1"
+	"$phongboost"               "0.25"
+	"$phongexponent"		    "85"
+	"$phongfresnelranges"       "[3.5 6 8]"
+	"$phongtint"		        "[0.55 0.7 1]"
+	
+	"$envmap"                   "env_cubemap"
+	"$envmaptint"               "[.012 .012 .012]"
+    "$normalmapalphaenvmapmask"	"1"
+	
+	"$rimlight"                 "1"
+	"$rimlightexponent"         "120"
+	"$rimlightboost"            ".01"	
+	"$rimmask"					"1"
+}

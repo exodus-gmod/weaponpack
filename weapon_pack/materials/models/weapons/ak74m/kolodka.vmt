@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/ak74m/Kolodka_D"
+	"$bumpmap" "models/weapons/ak74m/Kolodka_N"
+}

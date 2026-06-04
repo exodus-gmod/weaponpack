@@ -1,0 +1,34 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			    "models\weapons\sr2_veresk\rail_d"
+	"$bumpmap"				    "models\weapons\sr2_veresk\rail_n"
+	"$phongexponenttexture"     "models\weapons\sr2_veresk\rail_s"
+	"$color2"					"[0.8 0.8 0.8]"
+	"$translucent"				"1"
+//	"$basemapalphaenvmapmask"   "1"
+	
+	"$detail"				    "detail\metal_detail_01"
+    "$detailscale"              "1.8"
+   	"$detailblendfactor" 	    "0.8"
+   	"$detailblendmode"		    "0"
+	
+	"$phong"					"1"
+	"$phongexponent"			"120"
+	"$phongboost"				"80"
+	"$phongfresnelranges"	    "[0.42 0.8 0.65]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"55"
+	
+	"$envmap"					"env_cubemap"
+	"$envmaptint"				"[ .038 .038 .038 ]"
+	"$envmapfresnel"			"1"
+	"$normalmapalphaenvmapmask" "1"
+//	"$normalmapalphaphongmask"  "1"
+
+	"$rimlight"					"1"
+	"$rimlightexponent"			"120"	
+	"$rimlightboost"			"0.05"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}

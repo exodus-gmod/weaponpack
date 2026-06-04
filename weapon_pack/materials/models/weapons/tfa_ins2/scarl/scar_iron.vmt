@@ -1,0 +1,27 @@
+// Valve Material Setup 2014. Brought you by Studio Apocalyptic.
+// Written by Yogensia and Rafael De Jongh
+// More information: http://source.gamebanana.com/tuts/11498
+// Parameter Cheat Sheet: http://bit.ly/1ibGMCe (Google Drive Spreadsheet)
+
+Vertexlitgeneric
+{
+
+	// MAIN SETTINGS
+	"$basetexture" "models\weapons\tfa_ins2\scarl\scar_iron_d"
+	"$bumpmap"     "models\weapons\tfa_ins2\scarl\scar_iron_n"
+	"$nocull" "1"
+	// PHONG SHADING
+	$phong                      1
+	$phongboost                 0.8
+	$phongfresnelranges         "[.5 1 3]"
+	$phongtint                  "[.8 .8 1.2]"
+	$normalmapalphaphongmask    1
+
+	// ENVIRONMENT REFLECTION
+	$envmap                     env_cubemap
+	$envmaptint                 "[.045 .045 .055]"
+	$normalmapalphaenvmapmask   1
+
+
+
+}

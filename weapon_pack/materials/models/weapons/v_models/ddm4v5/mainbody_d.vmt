@@ -1,0 +1,27 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 				"models\weapons\v_models\ddm4v5\mainbody_d"
+	"$bumpmap" 				"models\weapons\v_models\ddm4v5\mainbody_n"
+	$color2					"[0.75 0.75 0.75]"
+	"$model"						"1"
+                //$halflambert					1
+	$nocull						1
+
+//PHONG
+	"$phong"                        "1"
+	//"$phongtint"                    "[1 .9 .8 ]"
+	"$phongboost"                   "1"
+	//$basemapalphaphongmask 1
+	$basemapluminancephongmask 1
+	//"$phongexponent"				"50"
+	"$phongExponentTexture"			 "models\weapons\v_models\ddm4v5\mainbody_s"
+	"$phongfresnelranges"		 "[1.2 3.2 0.7]"
+	$phongalbedotint		1
+
+//ENVMAP
+	"$envmap"						"env_cubemap"
+	"$normalmapalphaenvmapmask"		"1"
+	"$envmaptint" "[ 0.004 0.004 0.004]"
+	$envmapfresnel 1
+
+}

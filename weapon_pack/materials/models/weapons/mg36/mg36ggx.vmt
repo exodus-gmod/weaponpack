@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\mg36\mg36_d"
+	$bumpmap    "models\weapons\mg36\mg36_n"
+    $phongexponenttexture   "models\weapons\mg36\mg36_g"
+    $phongexponent "37"
+    $normalmapalphaenvmapmask   "1"
+    $envmaptint   "[0.1 0.1 0.1]"
+    $envmapfresnel "1" // Advanced envmap reflections
+    $envmap 		"env_cubemap"
+
+    $phong  "1"
+    $phongboost  "1"      //tone down to decrease specular reflections
+	"$phongfresnelranges"           "[.9 2 10]"
+    $phongalbedotint  "1"
+    $nocull  1		
+}

@@ -1,0 +1,15 @@
+local path = "weapons/fn/"
+
+TFA.AddFireSound("TFA_INS2.FN.Fire", path .. "fiveseven_fire_close.wav", true, ")" )
+TFA.AddFireSound("TFA_INS2.FN.Fire_Suppressed", path .. "fiveseven_fire_silenced_close.wav", true, ")" )
+TFA.AddWeaponSound("TFA_INS2.AKSU.Empty", path .. "empty.wav")
+TFA.AddWeaponSound("Weapon_M9.Boltback", path .. "fiveseven_slider_in_fast.wav")
+TFA.AddWeaponSound("Weapon_M9.Boltrelease", path .. "fiveseven_slider_out_fast.wav")
+TFA.AddWeaponSound("robotnik_bo1_ak47.out", path .. "magout.wav")
+TFA.AddWeaponSound("TFA_INS2.AKSU.MagoutRattle", path .. "magout_rattle.wav")
+TFA.AddWeaponSound("Weapon_M9.Magout", path .. "fiveseven_mag_out.wav")
+TFA.AddWeaponSound("Weapon_M9.Magrelease", path .. "fiveseven_mag_releasebutton.wav")
+TFA.AddWeaponSound("Weapon_M9.Magin", path .. "fiveseven_mag_rattle.wav")
+TFA.AddWeaponSound("Weapon_M9.MagHit", path .. "fiveseven_mag_in.wav")
+TFA.AddWeaponSound("TFA_INS2.AKSU.Rattle", path .. "rattle.wav")
+TFA.AddWeaponSound("TFA_INS2.AKSU.ROF", path .. "rof.wav")

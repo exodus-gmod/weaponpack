@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"models/weapons/tfa_eft/upgrades/scopes/mrs/mrs_reticle_1"
+	"$translucent" 	"1"
+	"$no_draw" "1"
+}

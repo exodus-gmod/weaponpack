@@ -1,0 +1,34 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			    "models\weapons\sr2_veresk\sr2_d"
+	"$bumpmap"				    "models\weapons\sr2_veresk\sr2_n"
+	"$phongexponenttexture"     "models\weapons\sr2_veresk\sr2_s"
+	"$nocull"					"1"
+	"$blendtintbybasealpha"     "1"
+//	"$basemapalphaenvmapmask"   "1"
+	
+	"$detail"				    "detail\plaster_detail_01"
+    "$detailscale"              "6.783"
+   	"$detailblendfactor" 	    "0.8"
+   	"$detailblendmode"		    "0"
+	
+	"$phong"					"1"
+	"$phongexponent"			"100"
+	"$phongboost"				"25"
+	"$phongfresnelranges"	    "[1 0.8 0.5]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"33"
+	
+	"$envmap"					"env_cubemap"
+	"$envmaptint"				"[ .020 .020 .020 ]"
+	"$envmapfresnel"			"1"
+	"$normalmapalphaenvmapmask" "1"
+//	"$normalmapalphaphongmask"  "1"
+	
+	"$rimlight"					"1"
+	"$rimlightexponent"			"150"	
+	"$rimlightboost"			"0.25"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}

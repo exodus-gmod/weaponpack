@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\weapons\ins2_sandstorm\m110\T_1P_M110_D"
+	"$bumpmap" "models\weapons\ins2_sandstorm\m110\T_1P_M110_N"
+	"$phongexponenttexture" "models\weapons\ins2_sandstorm\m110\T_1P_M110_M"
+	
+	"$metal" "1"
+	"$roughnessmultiplier" "1"
+	
+	"$fuzz" "1"
+	"$fuzzmultiplier" ".2"
+	
+	"$envmap" "models\weapons\ins2_sandstorm\envmap_unfuck"
+	// "$srgbtint" "[.75 .75 .75]"
+	
+	"$nocull" "1"
+}

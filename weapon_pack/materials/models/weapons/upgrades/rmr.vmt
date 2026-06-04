@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" 						"models\weapons\upgrades\rmr_d"
+	"$bumpmap" 							"models\weapons\upgrades\rmr_n"
+	"$phongexponenttexture"				"models\weapons\upgrades\rmr_e"
+	"$nocull"                           "1"
+	//"$color"							"[1.25 1.25 1.25]"
+	
+	"$alphatest"                        "1"
+
+	"$normalmapalphaenvmapmask"			"1"
+	"$normalmapalphaphongmask"			"1"
+	
+	"$envmap"						    "env_cubemap"
+	"$envmaptint"						"[0.04 0.05 0.057]"
+	"$envmapfresnel"					"1"
+	
+	"$phong"							"1"
+	"$phongboost"						"6.2"
+	"$phongfresnelranges"				"[0.06 0.5 1]"
+	"$phongtint"						"[0.83 0.82 0.95]"
+	
+	"$rimlight"							"1"
+	"$rimlightboost"					"0.4"
+	"$rimlightexponent"					"30"
+	"$rimmask"							"1"
+}

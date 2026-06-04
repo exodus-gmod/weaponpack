@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+
+    $basetexture                "models\weapons\v_models\Contract Wars\Noveske Diplomat_RETOUR\mag"
+    $bumpmap                    "models\weapons\v_models\Contract Wars\Noveske Diplomat_RETOUR\mag_n"
+        "$nocull" "1"
+     	"$normalmapalphaenvmapmask" "1"
+	"$color"			"[1 1 1]"
+        "$envmap" 			"env_cubemap"
+	"$envmaptint" 			"[.004 .004 .004]"
+        $phongalbedotint	1	
+	"$phongtint"			"[.6 .8 1]"
+        $phongalbedoboost	22
+	"$phong" 			"1"
+	"$phongboost" 			"0.8"
+        "$phongexponent" 		"20"
+	"$phongfresnelranges"		"[0.1 0.4 .8]"
+	"$halflambert"			"1"
+  	"$rimlight" 	"1"
+	"$rimlightexponent" 	"100"	
+	"$rimlightboost"	"0.05"
+	"$rimmask" 	"1"
+
+}

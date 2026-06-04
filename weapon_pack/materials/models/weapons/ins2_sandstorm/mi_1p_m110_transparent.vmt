@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\ins2_sandstorm\m110\T_1P_M110_D"
+	"$bumpmap" "models\weapons\ins2_sandstorm\m110\T_1P_M110_N"
+	
+	"$envmap" "models\weapons\ins2_sandstorm\envmap_unfuck"
+	// "$srgbtint" "[.75 .75 .75]"
+	
+	"$translucent" "1"
+	"$model" "1"
+	// "$nocull" "1"
+	
+	"$phong" "1"
+	"$phongexponent" "64"
+	"$phongboost" ".25"
+	"$phongfresnelranges" "[1 8 3]"
+	"$phongalbedotint" "1"
+	"$halflambert" "1"
+	
+	"$detail" "models\weapons\ins2_sandstorm\m110\T_1P_M110_D"
+	"$detailscale" "1"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "0"
+}

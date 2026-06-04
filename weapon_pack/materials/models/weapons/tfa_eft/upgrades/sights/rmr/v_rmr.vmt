@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 			"models/weapons/tfa_eft/upgrades/sights/rmr/v_rmr_d"
+	"$bumpmap" 			"models/weapons/tfa_eft/upgrades/sights/rmr/v_rmr_n"
+	"$phongexponenttexture" 		"models/weapons/tfa_eft/upgrades/sights/rmr/v_rmr_s"		
+	"$color2" 			"[0.65 0.65 0.65]"
+	"$envmap" 			"models\weapons\tfa_eft\zev_glock\painted_silver"
+	"$envmaptint" 			"[.01 .01 .01]"
+	"$basemapalphaphongmask" 		"1"
+	"$phong"				"1"
+	"$phongexponent" 			"20"
+	"$phongboost" 			"8"	
+	"$phongfresnelranges"		"[0.5 0.9 1.5]"
+	"$halflambert" 			"1"
+	"$phongalbedotint" 			"1"
+
+}
