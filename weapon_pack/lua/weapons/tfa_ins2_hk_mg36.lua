@@ -30,7 +30,26 @@ SWEP.Primary.SoundEchoTable = {
 	[256] = Sound("TFA_MWR_G36C.TailOutside") 
 }
 
-SWEP.Primary.Damage                = ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and 1 * TFA.Yankys_Custom_Weapon_Pack.DamageMultiplier or 35
+SWEP.Primary.Damage                = 35
+local scale_table = {
+    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
+
 SWEP.Primary.DamageTypeHandled     = true                      -- true will handle damagetype in base
 SWEP.Primary.DamageType            = nil                       -- See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through

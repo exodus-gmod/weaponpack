@@ -205,6 +205,25 @@ SWEP.VMPos_Additive = false --Set to false for an easier time using VMPos. If tr
 SWEP.Primary.Sound = Sound("Weapon_HL_FML_FMG.Pew") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("Weapon_HL_FML_FMG.Pew2") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.Damage = 23
+local scale_table = {
+    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
+
 SWEP.Primary.TakeAmmo = 1
 SWEP.Primary.ClipSize = 60
 SWEP.Primary.Ammo = "smg1"

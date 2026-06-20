@@ -72,6 +72,25 @@ SWEP.Secondary.IronFOV			= 75		-- How much you 'zoom' in. Less is more!
 SWEP.data 				= {}				--The starting firemode
 
 SWEP.Primary.Damage		= 32	-- Base damage per bullet
+local scale_table = {
+    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
+
 SWEP.Primary.Spread		= .035	-- Define from-the-hip accuracy 1 is terrible, .0001 is exact)
 SWEP.Primary.IronAccuracy = .00001 -- Ironsight accuracy, should be the same for shotguns
 SWEP.Primary.SpreadMultiplierMax = 0 --How far the spread can expand when you shoot. Example val: 2.5

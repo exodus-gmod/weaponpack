@@ -6,7 +6,7 @@ TFA.Attachments.RegisterFromTable("am_gib", {
 	Description = {
 		TFA.Attachments.Colors["+"], "10% more damage",
 		TFA.Attachments.Colors["-"], "20% more recoil",
-		TFA.Attachments.Colors["-"], "10% more spread"
+		TFA.Attachments.Colors["-"], "20% more spread"
 	},
 	Icon = "entities/tfa_ammo_gib.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -14,8 +14,8 @@ TFA.Attachments.RegisterFromTable("am_gib", {
 	WeaponTable = {
 		Primary = {
 			Damage = function( wep, stat ) return stat * 1.1 end,
-			Spread = function( wep, stat ) return stat * 1.1 end,
-			IronAccuracy = function( wep, stat ) return stat * 1.1 end,
+			Spread = function( wep, stat ) return stat * 1.2 end,
+			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.2 end,
 			KickDown = function( wep, stat ) return stat * 1.2 end
 		}
@@ -30,15 +30,15 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 		TFA.Attachments.Colors["+"], "20% more range",
 		TFA.Attachments.Colors["-"], "5% Vertical recoil",
         TFA.Attachments.Colors["-"], "5% Horizontal recoil",
-		TFA.Attachments.Colors["-"], "20% more spread"
+		TFA.Attachments.Colors["-"], "25% more spread"
 	},
 	Icon = "entities/tfa_ammo_magnum.png",
 	TFADataVersion = TFA.LatestDataVersion,
 
 	WeaponTable = {
 		Primary = {
-			Range = function( wep, stat ) return stat * 1.15 end,
-			Spread = function( wep, stat ) return stat * 1.2 end,
+			Range = function( wep, stat ) return stat * 1.2 end,
+			Spread = function( wep, stat ) return stat * 1.25 end,
 			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.05 end,
 			KickHorizontal = function( wep, stat ) return stat * 1.05 end
@@ -79,19 +79,16 @@ TFA.Attachments.RegisterFromTable("sg_slug", {
 	Icon = "entities/tfa_ammo_slug.png",
 	TFADataVersion = TFA.LatestDataVersion,
 
-	WeaponTable = {
-		Primary = {
-			Damage = function( wep, stat ) return wep.Primary_TFA.NumShots * stat * 0.85 end,
-			NumShots = function( wep, stat ) return 1, true end,
-			KickUp = function ( wep, stat ) return stat * 1.15 end,
-			KickHorizontal = function ( wep, stat ) return stat * 1.15 end,
-			Spread = function( wep, stat ) return math.max( stat - 0.015, stat * 0.5 ) end,
-			IronAccuracy = function( wep, stat ) return math.max( stat - 0.03, stat * 0.25 ) end,
-			Range = function( wep, stat ) return stat * 2 end
+WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+		["Damage"] = function( wep, stat ) return wep.Primary_TFA.NumShots * stat * 0.85 end,
+			["NumShots"] = function( wep, stat ) return 1, true end,
+			["KickUp"] = function ( wep, stat ) return stat * 1.15 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.15 end,
+			["IronAccuracy"] = function( wep, stat ) return math.max( stat - 0.025 ) end,
+			["Range"] = function( wep, stat ) return stat * 2 end -- Stat functions support changing value dynamically (which is cached afterwards), SWEP.Primary_TFA contains original unchanged values
 		}
-	}
-})
-
+	},
 
 
 TFA.Attachments.RegisterFromTable("br_supp", {
@@ -127,7 +124,7 @@ TFA.Attachments.RegisterFromTable("br_supp", {
 		["MuzzleFlashEffect"] = "tfa_muzzleflash_silenced",
 		["MuzzleAttachmentMod"] = function(wep,stat) return wep.MuzzleAttachmentSilenced or stat end
 	}
-})
+}),
 
 TFA.Attachments.RegisterFromTable("si_acog", {
 	Base = "si_rt_base",
@@ -171,7 +168,7 @@ TFA.Attachments.RegisterFromTable("si_acog", {
 		["RTReticleMaterial"] = Material("scope/gdcw_acog"),
 		["RTReticleScale"] = 1,
 	}
-})
+}),
 TFA.Attachments.RegisterFromTable("si_aimpoint", {
 	Name = "Aimpoint",
 	Description = {
@@ -206,7 +203,7 @@ TFA.Attachments.RegisterFromTable("si_aimpoint", {
 		},
 		["IronSightTime"] = function( wep, val ) return val * 1.10 end
 	}
-})
+}),
 TFA.Attachments.RegisterFromTable("si_eotech", {
 	Name = "EOTech",
 	Description = {
@@ -235,4 +232,4 @@ TFA.Attachments.RegisterFromTable("si_eotech", {
 		},
 		["IronSightTime"] = function( wep, val ) return val * 1.10 end
 	}
-})
+})})

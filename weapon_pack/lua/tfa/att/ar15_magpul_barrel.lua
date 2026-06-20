@@ -21,10 +21,10 @@ ATTACHMENT.WeaponTable = {
 		[2] = 2
 	},
 	["Primary"] = {
-		["MovementSpeed"] = function(wep,stat) return stat * 1.05 end,
 		["Range"] = function(wep,stat) return stat * 0.9 end,
-		["IronSightsMovementSpeed"] = function(wep,stat) return stat * 1.05 end
 	},
+	["MoveSpeed"] = function(wep,stat) return stat * 1.05 end,
+	["IronSightsMoveSpeed"] = function(wep,stat) return stat * 1.05 end
 }
 
 function ATTACHMENT:Attach( wep )

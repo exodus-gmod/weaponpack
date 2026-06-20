@@ -23,6 +23,25 @@ SWEP.Primary.GLSound = Sound("TFA_INS2_GP30.1")
 
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 32 --DAage, in standard damage points.
+local scale_table = {
+    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
+
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
 SWEP.Primary.Force = nil --Force value, leave nil to autocalc
@@ -90,6 +109,7 @@ SWEP.MaxPenetrationCounter = 0 --The maximum number of ricochets.  To prevent st
 SWEP.IronRecoilMultiplier = 1 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
 SWEP.CrouchAccuracyMultiplier = 1 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
 SWEP.CrouchRecoilMultiplier = 1
+SWEP.JumpAccuracyMultiplier = 500
 SWEP.IronSightTime = 0.35
 SWEP.ProceduralHoslterEnabled = true
 SWEP.ProceduralHolsterTime = 0.35

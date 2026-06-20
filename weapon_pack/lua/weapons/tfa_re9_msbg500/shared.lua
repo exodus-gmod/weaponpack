@@ -42,8 +42,27 @@ SWEP.NextReloadAction = 0
 SWEP.ReloadInterruptFire = true
 SWEP.ReloadInterruptHandled = true
 
-SWEP.Primary.Sound = Sound("TFA_INS2_M590.1")
+SWEP.Primary.Sound = Sound("weapons/msbg500/shotgun_fire_1.wav")
 SWEP.Primary.Damage = 13
+local scale_table = {
+    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
+
 SWEP.Primary.DamageTypeHandled = true
 SWEP.Primary.PenetrationMultiplier = 1
 SWEP.Primary.HullSize = 0

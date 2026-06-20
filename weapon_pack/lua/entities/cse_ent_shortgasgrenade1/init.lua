@@ -6,7 +6,7 @@ include("shared.lua")
 // this was a cse flashbang.
 
 
-local nbDamages = 0 
+local nbDamages = 1 
 util.AddNetworkString( "IsInside" )
 function ENT:Initialize()
 
@@ -23,7 +23,7 @@ function ENT:Initialize()
 		phys:Sleep()
 	end
 	
-	self.timer = CurTime() + 3
+	self.timer = CurTime() + 5
 	self.solidify = CurTime() + 1
 	self.Bastardgas = nil
 	self.Spammed = false
@@ -38,22 +38,18 @@ end
 
 local function Poison(ent,owner)
 	if IsValid(ent) then
-		local madeCestIciPourLaVie = 30 
+		local madeCestIciPourLaVie = 1 
 		madeCestIciPourLaVie = madeCestIciPourLaVie+1 
 		local pd = DamageInfo()
-		pd:SetDamage(math.random(5)/10)
+		pd:SetDamage(math.random(10)/10)
 		pd:SetAttacker(owner)
 		pd:SetDamageType(DMG_NERVEGAS)
 		nbDamages = nbDamages+1
 		if (ent:Health() >= madeCestIciPourLaVie) then
 			ent:TakeDamageInfo(pd)
 		end
-		if nbDamages >= 100 then
-			ent:EmitSound("ambient/voices/cough" .. math.random(4) .. ".wav")
-			nbDamages =0
 		end 
 	end
-end
 
 
 function ENT:Think()
@@ -70,15 +66,15 @@ function ENT:Think()
 			self.Bastardgas = ents.Create("env_dusttrail")
 			self.Bastardgas:SetOwner(self.Owner)
 			self.Bastardgas:SetPos(self.Entity:GetPos())
-			self.Bastardgas:SetKeyValue("spawnradius","225")
-			self.Bastardgas:SetKeyValue("minspeed","0.5")
-			self.Bastardgas:SetKeyValue("maxspeed","2")
-			self.Bastardgas:SetKeyValue("startsize","16536")
-			self.Bastardgas:SetKeyValue("endsize","256")
+			self.Bastardgas:SetKeyValue("spawnradius","175")
+			self.Bastardgas:SetKeyValue("minspeed","10")
+			self.Bastardgas:SetKeyValue("maxspeed","10.1")
+			self.Bastardgas:SetKeyValue("startsize","175")
+			self.Bastardgas:SetKeyValue("endsize","175")
 			self.Bastardgas:SetKeyValue("color","225 216 160")
-			self.Bastardgas:SetKeyValue("opacity","1")
-			self.Bastardgas:SetKeyValue("spawnrate","50")
-			self.Bastardgas:SetKeyValue("lifetime","7")
+			self.Bastardgas:SetKeyValue("opacity","0.1")
+			self.Bastardgas:SetKeyValue("spawnrate","175")
+			self.Bastardgas:SetKeyValue("lifetime","30")
 			self.Bastardgas:SetParent(self.Entity)
 			self.Bastardgas:Spawn()
 			self.Bastardgas:Activate()
@@ -86,8 +82,8 @@ function ENT:Think()
 		end
 
 		local pos = self.Entity:GetPos()
-		local maxrange = 250
-		local maxstun = 10
+		local maxrange = 210
+		local maxstun = 175
 		for k,v in pairs(ents.FindInSphere( pos, maxrange) ) do
 			if v:GetNWBool( "STALKER_PlyGasMaskOn" ) == true then return end
 				if  v:IsPlayer()&& IsValid(v) then
@@ -98,15 +94,15 @@ function ENT:Think()
 				end
 				Poison(v, self.Owner)
 		end
-		if (self.timer+60<CurTime()) then
+		if (self.timer+1<CurTime()) then
 			if IsValid(self.Bastardgas) then
 				self.Bastardgas:Remove()
 			end
 		end
-		if (self.timer+65<CurTime()) then
+		if (self.timer+20<CurTime()) then
 			self.Entity:Remove()
 		end
-		self.Entity:NextThink(CurTime()+0.5)
+		self.Entity:NextThink(CurTime()+1)
 		return true
 	end
 end

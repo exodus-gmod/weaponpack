@@ -1,5 +1,5 @@
 SWEP.Base					= "tfa_gun_base"
-SWEP.Category				= "TFA Insurgency" --The category.  Please, just choose something generic or something I've already done if you plan on only doing like one swep..
+SWEP.Category				= "EXR - Assault Rifles" --The category.  Please, just choose something generic or something I've already done if you plan on only doing like one swep..
 SWEP.Manufacturer 			= "Izhmash" --Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Author					= "BV & GroveZ" --Author Tooltip
 SWEP.Contact				= "" --Contact Info Tooltip
@@ -10,10 +10,10 @@ SWEP.AdminSpawnable			= true --Can an adminstrator spawn this?  Does not tie int
 SWEP.DrawCrosshair			= true		-- Draw the crosshair?
 SWEP.DrawCrosshairIS 		= false --Draw the crosshair in ironsights?
 SWEP.PrintName				= "AK 74M Custom"		-- Weapon name (Shown on HUD)
-SWEP.Slot					= 2			-- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
-SWEP.SlotPos				= 73			-- Position in the slot
-SWEP.AutoSwitchTo			= true		-- Auto switch to if we pick it up
-SWEP.AutoSwitchFrom			= true		-- Auto switch from if you pick up a better weapon
+SWEP.Slot					= 0			-- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
+SWEP.SlotPos				= 1			-- Position in the slot
+SWEP.AutoSwitchTo			= false		-- Auto switch to if we pick it up
+SWEP.AutoSwitchFrom			= false		-- Auto switch from if you pick up a better weapon
 SWEP.Weight					= 30			-- This controls how "good" the weapon is for autopickup.
 SWEP.Type 					= "AR"
 
@@ -28,6 +28,25 @@ SWEP.Primary.LoopSoundTailSilenced = Sound("TFA_INS2.EFTAK74.LOOP.TAIL.2") -- Lo
 
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 37 -- Damage, in standard damage points.
+local scale_table = {
+    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
+
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
 SWEP.Primary.Force = nil --Force value, leave nil to autocalc
@@ -56,41 +75,61 @@ SWEP.DefaultFireMode = "" --Default to auto or whatev
 SWEP.FireModeName = nil --Change to a text value to override it
 --Ammo Related
 SWEP.Primary.ClipSize = 30 -- This is the size of a clip
-SWEP.Primary.DefaultClip = SWEP.Primary.ClipSize * 4 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
+SWEP.Primary.DefaultClip = 150 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
 SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, include pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, and AirboatGun.
 SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.32 -- This is the maximum upwards recoil (rise)
-SWEP.Primary.KickDown = 0.24 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.25 -- This is the maximum sideways recoil (no real term)
-SWEP.Primary.StaticRecoilFactor = 0.75 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
+SWEP.Primary.KickUp = 0.128 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
+SWEP.Primary.KickHorizontal = 0.086 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
-SWEP.Primary.Spread = .023 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
-SWEP.Primary.IronAccuracy = .011 -- Ironsight accuracy, should be the same for shotguns
+SWEP.Primary.Spread = .035 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.IronAccuracy = .00001 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
-SWEP.Primary.SpreadMultiplierMax = 3--How far the spread can expand when you shoot. Example val: 2.5
-SWEP.Primary.SpreadIncrement = 0.5 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
-SWEP.Primary.SpreadRecovery = 4--How much the spread recovers, per second. Example val: 3
+SWEP.Primary.SpreadMultiplierMax = 0 --How far the spread can expand when you shoot. Example val: 2.5
+SWEP.Primary.SpreadIncrement = 0 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
+SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Example val: 3
 --Range Related
-SWEP.Primary.Range = 0.65 * (3280.84 * 16) -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
-SWEP.Primary.RangeFalloff = 0.85 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
+SWEP.Primary.RangeFalloff = 1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+SWEP.Primary.RangeFalloffLUT = {
+    bezier     = true,
+    
+    range_func = "quintic",
+    units      = "meters",
+    
+    lut = {
+        {range = 0, damage = 1},
+        {range = 35, damage = 1},
+        {range = 40, damage = 1},
+        {range = 45, damage = 0.8},
+        {range = 50, damage = 0.65},
+    }
+}
 --Penetration Related
-SWEP.MaxPenetrationCounter = 4 --The maximum number of ricochets.  To prevent stack overflows.
+SWEP.MaxPenetrationCounter = 0 --The maximum number of ricochets.  To prevent stack overflows.
 --Misc
-SWEP.IronRecoilMultiplier = 0.6 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
-SWEP.CrouchAccuracyMultiplier = 0.5 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
+SWEP.IronRecoilMultiplier = 1 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
+SWEP.CrouchAccuracyMultiplier = 1 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
+SWEP.CrouchRecoilMultiplier = 1
+SWEP.IronSightTime = 0.35
+SWEP.ProceduralHoslterEnabled = true
+SWEP.ProceduralHolsterTime = 0.35
+SWEP.ProceduralHolsterPos = Vector(3, 0, -5)
+SWEP.ProceduralHolsterAng = Vector(-40, -30, 10)
 --Movespeed
-SWEP.MoveSpeed = 0.885 --Multiply the player's movespeed by this.
-SWEP.IronSightsMoveSpeed = SWEP.MoveSpeed  * 0.8 --Multiply the player's movespeed by this when sighting.
+SWEP.MoveSpeed = 0.95 --Multiply the player's movespeed by this.
+SWEP.IronSightsMoveSpeed =  0.9 --Multiply the player's movespeed by this when sighting.
 --[[PROJECTILES]]--
 SWEP.ProjectileEntity = nil --Entity to shoot
 SWEP.ProjectileVelocity = 0 --Entity to shoot's velocity
 SWEP.ProjectileModel = nil --Entity to shoot's model
 --[[VIEWMODEL]]--
 SWEP.ViewModel			= "models/weapons/v_eftak74.mdl" --Viewmodel path
-SWEP.ViewModelFOV			= 72		-- This controls how big the viewmodel looks.  Less is more.
+SWEP.ViewModelFOV			= 70		-- This controls how big the viewmodel looks.  Less is more.
 SWEP.ViewModelFlip			= false		-- Set this to true for CSS models, or false for everything else (with a righthanded viewmodel.)
 SWEP.UseHands = true --Use gmod c_arms system.
 SWEP.VMPos = Vector(0, 0.5, 0) --The viewmodel positional offset, constantly.  Subtract this from any other modifications to viewmodel position.
@@ -164,33 +203,33 @@ SWEP.RunSightsAng = Vector(-11.869, 17.129, -16.056)
 --[[IRONSIGHTS]]--
 SWEP.data = {}
 SWEP.data.ironsights = 1 --Enable Ironsights
-SWEP.Secondary.IronFOV = 75 -- How much you 'zoom' in. Less is more!  Don't have this be <= 0.  A good value for ironsights is like 70.
+SWEP.Secondary.IronFOV = 65 -- How much you 'zoom' in. Less is more!  Don't have this be <= 0.  A good value for ironsights is like 70.
 SWEP.IronSightsPos = Vector(-2.25, 0.8, 0.71)
 SWEP.IronSightsAng = Vector(0, 0, 0)
 
 SWEP.IronSightsPos_Kobra = Vector(-2.25, 2, -0.9)
 SWEP.IronSightsAng_Kobra = Vector(0.15, 0.075, 0)
-SWEP.Secondary.IronFOV_Kobra = 70
+SWEP.Secondary.IronFOV_Kobra = 65
 
 SWEP.IronSightsPos_EOTech = Vector(-2.25, 1, -0.8)
 SWEP.IronSightsAng_EOTech = Vector(-0.25, 0.1, 0)
-SWEP.Secondary.IronFOV_EOTech = 75
+SWEP.Secondary.IronFOV_EOTech = 65
 
 SWEP.IronSightsPos_RDS = Vector(-2.25, 2, -1)
 SWEP.IronSightsAng_RDS = Vector(-0.3, 0.07, 0)
-SWEP.Secondary.IronFOV_RDS = 70
+SWEP.Secondary.IronFOV_RDS = 65
 
 SWEP.IronSightsPos_2XRDS = Vector(-2.265, 1, -1.1)
 SWEP.IronSightsAng_2XRDS = Vector(0, 0, 0)
-SWEP.Secondary.IronFOV_2XRDS = 60
+SWEP.Secondary.IronFOV_2XRDS = 65
 
 SWEP.IronSightsPos_C79 = Vector(-2.27, 2, -1.22)
 SWEP.IronSightsAng_C79 = Vector(0, 0, 0)
-SWEP.Secondary.IronFOV_C79 = 55
+SWEP.Secondary.IronFOV_C79 = 65
 
 SWEP.IronSightsPos_PO4X = Vector(-2.205, 2, -0.75)
 SWEP.IronSightsAng_PO4X = Vector(0, 0, 0)
-SWEP.Secondary.IronFOV_PO4X = 55
+SWEP.Secondary.IronFOV_PO4X = 65
 
 --[[INSPECTION]]--
 SWEP.InspectPos = Vector(8.241, -1.206, 1.205)
@@ -224,11 +263,6 @@ SWEP.StatusLengthOverride = {
 SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
 SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
-
-SWEP.ProceduralHoslterEnabled = nil
-SWEP.ProceduralHolsterTime = 0.3
-SWEP.ProceduralHolsterPos = Vector(3, 0, -5)
-SWEP.ProceduralHolsterAng = Vector(-40, -30, 10)
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only
@@ -329,12 +363,12 @@ SWEP.WElements = {
 }
 
 SWEP.Attachments = {
-	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "ins2_br_heavy" }, order = 1 },
-	[2] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum" }, order = 9 },
-	[7] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" }, order = 2 },
-	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip" }, order = 3 },
-	[9] = { offset = { 0, 0 }, atts = { "ins2_ub_laser" }, order = 4 },
-	[5] = { offset = { 0, 0 }, atts = { "eft_fl_wf501b" }, order = 5 }
+	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
+	[2] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 6 },
+	[7] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" }, order = 1 },
+	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip" }, order = 4 },
+	[9] = { offset = { 0, 0 }, atts = { "ins2_ub_laser, eft_fl_wf501b" }, order = 5 },
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }, order = 3 },
 }
 
 SWEP.MuzzleAttachmentSilenced = 2

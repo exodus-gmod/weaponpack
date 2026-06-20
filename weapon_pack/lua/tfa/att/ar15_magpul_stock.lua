@@ -24,7 +24,7 @@ ATTACHMENT.WeaponTable = {
 		["KickUp"] = function(wep,stat) return stat * 1.1 end,
 		["KickHorizontal"] = function(wep,stat) return stat * 1.1 end
 	},
-		["IronSightTime"] = function(wep,stat) return stat - 0.015 end,
+		["IronSightTime"] = function(wep,stat) return stat * 0.7 end,
 }
 
 function ATTACHMENT:Attach( wep )
