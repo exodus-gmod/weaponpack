@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 80
 local scale_table = {
-    [HITGROUP_HEAD]     = 2,
+    [HITGROUP_HEAD]     = 4,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3,
