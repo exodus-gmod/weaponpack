@@ -14,8 +14,8 @@ SWEP.AdminSpawnable			= true                            -- Can an adminstrator s
 SWEP.DrawCrosshair			= true		                      -- Draw the crosshair?
 SWEP.DrawCrosshairIS		= false                           -- Draw the crosshair in ironsights?
 
-SWEP.Slot				    = 1				                  -- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
-SWEP.SlotPos				= 0			                  -- Position in the slot
+SWEP.Slot				    = 3				                  -- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
+SWEP.SlotPos				= 1			                  -- Position in the slot
 SWEP.AutoSwitchTo			= true		                      -- Auto switch to if we pick it up
 SWEP.AutoSwitchFrom			= true		                      -- Auto switch from if you pick up a better weapon
 SWEP.Weight				    = 40			                  -- This controls how "good" the weapon is for autopickup.

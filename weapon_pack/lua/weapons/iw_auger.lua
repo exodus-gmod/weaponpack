@@ -1,7 +1,7 @@
 SWEP.Base					= "tfa_gun_base"
 SWEP.Category				= "EXR - LMGs" --Category where you will find your weapons
 SWEP.PrintName				= "Auger"		-- Weapon name (Shown on HUD)	
-SWEP.Slot					= 0			-- Slot in the weapon selection menu
+SWEP.Slot					= 2			-- Slot in the weapon selection menu
 SWEP.SlotPos				= 1.1			-- Position in the slot
 SWEP.DrawAmmo				= true		-- Should draw the default HL2 ammo counter
 SWEP.DrawWeaponInfoBox		= false		-- Should draw the weapon info box

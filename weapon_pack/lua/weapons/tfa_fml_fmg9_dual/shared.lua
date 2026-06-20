@@ -136,7 +136,7 @@ SWEP.Type = "Sub-Machine Gun"
 SWEP.AutoSwitchTo = false
 SWEP.AutoSwitchFrom = false
 
-SWEP.Slot = 0
+SWEP.Slot = 2
 SWEP.SlotPos = 1
  
 SWEP.UseHands = true

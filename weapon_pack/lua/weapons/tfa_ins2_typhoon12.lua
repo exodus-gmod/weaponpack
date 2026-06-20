@@ -1,7 +1,7 @@
 SWEP.Base = "tfa_gun_base"
 
 SWEP.Spawnable = (TFA and TFA.INS2) and true or false -- INSTALL SHARED PARTS
-SWEP.Slot = 1
+SWEP.Slot = 3
 SWEP.SlotPos = 1
 SWEP.Weight = 28
 

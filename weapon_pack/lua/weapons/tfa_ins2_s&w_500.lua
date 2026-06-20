@@ -13,7 +13,7 @@ SWEP.AdminSpawnable			= true                              -- Can an adminstrator
 SWEP.DrawCrosshair			= true		                        -- Draw the crosshair?
 SWEP.DrawCrosshairIS		= false                             -- Draw the crosshair in ironsights?
 
-SWEP.Slot					= 2			                        -- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
+SWEP.Slot					= 1			                        -- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
 SWEP.SlotPos				= 1			                    -- Position in the slot
 SWEP.AutoSwitchTo			= false		                        -- Auto switch to if we pick it up
 SWEP.AutoSwitchFrom			= false		                        -- Auto switch from if you pick up a better weapon
