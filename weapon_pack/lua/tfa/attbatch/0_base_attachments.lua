@@ -28,8 +28,7 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 	ShortName = "HGA",
 	Description = {
 		TFA.Attachments.Colors["+"], "20% more range",
-		TFA.Attachments.Colors["-"], "5% Vertical recoil",
-        TFA.Attachments.Colors["-"], "5% Horizontal recoil",
+		TFA.Attachments.Colors["-"], "5% more recoil",
 		TFA.Attachments.Colors["-"], "25% more spread"
 	},
 	Icon = "entities/tfa_ammo_magnum.png",
