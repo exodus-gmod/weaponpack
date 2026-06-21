@@ -17,7 +17,7 @@ TFA.Attachments.RegisterFromTable("am_gib", {
 			Spread = function( wep, stat ) return stat * 1.2 end,
 			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.2 end,
-			KickDown = function( wep, stat ) return stat * 1.2 end
+			KickHorizontal = function( wep, stat ) return stat * 1.2 end
 		}
 	}
 })
@@ -62,7 +62,7 @@ TFA.Attachments.RegisterFromTable("am_match", {
 			Spread = function( wep, stat ) return stat * 0.85 end,
 			IronAccuracy = function ( wep, stat) return stat * 1.5 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
-			KickDown = function( wep, stat ) return stat * 0.85 end
+			KickHorizontal = function( wep, stat ) return stat * 0.85 end
 		}
 	}
 })
