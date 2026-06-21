@@ -5,7 +5,7 @@ SWEP.MuzzleAttachment			= "1" 	-- Should be "1" for CSS models or "muzzle" for h
 SWEP.ShellAttachment			= "shell"	-- Should be "2" for CSS models or "1" for hl2 models
 SWEP.Author				= "Georgi Shpagin"
 SWEP.Contact				= ""
-SWEP.Purpose				= ""
+SWEP.Purpose				= "An old russian SMG. Chambered in 9x18. Lacks modularity, but comes with a drum magazine option."
 SWEP.Instructions				= ""
 SWEP.PrintName				= "PPSH-41"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 2				-- Slot in the weapon selection menu
@@ -77,7 +77,7 @@ SWEP.data 				= {}				--The starting firemode
 
 SWEP.Primary.Damage		= 20	-- Base damage per bullet
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - SMGs" 
 SWEP.PrintName				= "B&T MP9"   		           
 SWEP.Manufacturer 			= "Brügger & Thomet"               -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A 9x19mm Tactical Subcompact Submachine gun."
+SWEP.Purpose				= "A compact, 9mm PDW. Quickly deploys, and sprays at a high fire rate."
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    
@@ -35,7 +35,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 22
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

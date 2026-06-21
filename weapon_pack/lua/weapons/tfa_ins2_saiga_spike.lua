@@ -10,6 +10,7 @@ SWEP.Manufacturer = "Center Balanced Systems"
 SWEP.Category = "EXR - Shotguns"
 SWEP.Author = "YuRaNnNzZZ"
 SWEP.Type = "Shotgun"
+SWEP.Purpose = "A semi automatic magazine fed shotgun. Effective for controlled bursts or even suppression."
 
 SWEP.DrawCrosshair = true
 SWEP.DrawCrosshairIS = false
@@ -19,7 +20,7 @@ SWEP.Primary.SilencedSound = Sound("TFA_INS2.WF_SHG46.2")
 
 SWEP.Primary.Damage = 6
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

@@ -7,7 +7,7 @@ SWEP.MuzzleAttachmentSilenced = "3"
 SWEP.Manufacturer = "CMMG Inc."--Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Author				= ""
 SWEP.Contact				= ""
-SWEP.Purpose				= "A standart AR that use 7.62x39mm"
+SWEP.Purpose				= "A modern 7.62x39 high powered assault rifle. Fires faster and is more modular than most alternatives."
 SWEP.Instructions				= ""
 SWEP.PrintName				= "MK47 Mutant"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 2				-- Slot in the weapon selection menu
@@ -78,7 +78,7 @@ SWEP.data 				= {}				--The starting firemode
 
 SWEP.Primary.Damage		= 36	-- Base damage per bullet
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

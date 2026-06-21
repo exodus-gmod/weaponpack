@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Pistols" 
 SWEP.PrintName				= "Walther P99"                     -- Weapon name (Shown on HUD)
 SWEP.Manufacturer           = "Walther Arms"                    -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A 9x19MM Customizable Pistol."   -- Purpose Tooltip
+SWEP.Purpose				= "A highly modular 9x19 pistol. Boasting a unique railing and sighting system."   -- Purpose Tooltip
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxyanKy700xX - Edit by Lucho"                    -- Author Tooltip
@@ -42,7 +42,7 @@ SWEP.CanJam                        = false
 
 SWEP.Primary.Damage                = 28
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

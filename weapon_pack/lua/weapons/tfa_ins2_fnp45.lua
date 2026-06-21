@@ -3,7 +3,7 @@ SWEP.Category				= "EXR - Pistols"
 SWEP.PrintName				= ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "FN FNP-45" or "FNP-45"   		           
 SWEP.Type                   = ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Type: Semi-Automatic Pistol - Caliber: .45 ACP - Muzzle Velocity: 330 m/s" or "Pistol"
 SWEP.Manufacturer 			= "FN Herstal"                      -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A .45 ACP Special Pistol."       -- Purpose Tooltip
+SWEP.Purpose				= "A modern .45 ACP pistol. Has solid punch and capacity. Comes with glow sights."       -- Purpose Tooltip
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxyanKy700xX - Edit by Lucho"                    -- Author Tooltip
@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 27
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

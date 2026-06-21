@@ -15,6 +15,7 @@ SWEP.DrawCrosshair			= true		-- Draw the crosshair?
 SWEP.DrawCrosshairIS 		= false --Draw the crosshair in ironsights?
 SWEP.FiresUnderwater 		= false
 SWEP.Type					= "Rotary Light Machine Gun"
+SWEP.Purpose = "An advanced rotary LMG. Deals devastating damage."
 
 
 --[[WEAPON HANDLING]]--
@@ -23,7 +24,7 @@ SWEP.Primary.SilencedSound = Sound("") -- This is the sound of the weapon, when 
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 48 -- Damage, in standard damage points.
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

@@ -3,7 +3,7 @@ SWEP.Category               = "EXR - Sniper Rifles"
 SWEP.PrintName				= "Barrett M98B"	              -- Weapon name (Shown on HUD)
 SWEP.Manufacturer           = "Barrett Firearms Company"      -- Gun Manufactrer (e.g. Hoeckler and Koch )          
 SWEP.Type                   = ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Type: Bolt-Action Sniper Rifle - Caliber: .338 Lapua Magnum - Muzzle Velocity: 960 m/s" or "Bolt-Action Sniper Rifle"
-SWEP.Purpose				= "An extended magazine capacity .338 Lapua Magnum Bolt Action Sniper Rifle."   
+SWEP.Purpose				= "A variant of the original Barret .50 Cal. Chambered in .338 Lapua Magnum, and with more rounds in the magazine."   
 SWEP.Instructions		    = ""    
 
 SWEP.Author				    = "XxYanKy700xX  - Edit by Lucho"    

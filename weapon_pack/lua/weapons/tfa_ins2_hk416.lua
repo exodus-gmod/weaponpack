@@ -3,7 +3,7 @@ SWEP.Category				= "EXR - Assault Rifles" --The category.  Please, just choose s
 SWEP.Manufacturer 			= "Heckler & Koch" --Gun Manufactrer
 SWEP.Author					= "OLDMaster_24 - Edit by Lucho" --Author Tooltip
 SWEP.Contact				= "" --Contact Info Tooltip
-SWEP.Purpose				= "" --Purpose Tooltip
+SWEP.Purpose				= "A fast firing 5.56 assault rifle. Especially useful for close encounters." --Purpose Tooltip
 SWEP.Instructions			= "" --Instructions Tooltip
 SWEP.Spawnable				= (TFA and TFA.INS2) and true or false -- INSTALL SHARED PARTS
 SWEP.AdminSpawnable			= true --Can an adminstrator spawn this?  Does not tie into your admin mod necessarily, unless its coded to allow for GMod's default ranks somewhere in its code.  Evolve and ULX should work, but try to use weapon restriction rather than these.
@@ -23,7 +23,7 @@ SWEP.Primary.SilencedSound = Sound("TFA_INS2.HK416.2") -- This is the sound of t
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate throughSWEP.Primary.Damage = 34 -- Damage, in standard damage points.
 SWEP.Primary.Damage = 30 -- Damage, in standard damage points.
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

@@ -6,7 +6,7 @@ SWEP.ShellAttachment			= "shell"	-- Should be "2" for CSS models or "1" for hl2 
 SWEP.Author				= "The Master MLG - Edit by Lucho"
 SWEP.Manufacturer = "Kalashnikov Concern " --Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Contact				= ""
-SWEP.Purpose				= ""
+SWEP.Purpose				= "A robust, russian LMG with a drum magazine. Chambered in 7.62x39."
 SWEP.Instructions				= ""
 SWEP.PrintName				= "RPK-12"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 2				-- Slot in the weapon selection menu
@@ -68,7 +68,7 @@ SWEP.Primary.RangeFalloffLUT = {
 }
 SWEP.Primary.Damage		= 39	-- Base damage per bullet
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

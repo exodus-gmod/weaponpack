@@ -3,7 +3,7 @@ SWEP.Category               = "EXR - Sniper Rifles"
 SWEP.PrintName				= "Accuracy International AWM" 		           
 SWEP.Manufacturer           = "Accuracy International"        -- Gun Manufactrer (e.g. Hoeckler and Koch )          
 SWEP.Type                   = ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Type: Bolt-Action Sniper Rifle - Caliber: .338 Lapua Magnum - Muzzle Velocity: 936 m/s" or "Bolt-Action Sniper Rifle"
-SWEP.Purpose				= "A .338 Lapua Magnum Bolt Action Sniper Rifle."   
+SWEP.Purpose				= "A high caliber, slow firing, magazine fed sniper rifle. Bolt action, boasting high accuracy."   
 SWEP.Instructions		    = ""                          
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    

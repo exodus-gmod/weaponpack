@@ -2,7 +2,7 @@
 SWEP.Category				= "EXR - Equipment"
 SWEP.Author				= "Lucho"
 SWEP.Contact				= ""
-SWEP.Purpose				= ""
+SWEP.Purpose				= "A fragmentation grenade built to clear zones and deal lethal damage.S"
 SWEP.Instructions				= ""
 SWEP.PrintName				= "High Explosive Grenade"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 4				-- Slot in the weapon selection menu

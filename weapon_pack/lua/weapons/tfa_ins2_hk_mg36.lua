@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - LMGs"   
 SWEP.PrintName				= "H&K MG-36"   		           
 SWEP.Manufacturer 			= "Heckler & Koch"                 -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A 5.56x45MM Germany Machinegun."
+SWEP.Purpose				= "A G36 with a heavier barrel and drum magazine. Effective for suppression and long duration fire."
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "Lucho"    
@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 35
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

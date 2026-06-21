@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Pistols"
 SWEP.PrintName				= ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Manurhin MR-96" or "MR-96"   		           
 SWEP.Manufacturer           = "Manurhin"                        -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A accurate light weight Double Action Revolver." 
+SWEP.Purpose				= "A compact, lightweight 6 shooter." 
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "Edit by Lucho"                    -- Author Tooltip
@@ -31,7 +31,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 50
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

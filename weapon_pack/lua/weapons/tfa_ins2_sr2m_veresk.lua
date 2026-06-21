@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = ( TFA and TFA.Yankys_Custom_Weapon_Pack_Categories ) and "[TFA] [AT] [ SMGs ]" or "EXR - SMGs"   
 SWEP.PrintName				= ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "KBP SR-2M Veresk" or "SR-2M Veresk"   		           
 SWEP.Manufacturer 			= "TsNIITochMash"                  -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A 9x21mm High Penetration Submachine Gun."
+SWEP.Purpose				= "A specialized SMG chambered in 9x21. Comes with a 20 round magazine, but packs a punch for an SMG."
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX"    
@@ -36,7 +36,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 28
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

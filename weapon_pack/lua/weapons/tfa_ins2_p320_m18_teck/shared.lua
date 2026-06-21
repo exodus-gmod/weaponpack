@@ -6,7 +6,7 @@ SWEP.ShellAttachment			= "shell" 	-- Should be "2" for CSS models or "1" for hl2
 SWEP.Manufacturer = "SIG USA" --Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Author				= "The Master MLG, Water, Delarobe - Edit by Lucho"
 SWEP.Contact				= ""
-SWEP.Purpose				= ""
+SWEP.Purpose				= "An american sidearm preferred by military contractors. Compact, modular, and with high capacity."
 SWEP.Instructions				= ""
 SWEP.PrintName				= "SIG SAUER P320"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 1				-- Slot in the weapon selection menu
@@ -54,7 +54,7 @@ SWEP.data 				= {}				--The starting firemode
 
 SWEP.Primary.Damage		= 30	-- Base damage per bullet
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

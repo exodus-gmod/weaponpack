@@ -5,7 +5,7 @@ SWEP.MuzzleAttachment			= "1" 	-- Should be "1" for CSS models or "muzzle" for h
 SWEP.ShellAttachment			= "shell" 	-- Should be "2" for CSS models or "1" for hl2 models
 SWEP.Author				= "Lucho & LB"
 SWEP.Contact				= ""
-SWEP.Purpose				= ""
+SWEP.Purpose				= "A reliable and compact 9x19 pistol made by GLOCK. Best for quick draws."
 SWEP.Instructions				= ""
 SWEP.PrintName				= "Glock 19"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 1				-- Slot in the weapon selection menu
@@ -73,7 +73,7 @@ SWEP.data 				= {}				--The starting firemode
 
 SWEP.Primary.Damage		= 32	-- Base damage per bullet
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

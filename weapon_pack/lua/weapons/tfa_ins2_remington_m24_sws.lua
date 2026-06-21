@@ -3,7 +3,7 @@ SWEP.Category               = "EXR - Sniper Rifles"
 SWEP.PrintName				= "Remington M24A1 SWS"	          -- Weapon name (Shown on HUD)
 SWEP.Manufacturer           = "Remington Arms"                -- Gun Manufactrer (e.g. Hoeckler and Koch )          
 SWEP.Type                   = ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Type: Bolt-Action Sniper Rifle - Caliber: 7.62x51mm - Muzzle Velocity: 853 m/s" or "Bolt-Action Sniper Rifle"
-SWEP.Purpose				= "A 7.62x51MM Bolt Action Sniper Rifle."   
+SWEP.Purpose				= "A heavy, slow firing 7.62x51 sniper rifle. Deals very high damage."   
 SWEP.Instructions		    = ""    
 
 SWEP.Author				    = "XxYanKy700xX & Shadowrun - Edit by Lucho"    

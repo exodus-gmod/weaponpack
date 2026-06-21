@@ -2,7 +2,7 @@ SWEP.Base					= "tfa_gun_base"
 SWEP.Category				= "EXR - Pistols"   
 SWEP.PrintName				= "MR-73"   		           
 SWEP.Manufacturer           = "Manurhin"                        -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "Really cool Light Double Action Revolver" 
+SWEP.Purpose				= "A lightweight, double action revolver." 
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "8fps - Edit by Lucho"                    -- Author Tooltip
@@ -26,7 +26,7 @@ SWEP.Primary.Sound          = Sound("Weapon_sndstrm_MR73.Fire") -- This is the s
 
 SWEP.Primary.Damage                = 53
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

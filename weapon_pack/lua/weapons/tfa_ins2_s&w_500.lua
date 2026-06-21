@@ -2,7 +2,7 @@ SWEP.Base					= "tfa_gun_base"                    -- Weapon Base
 SWEP.Category               = "EXR - Pistols"   
 SWEP.PrintName				= "S&W 500"   		           
 SWEP.Manufacturer           = "Smith & Wesson"                  -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A overpowered .500 S&W Magnum Double Action Revolver."
+SWEP.Purpose				= "Good luck."
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxyanKy700xX"                    -- Author Tooltip
@@ -31,7 +31,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 85
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

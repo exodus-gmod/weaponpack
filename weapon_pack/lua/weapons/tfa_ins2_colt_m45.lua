@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Pistols"   
 SWEP.PrintName				= "Colt M45A1"  		           
 SWEP.Manufacturer 			= "Colt Firearms"                   -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A improved version of the legendary M1911." 
+SWEP.Purpose				= "A more modern 1911. Chambered in .45 ACP. Has a small magazine, but packs a punch." 
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    
@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 40
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

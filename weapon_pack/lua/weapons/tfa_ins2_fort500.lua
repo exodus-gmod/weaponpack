@@ -3,7 +3,7 @@ SWEP.Category				= "EXR - Shotguns" --The category.  Please, just choose somethi
 SWEP.Manufacturer = "TOZ" --Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Author				= "Khris - Edit by Lucho" --Author Tooltip
 SWEP.Contact				= "" --Contact Info Tooltip
-SWEP.Purpose				= "" --Contact Info Tooltip
+SWEP.Purpose				= "A high powered shotgun firing a massive burst of projectiles. Has immense recoil and stopping power." --Contact Info Tooltip
 SWEP.Instructions				= "" --Instructions Tooltip
 SWEP.Spawnable			= TFA_BASE_VERSION and TFA_BASE_VERSION >= 4 --Can you, as a normal user, spawn this?
 SWEP.AdminSpawnable			= true --Can an adminstrator spawn this?  Does not tie into your admin mod necessarily, unless its coded to allow for GMod's default ranks somewhere in its code.  Evolve and ULX should work, but try to use weapon restriction rather than these.
@@ -27,7 +27,7 @@ SWEP.Primary.SoundEchoTable = {
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 15 -- Damage, in standard damage points.
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

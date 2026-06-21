@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Shotguns" 
 SWEP.PrintName				= "TOZ-194M"	                   -- Weapon name (Shown on HUD)
 SWEP.Manufacturer           = "Tula Arms"                      -- Gun Manufactrer (e.g. Hoeckler and Koch )          
-SWEP.Purpose				= "A 12 Gauge Pump Action Shotgun."    
+SWEP.Purpose				= "An effective russian pump action shotgun. Best used in close encounters."    
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    
@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 11
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

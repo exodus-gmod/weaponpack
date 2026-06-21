@@ -9,6 +9,7 @@ SWEP.Category = "EXR - Shotguns"
 SWEP.Author = "DocZesty"
 SWEP.PrintName = "Super Shorty"
 SWEP.Type = "Shotgun"
+SWEP.Purpose = "A compact, secondary shotgun that can be easily concealed. Lacks range."
 
 SWEP.Spawnable = true
 SWEP.AdminSpawnable = true
@@ -45,7 +46,7 @@ SWEP.ReloadInterruptHandled = true
 SWEP.Primary.Sound = Sound("weapons/msbg500/shotgun_fire_1.wav")
 SWEP.Primary.Damage = 13
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

@@ -10,6 +10,7 @@ SWEP.Manufacturer = "Typhoon Defence"
 SWEP.Category = "EXR - Shotguns"
 SWEP.Author = "YuRaNnNzZZ"
 SWEP.Type = "Shotgun"
+SWEP.Purpose = " A fast firing, drum fed full auto shotgun. Comes with high modularity, unlike its alternatives."
 
 SWEP.DrawCrosshair = true
 SWEP.DrawCrosshairIS = false
@@ -19,7 +20,7 @@ SWEP.Primary.SilencedSound = Sound("TFA_INS2.WF_SHG53.2")
 
 SWEP.Primary.Damage = 5.5
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

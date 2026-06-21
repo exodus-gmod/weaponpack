@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Assault Rifles" 
 SWEP.PrintName				= ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "FN SCAR-H SSR" or "SCAR-H SSR"   		           
 SWEP.Manufacturer 			= "FN Herstal"                     -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A modern tactical 7.62x51MM Battle Rifle."                
+SWEP.Purpose				= "An upsized scar chambered in 7.62x51. Packs a heavier punch, but has lower capacity and slower fire rate."                
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    
@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 40
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

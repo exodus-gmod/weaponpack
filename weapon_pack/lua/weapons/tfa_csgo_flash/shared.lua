@@ -2,7 +2,7 @@
 SWEP.Category				= "EXR - Equipment"
 SWEP.Author				= "Lucho"
 SWEP.Contact				= ""
-SWEP.Purpose				= ""
+SWEP.Purpose				= "A flashbang. Throw and blind the enemy."
 SWEP.Instructions				= ""
 SWEP.PrintName				= "Flashbang"		-- Weapon name (Shown on HUD)	
 SWEP.Slot				= 4				-- Slot in the weapon selection menu

@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Assault Rifles"   
 SWEP.PrintName				= ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "FN FAL STD" or "FN FAL"   		           
 SWEP.Manufacturer 			= "FN Herstal"                     -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A Legendary 7.62x51MM Battle Rifle." 
+SWEP.Purpose				= "A high caliber 7.62x51 battle rifle. Packs a mean punch, but lacks capacity." 
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    
@@ -32,7 +32,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 43
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

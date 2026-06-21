@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Assault Rifles"  
 SWEP.PrintName				= ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Izhmash AK-103" or "AK-103"   		           
 SWEP.Manufacturer 			= "Izhmash"                    -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "A Russian 7.62x39MM Assault Rifle."
+SWEP.Purpose				= "A modular 7.62x39 assault rifle. Fires slowly, but has high stopping power."
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "Edit by Lucho"    
@@ -39,7 +39,7 @@ SWEP.ViewModelPunchYawMultiplier_IronSights      = 1         -- Default value is
 
 SWEP.Primary.Damage                = 36
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

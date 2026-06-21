@@ -2,7 +2,7 @@ SWEP.Base					= "tfa_gun_base"                   -- Weapon Base
 SWEP.Category				= "EXR - Pistols"                 -- The category.  Please, just choose something generic or something I've already done if you plan on only doing like one swep..
 SWEP.PrintName				= "FN Five-seveN MK2"		                   -- Weapon name (Shown on HUD)
 SWEP.Manufacturer 			= "FN"                        -- Gun Manufactrer (e.g. Hoeckler and Koch )
-SWEP.Purpose				= "Manufactured by the Belgian firm Fabrique Nationale of Herstal."
+SWEP.Purpose				= "A specialized high capacity pistol firing 5.7 rounds. Effective at personal defense."
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "nightmatt - Edit by Lucho"    
@@ -34,7 +34,7 @@ SWEP.ViewModelPunchYawMultiplier_IronSights      = 1         -- Default value is
 
 SWEP.Primary.Damage                = 31                        -- Damage, in standard damage points.
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

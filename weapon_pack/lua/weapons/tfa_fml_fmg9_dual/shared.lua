@@ -1,7 +1,7 @@
 SWEP.PrintName = "FMG9 Dualist"
 SWEP.Author = "Fleshy Mammal"
 SWEP.Contact = ""
-SWEP.Purpose = ""
+SWEP.Purpose = "The FMG-9, but THERES TWO OF THEM?!"
 SWEP.Instructions = ""
 
 SWEP.Category = "EXR - SMGs"

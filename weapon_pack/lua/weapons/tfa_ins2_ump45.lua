@@ -3,7 +3,7 @@ SWEP.Category				= "EXR - SMGs" --The category.  Please, just choose something g
 SWEP.Manufacturer = "Heckler & Koch" --Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Author				= "YuRaNnNzZZ - Edit by Lucho" --Author Tooltip
 SWEP.Contact				= "" --Contact Info Tooltip
-SWEP.Purpose				= "" --Purpose Tooltip
+SWEP.Purpose				= "A slow firing, cheap, and reliable .45 ACP PDW. Packs a heavier punch at longer ranges." --Purpose Tooltip
 SWEP.Instructions				= "" --Instructions Tooltip
 SWEP.Spawnable				= (TFA and TFA.INS2) and true or false -- INSTALL SHARED PARTS
 SWEP.AdminSpawnable			= true --Can an adminstrator spawn this?  Does not tie into your admin mod necessarily, unless its coded to allow for GMod's default ranks somewhere in its code.  Evolve and ULX should work, but try to use weapon restriction rather than these.
@@ -55,7 +55,7 @@ SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun
 
 SWEP.Primary.Damage = 30 -- Damage, in standard damage points.
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,

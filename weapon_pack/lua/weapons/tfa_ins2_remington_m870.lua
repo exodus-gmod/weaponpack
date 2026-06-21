@@ -2,7 +2,7 @@ SWEP.Base					= ( TFA and DVL ) and "tfa_devl_base" or "tfa_gun_base"           
 SWEP.Category               = "EXR - Shotguns"  
 SWEP.PrintName				= "Remington M870"	               -- Weapon name (Shown on HUD)
 SWEP.Manufacturer           = "Remington Arms"                 -- Gun Manufactrer (e.g. Hoeckler and Koch )          
-SWEP.Purpose				= "A 12 Gauge Tactical Pump Action Shotgun."    
+SWEP.Purpose				= "A tactical and modular 12 gauge shotgun. Can be suited for your needs."    
 SWEP.Instructions			= ""              
 
 SWEP.Author				    = "XxYanKy700xX - Edit by Lucho"    
@@ -39,7 +39,7 @@ SWEP.Primary.SoundEchoTable = {
 
 SWEP.Primary.Damage                = 9
 local scale_table = {
-    [HITGROUP_HEAD]     = 1,
+    [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,
