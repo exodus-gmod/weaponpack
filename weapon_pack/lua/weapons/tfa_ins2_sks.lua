@@ -87,6 +87,20 @@ SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Exam
 --Range Related
 SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
 SWEP.Primary.RangeFalloff = 1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
+SWEP.Primary.RangeFalloffLUT = {
+    bezier     = true,
+    
+    range_func = "quintic",
+    units      = "meters",
+    
+    lut = {
+        {range = 0, damage = 1},
+        {range = 75, damage = 1},
+        {range = 80, damage = 1},
+        {range = 85, damage = 0.9},
+        {range = 100, damage = 0.8},
+    }
+}
 --Penetration Related
 SWEP.MaxPenetrationCounter = 0 --The maximum number of ricochets.  To prevent stack overflows.
 --Misc
