@@ -10,7 +10,7 @@ ATTACHMENT.Icon = "entities/M320_MW3.png" --Revers to label, please give it an i
 ATTACHMENT.ShortName = "GL"
 
 ATTACHMENT.Ent = "tfa_exp_contact"
-ATTACHMENT.Damage = 70
+ATTACHMENT.Damage = 120
 ATTACHMENT.DefaultModel = "models/weapons/tfa_ins2/upgrades/a_projectile_m203.mdl"
 ATTACHMENT.Velocity = 76 * 39.370 * 4 / 3 --76.5 M/s * Meters to Inches * Inches to Hammer Units
 ATTACHMENT.Ammo = "smg1_grenade"
