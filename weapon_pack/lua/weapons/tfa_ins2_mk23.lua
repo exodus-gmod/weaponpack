@@ -21,7 +21,7 @@ SWEP.Type					= "Pistol"
 SWEP.Primary.Sound = Sound("TFA_INS2.MK23.1") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("TFA_INS2.MK23.2") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 28 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 31 -- Damage, in standard damage points.
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
@@ -65,7 +65,7 @@ SWEP.OnlyBurstFire = false --No auto, only burst/single?
 SWEP.DefaultFireMode = "" --Default to auto or whatev
 SWEP.FireModeName = nil --Change to a text value to override it
 --Ammo Related
-SWEP.Primary.ClipSize = 12 -- This is the size of a clip
+SWEP.Primary.ClipSize = 14 -- This is the size of a clip
 SWEP.Primary.DefaultClip = 60 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
 SWEP.Primary.Ammo = "pistol" -- What kind of ammo.  Options, besides custom, include pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, and AirboatGun.
 SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
