@@ -94,6 +94,8 @@ SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Exam
 SWEP.IronRecoilMultiplier = 1 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
 SWEP.CrouchAccuracyMultiplier = 1 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
 SWEP.CrouchRecoilMultiplier = 0.4
+SWEP.MoveSpeed = 0.8 --Multiply the player's movespeed by this.
+SWEP.IronSightsMoveSpeed = 0.75 --Multiply the player's movespeed by this when sighting.
 SWEP.IronSightTime = 0.5
 SWEP.ProceduralHoslterEnabled = true
 SWEP.ProceduralHolsterTime = 0.5
