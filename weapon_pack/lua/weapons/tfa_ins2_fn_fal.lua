@@ -30,7 +30,7 @@ SWEP.Primary.SoundEchoTable = {
 	[256] = Sound("TFA_MWR_XMLAR.TailOutside") 
 }
 
-SWEP.Primary.Damage                = 43
+SWEP.Primary.Damage                = 39
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
@@ -57,7 +57,7 @@ SWEP.Primary.Velocity              = 823                       -- m/s
 SWEP.Primary.NumShots              = 1                         -- The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 
 SWEP.Primary.Automatic             = true                      -- Automatic/Semi Auto
-SWEP.Primary.RPM                   = 500                       -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM                   = 600                       -- This is in Rounds Per Minute / RPM
 
 SWEP.Primary.Force                 = nil                       -- Force value, leave nil to autocalc
 SWEP.Primary.Knockback             = nil                       -- Autodetected if nil; this is the velocity kickback
@@ -90,7 +90,7 @@ SWEP.CanJam                        = true
 --Recoil Related
 SWEP.Primary.KickUp              = 0.258                        -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown            = 0                        -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal      = 0.086                        -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal      = 0.159                        -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor  = 1                        -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 
 --Firing Cone Related
