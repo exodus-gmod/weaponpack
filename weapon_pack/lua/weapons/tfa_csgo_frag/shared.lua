@@ -35,7 +35,7 @@ SWEP.ProceduralHolsterAng = Vector(0, 0, 0)
 
 SWEP.Primary.RPM				= 30		-- This is in Rounds Per Minute
 SWEP.Primary.ClipSize			= 1		-- Size of a clip
-SWEP.Primary.DefaultClip		= 1		-- Bullets you start with
+SWEP.Primary.DefaultClip		= 2		-- Bullets you start with
 SWEP.Primary.Automatic			= false		-- Automatic = true; Semi Auto = false
 SWEP.Primary.Ammo			= "AR2AltFire"				
 -- pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, AirboatGun
