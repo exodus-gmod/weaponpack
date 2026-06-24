@@ -37,9 +37,9 @@ SWEP.Primary.Sound			= Sound("weapons/tfa_ppsh41/mp5k_fp.wav")
 SWEP.Primary.RPM			= 1050			-- This is in Rounds Per Minute
 SWEP.Primary.ClipSize			= 41		-- Size of a clip
 SWEP.Primary.DefaultClip		= 205		-- Bullets you start with
-SWEP.Primary.KickUp				= 0.119		-- Maximum up recoil (rise)
+SWEP.Primary.KickUp				= 0.125		-- Maximum up recoil (rise)
 SWEP.Primary.KickDown			= 0		-- Maximum down recoil (skeet)
-SWEP.Primary.KickHorizontal		= 0.076		-- Maximum up recoil (stock)
+SWEP.Primary.KickHorizontal		= 0.082		-- Maximum up recoil (stock)
 SWEP.Primary.Automatic			= true	-- Automatic = true; Semi Auto = false
 SWEP.Primary.Ammo			= "pistol"			-- pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, AirboatGun
 -- Pistol, buckshot, and slam always ricochet. 

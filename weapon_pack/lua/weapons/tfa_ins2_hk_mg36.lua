@@ -87,9 +87,9 @@ SWEP.DisableChambering             = false                     -- Disable round-
 SWEP.CanJam                        = false
 
 -- Recoil Related
-SWEP.Primary.KickUp                = 0.265                      -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp                = 0.273                      -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown              = 0                      -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal        = 0.1                      -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal        = 0.15                      -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor    = 1                      -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 
 -- Firing Cone Related
@@ -125,7 +125,7 @@ SWEP.MaxPenetrationCounter      = 0                            -- The maximum nu
 -- Misc
 SWEP.IronRecoilMultiplier       = 1                         -- Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
 SWEP.CrouchAccuracyMultiplier   = 1                        -- Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
-SWEP.CrouchRecoilMultiplier = 0.4
+SWEP.CrouchRecoilMultiplier = 0.5
 SWEP.IronSightTime = 0.5
 SWEP.ProceduralHoslterEnabled   = true
 SWEP.ProceduralHolsterTime      = 0.5

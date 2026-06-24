@@ -87,9 +87,9 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 SWEP.DisableChambering = true --Disable round-in-the-chamber
 
 --Recoil Related
-SWEP.Primary.KickUp = 0.22 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.25 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.05 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal = 0.1 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1
 
 --Firing Cone Related

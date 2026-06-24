@@ -37,9 +37,9 @@ SWEP.Primary.Sound			= Sound("weapons/tfa_ins2_rpk_12/rpk_12_fire.wav")
 SWEP.Primary.RPM			= 650			-- This is in Rounds Per Minute
 SWEP.Primary.ClipSize			= 75		-- Size of a clip
 SWEP.Primary.DefaultClip		= 375		-- Bullets you start with
-SWEP.Primary.KickUp				= 0.258		-- Maximum up recoil (rise)
+SWEP.Primary.KickUp				= 0.27		-- Maximum up recoil (rise)
 SWEP.Primary.KickDown			= 0		-- Maximum down recoil (skeet)
-SWEP.Primary.KickHorizontal		= 0.15		-- Maximum up recoil (stock)
+SWEP.Primary.KickHorizontal		= 0.2		-- Maximum up recoil (stock)
 SWEP.Primary.StaticRecoilFactor = 1
 SWEP.Primary.Automatic			= true	-- Automatic = true; Semi Auto = false
 SWEP.Primary.Ammo			= "ar2"			-- pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, AirboatGun
@@ -93,7 +93,7 @@ SWEP.Primary.SpreadIncrement = 0 --What percentage of the modifier is added on, 
 SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Example val: 3
 SWEP.IronRecoilMultiplier = 1 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
 SWEP.CrouchAccuracyMultiplier = 1 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
-SWEP.CrouchRecoilMultiplier = 0.4
+SWEP.CrouchRecoilMultiplier = 0.5
 SWEP.MoveSpeed = 0.8 --Multiply the player's movespeed by this.
 SWEP.IronSightsMoveSpeed = 0.75 --Multiply the player's movespeed by this when sighting.
 SWEP.IronSightTime = 0.5

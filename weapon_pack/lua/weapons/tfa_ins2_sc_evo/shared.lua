@@ -12,8 +12,8 @@ SWEP.DrawCrosshairIS = false --Draw the crosshair in ironsights?
 SWEP.PrintName				= "Scorpion Evo 3"		-- Weapon name (Shown on HUD)
 SWEP.Slot				= 2			-- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
 SWEP.SlotPos				= 1			-- Position in the slot
-SWEP.AutoSwitchTo			= true		-- Auto switch to if we pick it up
-SWEP.AutoSwitchFrom			= true		-- Auto switch from if you pick up a better weapon
+SWEP.AutoSwitchTo			= false		-- Auto switch to if we pick it up
+SWEP.AutoSwitchFrom			= false		-- Auto switch from if you pick up a better weapon
 SWEP.Weight				= 26			-- This controls how "good" the weapon is for autopickup.
 
 --[[WEAPON HANDLING]]--
@@ -73,9 +73,9 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.115 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.12 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.079 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal = 0.085 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .03 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)

@@ -71,9 +71,9 @@ SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, includ
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp				= 0.126
+SWEP.Primary.KickUp				= 0.134
 SWEP.Primary.KickDown 			= 0
-SWEP.Primary.KickHorizontal		= 0.084
+SWEP.Primary.KickHorizontal		= 0.09
 SWEP.Primary.StaticRecoilFactor = 1
 --Firing Cone Related
 SWEP.Primary.Spread		  = .035

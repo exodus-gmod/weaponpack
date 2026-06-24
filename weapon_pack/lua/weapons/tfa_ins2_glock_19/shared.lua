@@ -42,9 +42,9 @@ SWEP.Primary.SilencedSound			= Sound("weapons/glock_19/glock18_suppresed.wav")		
 SWEP.Primary.RPM			= 600			-- This is in Rounds Per Minute
 SWEP.Primary.ClipSize			= 12		-- Size of a clip
 SWEP.Primary.DefaultClip		= 60		-- Bullets you start with
-SWEP.Primary.KickUp				= 0.2		-- Maximum up recoil (rise)
+SWEP.Primary.KickUp				= 0.25		-- Maximum up recoil (rise)
 SWEP.Primary.KickDown			= 0		-- Maximum down recoil (skeet)
-SWEP.Primary.KickHorizontal		= 0.087		-- Maximum up recoil (stock)
+SWEP.Primary.KickHorizontal		= 0.093		-- Maximum up recoil (stock)
 SWEP.Primary.StaticRecoilFactor = 1
 SWEP.Primary.Automatic			= false	-- Automatic = true; Semi Auto = false
 SWEP.Primary.Ammo			= "pistol"			-- pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, AirboatGun

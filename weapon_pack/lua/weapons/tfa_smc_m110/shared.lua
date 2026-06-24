@@ -48,7 +48,7 @@ SWEP.EventTable = {
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 55 -- Damage, in standard damage points.
 local scale_table = {
-    [HITGROUP_HEAD]     = 2.5,
+    [HITGROUP_HEAD]     = 3,
     [HITGROUP_CHEST]    = 1,
     [HITGROUP_STOMACH]  = 1,
     [HITGROUP_LEFTARM]  = 3.5,
@@ -99,9 +99,9 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.437 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.461 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.17 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal = 0.2 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .15 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)

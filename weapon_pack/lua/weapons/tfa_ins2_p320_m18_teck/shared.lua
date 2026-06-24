@@ -38,9 +38,9 @@ SWEP.Primary.SilencedSound			= Sound("Weapon_P320_2")		-- Script that calls the 
 SWEP.Primary.RPM			= 650			-- This is in Rounds Per Minute
 SWEP.Primary.ClipSize			= 17		-- Size of a clip
 SWEP.Primary.DefaultClip		= 85		-- Bullets you start with
-SWEP.Primary.KickUp			= 0.215		-- Maximum up recoil (rise)
+SWEP.Primary.KickUp			= 0.22		-- Maximum up recoil (rise)
 SWEP.Primary.KickDown			= 0		-- Maximum down recoil (skeet)
-SWEP.Primary.KickHorizontal		= 0.09		-- Maximum up recoil (stock)
+SWEP.Primary.KickHorizontal		= 0.095		-- Maximum up recoil (stock)
 SWEP.Primary.StaticRecoilFactor = 1
 SWEP.Primary.Automatic			= false	-- Automatic = true; Semi Auto = false
 SWEP.Primary.Ammo			= "pistol"			-- pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, AirboatGun

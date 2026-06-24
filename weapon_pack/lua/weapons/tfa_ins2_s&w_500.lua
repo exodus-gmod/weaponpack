@@ -84,9 +84,9 @@ SWEP.DefaultFireMode             = "Double-Action"              -- Default to au
 SWEP.FireModeName                = "Double-Action"              -- Change to a text value to override it
 
 -- Recoil Related
-SWEP.Primary.KickUp              = 2.32                         -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp              = 2.4                         -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown            = 0                         -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal      = 1.80                         -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal      = 1.85                         -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor  = 1                         -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 
 -- Firing Cone Related

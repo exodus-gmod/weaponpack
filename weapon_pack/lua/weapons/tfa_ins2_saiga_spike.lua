@@ -56,9 +56,9 @@ SWEP.Primary.ClipSize = 10
 SWEP.Primary.DefaultClip = 50
 SWEP.Primary.Ammo = "buckshot"
 
-SWEP.Primary.KickUp = 1
+SWEP.Primary.KickUp = 1.15
 SWEP.Primary.KickDown = 0
-SWEP.Primary.KickHorizontal = 0.6
+SWEP.Primary.KickHorizontal = 0.65
 SWEP.Primary.StaticRecoilFactor = 1
 
 SWEP.Primary.Spread = 0.025
