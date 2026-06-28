@@ -47,8 +47,8 @@ hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
 
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
-SWEP.Primary.Force = nil --Force value, leave nil to autocalc
-SWEP.Primary.Knockback = nil --Autodetected if nil; this is the velocity kickback
+SWEP.Primary.Force = 0 --Force value, leave nil to autocalc
+SWEP.Primary.Knockback = 0 --Autodetected if nil; this is the velocity kickback
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 10 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = false -- Automatic/Semi Auto

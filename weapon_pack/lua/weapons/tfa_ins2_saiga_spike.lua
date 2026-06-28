@@ -38,7 +38,8 @@ end
 hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
 hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
 
-SWEP.Primary.Knockback = 0
+SWEP.Primary.Force = 0 --Force value, leave nil to autocalc
+SWEP.Primary.Knockback = 0 --Autodetected if nil; this is the velocity kickback
 SWEP.Primary.NumShots = 10
 SWEP.Primary.Automatic = false
 SWEP.Primary.RPM = 350

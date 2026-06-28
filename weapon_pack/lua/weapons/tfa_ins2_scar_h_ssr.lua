@@ -57,7 +57,7 @@ SWEP.Primary.Velocity              = 950                       -- m/s
 SWEP.Primary.NumShots              = 1                         -- The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 
 SWEP.Primary.Automatic             = true                      -- Automatic/Semi Auto
-SWEP.Primary.RPM                   = 550                       -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM                   = 500                       -- This is in Rounds Per Minute / RPM
 
 SWEP.Primary.Force                 = nil                       -- Force value, leave nil to autocalc
 SWEP.Primary.Knockback             = nil                       -- Autodetected if nil; this is the velocity kickback

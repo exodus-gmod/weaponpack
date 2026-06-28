@@ -18,7 +18,7 @@ SWEP.SlotPos				= 1			                   -- Position in the slot
 SWEP.AutoSwitchTo			= false -- Auto switch to if we pick it up
 SWEP.AutoSwitchFrom			= false -- Auto switch from if you pick up a better weapon
 SWEP.Weight					= 31			                   -- This controls how "good" the weapon is for autopickup.
-SWEP.Type                   = ( TFA and TFA.Yankys_Custom_Weapon_Pack ) and "Type: Battle Rifle - Caliber: 7.62x51mm - Muzzle Velocity: 823 m/s" or "Battle Rifle"
+SWEP.Type                   = "Battle Rifle"
 
 --[[WEAPON HANDLING]]--
 
@@ -57,7 +57,7 @@ SWEP.Primary.Velocity              = 823                       -- m/s
 SWEP.Primary.NumShots              = 1                         -- The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 
 SWEP.Primary.Automatic             = true                      -- Automatic/Semi Auto
-SWEP.Primary.RPM                   = 600                       -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM                   = 550                       -- This is in Rounds Per Minute / RPM
 
 SWEP.Primary.Force                 = nil                       -- Force value, leave nil to autocalc
 SWEP.Primary.Knockback             = nil                       -- Autodetected if nil; this is the velocity kickback

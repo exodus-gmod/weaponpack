@@ -59,8 +59,8 @@ SWEP.Primary.Velocity              = 520                       -- Bullet Velocit
 SWEP.Primary.Automatic             = false                     -- Automatic/Semi Auto
 SWEP.Primary.RPM                   = 150                       -- This is in Rounds Per Minute / RPM
 
-SWEP.Primary.Force                 = nil                       -- Force value, leave nil to autocalc
-SWEP.Primary.Knockback             = nil                       -- Autodetected if nil; this is the velocity kickback
+SWEP.Primary.Force = 0 --Force value, leave nil to autocalc
+SWEP.Primary.Knockback = 0 --Autodetected if nil; this is the velocity kickback
 SWEP.Primary.HullSize              = 0                         -- Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 
 SWEP.FiresUnderwater               = false
