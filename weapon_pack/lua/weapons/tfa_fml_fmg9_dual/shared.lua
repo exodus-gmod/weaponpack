@@ -114,7 +114,7 @@ SWEP.Secondary.IronFOV_MX4 = 65
 
 SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp_dual", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },	
-	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }, order = 2 },
+	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	[3] = { offset = { 0, 0 }, atts = { "am_magnum", "am_match", "am_gib" }, order = 3 },		
 }
 
@@ -167,20 +167,11 @@ SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Exam
 --Range Related
 SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
 SWEP.Primary.RangeFalloff = 1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
-SWEP.Primary.RangeFalloffLUT = {
-    bezier     = true,
-    
-    range_func = "quintic",
-    units      = "meters",
-    
-    lut = {
-        {range = 0, damage = 1},
-        {range = 25, damage = 1},
-        {range = 30, damage = 1},
-        {range = 35, damage = 0.8},
-        {range = 40, damage = 0.65},
-    }
-}
+SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
+SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
+SWEP.Primary.MinRangeStartFalloff = 30 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MaxFalloff         = 6 -- Maximal amount of damage to be lost
+
 --Misc
 SWEP.CrouchAccuracyMultiplier = 1 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
 SWEP.IronRecoilMultiplier = 1

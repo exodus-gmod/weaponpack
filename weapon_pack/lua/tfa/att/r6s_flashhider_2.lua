@@ -12,10 +12,10 @@ ATTACHMENT.WeaponTable = {
 	["MuzzleFlashEffect"] = "tfa_muzzleflash_silenced",
 				["Primary"] = {
                 ["KickUp"] = function( wep, stat ) return stat * 0.95 end,
-                ["KickHorizontal"] = function( wep, stat ) return stat * 0.95 end,
-				["IronSightTime"] = function( wep, stat ) return stat * 1.35 end,		
-                ["SpreadMultiplierMax"] = function( wep, stat ) return stat * 1 end
-        }
+                ["KickHorizontal"] = function( wep, stat ) return stat * 0.95 end,	
+                ["SpreadMultiplierMax"] = function( wep, stat ) return stat * 1 end,
+        },
+		["IronSightTime"] = function( wep, stat ) return stat * 1.15 end,	
 }
 
 if not TFA_ATTACHMENT_ISUPDATING then

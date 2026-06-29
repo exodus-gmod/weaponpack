@@ -4,30 +4,54 @@ TFA.Attachments.RegisterFromTable("ins2_br_heavy", {
 	Name = CLIENT and "#insurgency_weapon_upgrade_heavybarrel" or "Heavy Barrel",
 	Description = {
 		"#insurgency_weapon_upgrade_heavybarrel_desc",
-		TFA.AttachmentColors["+"], "Increases Range by 15%", "Increases Damage by 5%",
-		TFA.AttachmentColors["-"], "5% decreased movement speed", "Slower ADS speed", "Increases Recoil by 10%",
+		TFA.AttachmentColors["+"], "Increases Range by 15%", "Decreases Recoil by 10%",
+		TFA.AttachmentColors["-"], "5% decreased movement speed", "Slower ADS speed",
 	},
 	Icon = "entities/ins2_att_br_heavy.png",
 	ShortName = "HBR",
 
 	WeaponTable = {
 		Primary = {
-			KickUp = function( wep, stat ) return stat * 1.1 end,
-			KickHorizontal = function( wep, stat ) return stat * 1.1 end,
+			KickUp = function( wep, stat ) return stat * 0.9 end,
+			KickHorizontal = function( wep, stat ) return stat * 0.9 end,
 			Range = function ( wep, stat) return stat * 1.15 end,
-			Damage = function ( wep, stat) return stat * 1.05 end,
+			Damage = function ( wep, stat) return stat * 1 end,
 		},
-		IronSightTime = function ( wep, stat) return stat * 1.3 end,
+		IronSightTime = function ( wep, stat) return stat * 1.4 end,
 		MoveSpeed = function( wep, stat ) return stat * 0.95 end,
 		IronSightsMoveSpeed = function( wep, stat ) return stat * 0.95 end,
 	}
 })
+
+TFA.Attachments.RegisterFromTable("ins2_br_light", {
+	Name = "Light Barrel",
+	Description = {
+		"A lightweight barrel made of aluminum.",
+		TFA.AttachmentColors["+"], "5% Increased Movement Speed", "Faster ADS Speed",
+		TFA.AttachmentColors["-"], "10% Less Range", "Increases Recoil by 10%",
+	},
+	Icon = "entities/ins2_att_br_heavy.png",
+	ShortName = "LBR",
+
+	WeaponTable = {
+		Primary = {
+			KickUp = function( wep, stat ) return stat * 1.1 end,
+			KickHorizontal = function( wep, stat ) return stat * 1.1 end,
+			Range = function ( wep, stat) return stat * 0.9 end,
+			Damage = function ( wep, stat) return stat * 1 end,
+		},
+		IronSightTime = function ( wep, stat) return stat * 0.85 end,
+		MoveSpeed = function( wep, stat ) return stat * 1.05 end,
+		IronSightsMoveSpeed = function( wep, stat ) return stat * 1.05 end,
+	}
+})
+
 TFA.Attachments.RegisterFromTable("ins2_br_supp", {
 	Name = CLIENT and "#insurgency_weapon_upgrade_silencer" or "Suppressor",
 	Description = {
 		"#insurgency_weapon_upgrade_silencer_desc",
 		TFA.AttachmentColors["+"], "Less firing noise",
-		TFA.AttachmentColors["+"], "5% less recoil",
+		TFA.AttachmentColors["+"], "Slightly Reduced Spread",
         TFA.AttachmentColors["-"], "Slower ADS speed",
 		TFA.AttachmentColors["-"], "15% less range"
 	},
@@ -45,8 +69,8 @@ TFA.Attachments.RegisterFromTable("ins2_br_supp", {
 		},
 		Primary = {
 			Range = function(wep,stat) return stat * 0.85 end,
-			KickUp = function(wep,stat) return stat * 0.95 end,
-			KickHorizontal = function(wep,stat) return stat * 0.95 end,
+			Spread = function(wep,stat) return stat * 0.9 end,
+			KickHorizontal = function(wep,stat) return stat * 1 end,
 			Sound = function(wep,stat) return wep.Primary.SilencedSound or stat end
 		},
 		IronSightTime = function(wep,stat) return stat * 1.3 end,

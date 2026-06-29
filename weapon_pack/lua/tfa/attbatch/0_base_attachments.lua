@@ -1,37 +1,82 @@
 if not TFA_ATTACHMENT_ISUPDATING then TFAUpdateAttachments(false) return end
 
 TFA.Attachments.RegisterFromTable("am_gib", {
-	Name = "Hollow Point Ammunition",
-	ShortName = "HPA",
+	Name = "High Grain Ammunition",
+	ShortName = "HGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "10% more damage",
+		TFA.Attachments.Colors["+"], "2 more damage",
 		TFA.Attachments.Colors["-"], "20% more recoil",
-		TFA.Attachments.Colors["-"], "20% more spread"
+		TFA.Attachments.Colors["-"], "-50 RPM"
 	},
 	Icon = "entities/tfa_ammo_gib.png",
 	TFADataVersion = TFA.LatestDataVersion,
 
 	WeaponTable = {
 		Primary = {
-			Damage = function( wep, stat ) return stat * 1.1 end,
-			Spread = function( wep, stat ) return stat * 1.2 end,
+			Damage = function( wep, stat ) return stat + 2 end,
+			RPM = function( wep, stat ) return stat - 50 end,
 			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.2 end,
 			KickHorizontal = function( wep, stat ) return stat * 1.2 end
 		}
 	}
 })
+
+TFA.Attachments.RegisterFromTable("am_gib_dmr", {
+	Name = "High Grain Ammunition",
+	ShortName = "HGA",
+	Description = {
+		TFA.Attachments.Colors["+"], "10 more damage",
+		TFA.Attachments.Colors["-"], "20% more recoil",
+		TFA.Attachments.Colors["-"], "-50 RPM",
+	},
+	Icon = "entities/tfa_ammo_gib.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = {
+		Primary = {
+			Damage = function( wep, stat ) return stat + 10 end,
+			RPM = function( wep, stat ) return stat - 50 end,
+			IronAccuracy = function( wep, stat ) return stat * 1 end,
+			KickUp = function( wep, stat ) return stat * 1.2 end,
+			KickHorizontal = function( wep, stat ) return stat * 1.2 end
+		}
+	}
+})
+
+TFA.Attachments.RegisterFromTable("am_gib_snpr", {
+	Name = "High Grain Ammuntion",
+	ShortName = "HGA",
+	Description = {
+		TFA.Attachments.Colors["+"], "15 more damage",
+		TFA.Attachments.Colors["-"], "20% more recoil",
+		TFA.Attachments.Colors["-"], "-25 RPM",
+	},
+	Icon = "entities/tfa_ammo_gib.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = {
+		Primary = {
+			RPM = function( wep, stat ) return stat - 25 end,
+			Damage = function( wep, stat ) return stat + 15 end,
+			IronAccuracy = function( wep, stat ) return stat * 1 end,
+			KickUp = function( wep, stat ) return stat * 1.2 end,
+			KickHorizontal = function( wep, stat ) return stat * 1.2 end
+		}
+	}
+})
+
 if not TFA_ATTACHMENT_ISUPDATING then TFAUpdateAttachments(false) return end
 
 TFA.Attachments.RegisterFromTable("am_magnum", {
-	Name = "High Grain Ammunition",
-	ShortName = "HGA",
+	Name = " AP Ammunition",
+	ShortName = "APA",
 	Description = {
 		TFA.Attachments.Colors["+"], "20% more range",
 		TFA.Attachments.Colors["-"], "5% more recoil",
 		TFA.Attachments.Colors["-"], "25% more spread"
 	},
-	Icon = "entities/tfa_ammo_magnum.png",
+	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
 
 	WeaponTable = {
@@ -49,22 +94,67 @@ TFA.Attachments.RegisterFromTable("am_match", {
 	ShortName = "LGA",
 	Description = {
 		TFA.Attachments.Colors["+"], "15% tighter spread",
-		"15% lower recoil",
-		TFA.Attachments.Colors["-"], "10% less damage", "Wider Aim Accuracy"
+		"15% lower recoil","+50 RPM",
+		TFA.Attachments.Colors["-"], "-2 Damage",
 	},
-	Icon = "entities/tfa_ammo_match.png",
+	Icon = "entities/tfa_ammo_magnum.png",
 	TFADataVersion = TFA.LatestDataVersion,
 
 	WeaponTable = {
 		Primary = {
-            Damage = function( wep, stat ) return stat * 0.9 end,
+            Damage = function( wep, stat ) return stat -2 end,
 			Spread = function( wep, stat ) return stat * 0.85 end,
-			IronAccuracy = function ( wep, stat) return stat * 1.5 end,
+			RPM = function ( wep, stat) return stat + 50 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
 			KickHorizontal = function( wep, stat ) return stat * 0.85 end
 		}
 	}
 })
+
+TFA.Attachments.RegisterFromTable("am_match_dmr", {
+	Name = "Low Grain Ammunition",
+	ShortName = "LGA",
+	Description = {
+		TFA.Attachments.Colors["+"], "15% tighter spread",
+		"15% lower recoil","+50 RPM",
+		TFA.Attachments.Colors["-"], "-10 Damage",
+	},
+	Icon = "entities/tfa_ammo_magnum.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = {
+		Primary = {
+            Damage = function( wep, stat ) return stat - 10 end,
+			Spread = function( wep, stat ) return stat * 0.85 end,
+			RPM = function ( wep, stat) return stat + 50 end,
+			KickUp = function( wep, stat ) return stat * 0.85 end,
+			KickHorizontal = function( wep, stat ) return stat * 0.85 end
+		}
+	}
+})
+
+TFA.Attachments.RegisterFromTable("am_match_snpr", {
+	Name = "Low Grain Ammunition",
+	ShortName = "LGA",
+	Description = {
+		TFA.Attachments.Colors["+"], "15% tighter spread",
+		"15% lower recoil","+25 RPM",
+		TFA.Attachments.Colors["-"], "-15 Damage",
+	},
+	Icon = "entities/tfa_ammo_magnum.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = {
+		Primary = {
+            Damage = function( wep, stat ) return stat -15 end,
+			Spread = function( wep, stat ) return stat * 0.85 end,
+			RPM = function ( wep, stat) return stat + 25 end,
+			KickUp = function( wep, stat ) return stat * 0.85 end,
+			KickHorizontal = function( wep, stat ) return stat * 0.85 end
+		}
+	}
+})
+
 TFA.Attachments.RegisterFromTable("sg_slug", {
 	Name = "Slug Ammunition",
 	ShortName = "Slug",
@@ -88,13 +178,36 @@ WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
 			["Range"] = function( wep, stat ) return stat * 2 end -- Stat functions support changing value dynamically (which is cached afterwards), SWEP.Primary_TFA contains original unchanged values
 		}
 	},
+})
 
+TFA.Attachments.RegisterFromTable("sg_bird", {
+	Name = "Birdshot",
+	ShortName = "Bird",
+	Description = {
+		TFA.Attachments.Colors["+"], "15% Less Recoil",
+		TFA.Attachments.Colors["+"], "Double Pellets",
+		TFA.Attachments.Colors["-"], "Half Damage",
+		TFA.Attachments.Colors["-"], "10% More Spread",
+	},
+	Icon = "entities/sw500_410_bore_gauge.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["NumShots"] = function( wep, stat ) return 20, true end,
+			["KickUp"] = function ( wep, stat ) return stat * 0.85 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 0.85 end,
+			["Spread"] = function( wep, stat ) return stat * 1.1 end,
+			["Damage"] = function( wep, stat ) return stat * 0.5 end, -- Stat functions support changing value dynamically (which is cached afterwards), SWEP.Primary_TFA contains original unchanged values
+		}
+	},
+})
 
 TFA.Attachments.RegisterFromTable("br_supp", {
 	Name = "Suppressor",
 	Description = {
 		TFA.Attachments.Colors["+"], "Less firing noise",
-        TFA.Attachments.Colors["+"], "5% less recoil",
+        TFA.Attachments.Colors["+"], "Slightly Reduced Spread",
 		TFA.Attachments.Colors["-"], "Slower ADS speed",
 		TFA.Attachments.Colors["-"], "15% less range"
 	},
@@ -114,8 +227,8 @@ TFA.Attachments.RegisterFromTable("br_supp", {
 			}
 		},
 		["Primary"] = {
-			["KickUp"] = function(wep,stat) return stat * 0.95 end,
-			["KickHorizontal"] = function(wep,stat) return stat * 0.95 end,
+			["Spread"] = function(wep,stat) return stat * 0.9 end,
+			["KickHorizontal"] = function(wep,stat) return stat * 1 end,
             ["Range"] = function(wep,stat) return stat * 0.85 end,
 			["Sound"] = function(wep,stat) return wep.Primary.SilencedSound or stat end
 		},
@@ -123,7 +236,7 @@ TFA.Attachments.RegisterFromTable("br_supp", {
 		["MuzzleFlashEffect"] = "tfa_muzzleflash_silenced",
 		["MuzzleAttachmentMod"] = function(wep,stat) return wep.MuzzleAttachmentSilenced or stat end
 	}
-}),
+})
 
 TFA.Attachments.RegisterFromTable("si_acog", {
 	Base = "si_rt_base",
@@ -167,7 +280,7 @@ TFA.Attachments.RegisterFromTable("si_acog", {
 		["RTReticleMaterial"] = Material("scope/gdcw_acog"),
 		["RTReticleScale"] = 1,
 	}
-}),
+})
 TFA.Attachments.RegisterFromTable("si_aimpoint", {
 	Name = "Aimpoint",
 	Description = {
@@ -202,7 +315,7 @@ TFA.Attachments.RegisterFromTable("si_aimpoint", {
 		},
 		["IronSightTime"] = function( wep, val ) return val * 1.10 end
 	}
-}),
+})
 TFA.Attachments.RegisterFromTable("si_eotech", {
 	Name = "EOTech",
 	Description = {
@@ -231,4 +344,4 @@ TFA.Attachments.RegisterFromTable("si_eotech", {
 		},
 		["IronSightTime"] = function( wep, val ) return val * 1.10 end
 	}
-})})
+})

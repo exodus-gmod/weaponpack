@@ -11,9 +11,9 @@ ATTACHMENT.WeaponTable = {
 			["Primary"] = {
                 ["KickUp"] = function( wep, stat ) return stat * 0.85 end,
                 ["KickHorizontal"] = function( wep, stat ) return stat * 0.85 end,
-				["IronSightTime"] = function( wep, stat ) return stat * 1.45 end,	
                 ["SpreadMultiplierMax"] = function( wep, stat ) return stat * 1 end
-        }
+        },
+		["IronSightTime"] = function( wep, stat ) return stat * 1.25 end,	
 	}
 	
 if not TFA_ATTACHMENT_ISUPDATING then

@@ -88,20 +88,10 @@ SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Exam
 --Range Related
 SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
 SWEP.Primary.RangeFalloff = 1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
-SWEP.Primary.RangeFalloffLUT = {
-    bezier     = true,
-    
-    range_func = "quintic",
-    units      = "meters",
-    
-    lut = {
-        {range = 0, damage = 1},
-        {range = 20, damage = 1},
-        {range = 25, damage = 1},
-        {range = 30, damage = 0.75},
-        {range = 35, damage = 0.5},
-    }
-}
+SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
+SWEP.Primary.FalloffByMeter     = 0.35 -- How much damage points will bullet loose when travel
+SWEP.Primary.MinRangeStartFalloff = 20 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MaxFalloff         = 3 -- Maximal amount of damage to be lost
 --Penetration Related
 SWEP.MaxPenetrationCounter = 0 --The maximum number of ricochets.  To prevent stack overflows.
 --Misc
@@ -335,8 +325,8 @@ SWEP.WElements = {
 }
 SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },
-	[2] = { offset = { 0, 0 }, atts = { "sg_slug" }, order = 3 },
-	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }, order = 2 },
+	[2] = { atts = { "sg_slug", "sg_bird" }, order = 3 },
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	--[MDL_ATTACHMENT] = = { offset = { 0, 0 }, atts = { "si_eotech" }, sel = 0 }
 	--Sorry for kind-of copying your syntax, Spy, but it makes it easier on the users and you did an excellent job.  The internal code's all mine anyways.
 	--sel allows you to have an attachment pre-selected, and is used internally by the base to show which attachment is selected in each category.

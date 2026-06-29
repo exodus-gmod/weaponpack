@@ -80,20 +80,11 @@ SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Exam
 --Penetration Related
 SWEP.MaxPenetrationCounter = 0 --The maximum number of ricochets.  To prevent stack overflows.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.RangeFalloffLUT = {
-    bezier     = true,
-    
-    range_func = "quintic",
-    units      = "meters",
-    
-    lut = {
-        {range = 0, damage = 1},
-        {range = 20, damage = 1},
-        {range = 25, damage = 1},
-        {range = 30, damage = 0.8},
-        {range = 35, damage = 0.65},
-    }
-}
+SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
+SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
+SWEP.Primary.MinRangeStartFalloff = 20 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MaxFalloff         = 10 -- Maximal amount of damage to be lost
+
 SWEP.IronSightTime = 0.15
 SWEP.MoveSpeed = 1 --Multiply the player's movespeed by this.
 SWEP.IronSightsMoveSpeed = 0.95
@@ -166,7 +157,7 @@ SWEP.LuaShellEffect = "PistolShellEject" --The effect used for shell ejection; D
 
 SWEP.Attachments = {
                         [2] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
-						[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }, order = 3 },
+						[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
                         [4] = { offset = { 0, 0 }, atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }, order = 4 },
                         [5] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 5 },
                         [6] = { atts = { "ins2_p320_black", "ins2_p320_classic" }, order = 6 },

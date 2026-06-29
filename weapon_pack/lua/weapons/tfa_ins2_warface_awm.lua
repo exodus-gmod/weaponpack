@@ -104,20 +104,10 @@ SWEP.Primary.SpreadRecovery      = 0                        -- How much the spre
 -- Range Related
 SWEP.Primary.Range               = 1000     -- The distance the bullet can travel in source units.  Set to -1 to autodetect based on damage/rpm.
 SWEP.Primary.RangeFalloff        = 1                       -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
-SWEP.Primary.RangeFalloffLUT = {
-    bezier     = true,
-    
-    range_func = "quintic",
-    units      = "meters",
-    
-    lut = {
-        {range = 0, damage = 1},
-        {range = 85, damage = 1},
-        {range = 90, damage = 1},
-        {range = 100, damage = 0.95},
-        {range = 125, damage = 0.9},
-    }
-}
+SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
+SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
+SWEP.Primary.MinRangeStartFalloff = 100 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MaxFalloff         = 15 -- Maximal amount of damage to be lost
 
 
 -- Penetration Related
@@ -354,10 +344,10 @@ SWEP.InspectAng   = Vector(24.622, 45, 15.477)
 
 SWEP.Attachments = {
 	[1] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_mosin", "ins2_si_c79", "ins2_si_po4x", "ins2_si_mx4" } },
-	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }},
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
 	[2] = { atts = { "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_supp" } },
 	[4] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight" } },
-	[5] = { atts = { "am_match", "am_magnum", "am_gib", "tfa_mb_penrnd" } },
+	[5] = { atts = { "am_match_snpr", "am_magnum", "am_gib_snpr", "tfa_mb_penrnd" } },
 }
 
 SWEP.AttachmentDependencies = {	

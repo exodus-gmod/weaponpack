@@ -106,20 +106,10 @@ SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Exam
 --Range Related
 SWEP.Primary.Range = 1000
 SWEP.Primary.RangeFalloff = 1
-SWEP.Primary.RangeFalloffLUT = {
-    bezier     = true,
-    
-    range_func = "quintic",
-    units      = "meters",
-    
-    lut = {
-        {range = 0, damage = 1},
-        {range = 25, damage = 1},
-        {range = 30, damage = 1},
-        {range = 35, damage = 0.8},
-        {range = 40, damage = 0.65},
-    }
-}
+SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
+SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
+SWEP.Primary.MinRangeStartFalloff = 35 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MaxFalloff         = 6 -- Maximal amount of damage to be lost
 --Misc
 SWEP.IronRecoilMultiplier = 1 --Multiply recoil by this factor when we're in ironsights.  This is proportional, not inversely.
 SWEP.CrouchAccuracyMultiplier = 1 --Less is more.  Accuracy * 0.5 = Twice as accurate, Accuracy * 0.1 = Ten times as accurate
@@ -293,7 +283,7 @@ SWEP.WElements = {
 
 SWEP.Attachments = {
 	[1] = { atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
-	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }, order = 3 },
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[2] = { atts = { "am_match", "am_magnum", "am_gib" }, order = 5 },
 	[9] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" }, order = 1 },
 	[8] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }, order = 4 }

@@ -58,20 +58,10 @@ SWEP.DisableChambering = false -- Disable round-in-the-chamber
 SWEP.Primary.Automatic = true -- Automatic/Semi Auto
 SWEP.SelectiveFire		= false
 SWEP.DisableBurstFire = false
-SWEP.Primary.RangeFalloffLUT = {
-    bezier     = true,
-    
-    range_func = "quintic",
-    units      = "meters",
-    
-    lut = {
-        {range = 0, damage = 1},
-        {range = 35, damage = 1},
-        {range = 40, damage = 1},
-        {range = 45, damage = 0.8},
-        {range = 50, damage = 0.65},
-    }
-}
+SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
+SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
+SWEP.Primary.MinRangeStartFalloff = 40 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MaxFalloff         = 10 -- Maximal amount of damage to be lost
 SWEP.Secondary.IronFOV			= 65		-- How much you 'zoom' in. Less is more! 	
 
 SWEP.data 				= {}				--The starting firemode
@@ -203,7 +193,7 @@ SWEP.IronAnimation = {
 SWEP.Attachments = {
 	[1] = { atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
 	[2] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" }, order = 1},
-	[6] = { offset = { 0, 0 }, atts = { "ins2_br_heavy" }, order = 3 },
+	[6] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[4] = { atts = { "ins2_fg_grip" }, order = 4},
 	[5] = { atts = { "am_match", "am_magnum", "am_gib" }, order = 5 },
 }
