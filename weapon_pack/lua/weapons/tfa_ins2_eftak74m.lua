@@ -27,7 +27,7 @@ SWEP.Primary.LoopSoundTail = Sound("TFA_INS2.EFTAK74.LOOP.TAIL.1") -- Loop end/t
 SWEP.Primary.LoopSoundTailSilenced = Sound("TFA_INS2.EFTAK74.LOOP.TAIL.2") -- Loop end/tail sound, silenced
 
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 37 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 38 -- Damage, in standard damage points.
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
