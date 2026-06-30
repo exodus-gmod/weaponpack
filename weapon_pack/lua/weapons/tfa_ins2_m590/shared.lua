@@ -403,7 +403,7 @@ SWEP.WElements = {
 }
 SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
-	[2] = { offset = { 0, 0 }, atts = { "sg_slug", "sg_bird" }, order = 6 },
+	[2] = { offset = { 0, 0 }, atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 6 },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[7] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" }, order = 1 },
 	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip" }, order = 4 },

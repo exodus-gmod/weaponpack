@@ -189,7 +189,7 @@ SWEP.Attachments = {
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	[2] = { atts = { "ins2_fg_grip" }, order = 3 },
 	[4] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight" }, order = 4 },
-	[5] = { atts = { "sg_slug", "sg_bird" }, order = 5 },
+	[5] = { atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 5 },
 }
 
 SWEP.LaserSightModAttachment = 1

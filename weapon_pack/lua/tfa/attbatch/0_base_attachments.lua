@@ -72,23 +72,72 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 	Name = " AP Ammunition",
 	ShortName = "APA",
 	Description = {
-		TFA.Attachments.Colors["+"], "20% more range",
+		TFA.Attachments.Colors["+"], "Increased Range",
+		TFA.Attachments.Colors["+"], "Improved Fall Off",
 		TFA.Attachments.Colors["-"], "5% more recoil",
 		TFA.Attachments.Colors["-"], "25% more spread"
 	},
 	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
 
-	WeaponTable = {
-		Primary = {
-			Range = function( wep, stat ) return stat * 1.2 end,
-			Spread = function( wep, stat ) return stat * 1.25 end,
-			IronAccuracy = function( wep, stat ) return stat * 1 end,
-			KickUp = function( wep, stat ) return stat * 1.05 end,
-			KickHorizontal = function( wep, stat ) return stat * 1.05 end
+	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
+			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["MinRangeStartFalloff"] = function(wep, stat) return stat + 10 end,
+			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
 		}
-	}
+	},
 })
+
+TFA.Attachments.RegisterFromTable("am_magnum_dmr", {
+	Name = " AP Ammunition",
+	ShortName = "APA",
+	Description = {
+		TFA.Attachments.Colors["+"], "Increased Range",
+		TFA.Attachments.Colors["+"], "Improved Fall Off",
+		TFA.Attachments.Colors["-"], "5% more recoil",
+		TFA.Attachments.Colors["-"], "25% more spread"
+	},
+	Icon = "entities/tfa_ammo_match.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
+			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["MinRangeStartFalloff"] = function(wep, stat) return stat + 15 end,
+			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
+		}
+	},
+})
+
+TFA.Attachments.RegisterFromTable("am_magnum_snpr", {
+	Name = " AP Ammunition",
+	ShortName = "APA",
+	Description = {
+		TFA.Attachments.Colors["+"], "Increased Range",
+		TFA.Attachments.Colors["+"], "Improved Fall Off",
+		TFA.Attachments.Colors["-"], "5% more recoil",
+		TFA.Attachments.Colors["-"], "25% more spread"
+	},
+	Icon = "entities/tfa_ammo_match.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
+			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["MinRangeStartFalloff"] = function(wep, stat) return stat + 20 end,
+			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
+			["MaxFalloff"] = function(wep, stat) return 12 end,
+		}
+	},
+})
+
 TFA.Attachments.RegisterFromTable("am_match", {
 	Name = "Low Grain Ammunition",
 	ShortName = "LGA",
@@ -175,19 +224,21 @@ WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
 			["KickUp"] = function ( wep, stat ) return stat * 1.15 end,
 			["KickHorizontal"] = function ( wep, stat ) return stat * 1.15 end,
 			["IronAccuracy"] = function( wep, stat ) return math.max( stat - 0.025 ) end,
-			["Range"] = function( wep, stat ) return stat * 2 end -- Stat functions support changing value dynamically (which is cached afterwards), SWEP.Primary_TFA contains original unchanged values
+			["MaxFalloff"] = function( wep, stat ) return 15 end,
+			["MinRangeStartFalloff"] = function(wep, stat) return 40 end,
+			["FalloffByMeter"] = function(wep, stat) return 0.5 end,
 		}
 	},
 })
 
 TFA.Attachments.RegisterFromTable("sg_bird", {
-	Name = "Birdshot",
+	Name = "Birdshot Ammunition",
 	ShortName = "Bird",
 	Description = {
 		TFA.Attachments.Colors["+"], "15% Less Recoil",
 		TFA.Attachments.Colors["+"], "Double Pellets",
-		TFA.Attachments.Colors["-"], "Half Damage",
-		TFA.Attachments.Colors["-"], "10% More Spread",
+		TFA.Attachments.Colors["-"], "30% Less Damage",
+		TFA.Attachments.Colors["-"], "20% More Spread",
 	},
 	Icon = "entities/sw500_410_bore_gauge.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -197,8 +248,33 @@ WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
 			["NumShots"] = function( wep, stat ) return 20, true end,
 			["KickUp"] = function ( wep, stat ) return stat * 0.85 end,
 			["KickHorizontal"] = function ( wep, stat ) return stat * 0.85 end,
-			["Spread"] = function( wep, stat ) return stat * 1.1 end,
-			["Damage"] = function( wep, stat ) return stat * 0.5 end, -- Stat functions support changing value dynamically (which is cached afterwards), SWEP.Primary_TFA contains original unchanged values
+			["Spread"] = function( wep, stat ) return stat * 1.2 end,
+			["Damage"] = function( wep, stat ) return stat * 0.7 end,
+			["MaxFalloff"] = function(wep, stat) return stat * 0.5 end,
+		}
+	},
+})
+
+TFA.Attachments.RegisterFromTable("sg_flech", {
+	Name = "Flechette Ammunition",
+	ShortName = "flch",
+	Description = {
+		TFA.Attachments.Colors["+"], "Improved Aim Accuracy",
+		TFA.Attachments.Colors["+"], "Increased Damage",
+		TFA.Attachments.Colors["-"], "-4 Pellets",
+		TFA.Attachments.Colors["-"], "10% More Recoil",
+	},
+	Icon = "entities/flechetterounds.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+		["Damage"] = function( wep, stat ) return stat * 1.45 end,
+			["NumShots"] = function( wep, stat ) return 6, true end,
+			["KickUp"] = function ( wep, stat ) return stat * 1.1 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.1 end,
+			["IronAccuracy"] = function( wep, stat ) return math.max( stat - 0.01 ) end,
+			["Range"] = function( wep, stat ) return stat * 1 end -- Stat functions support changing value dynamically (which is cached afterwards), SWEP.Primary_TFA contains original unchanged values
 		}
 	},
 })

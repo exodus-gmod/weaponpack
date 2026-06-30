@@ -338,7 +338,7 @@ SWEP.Attachments = {
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[6] = { offset = { 0, 0 }, atts = { "ins2_ub_laser" }, order = 5 },
 	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip" }, order = 4 },
-	[2] = { offset = { 0, 0 }, atts = { "sg_slug", "sg_bird" }, order = 6 },
+	[2] = { offset = { 0, 0 }, atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 6 },
 }
 SWEP.AttachmentDependencies = {}--{["si_acog"] = {"bg_rail"}}
 SWEP.AttachmentExclusions = {}--{ ["si_iron"] = {"bg_heatshield"} }

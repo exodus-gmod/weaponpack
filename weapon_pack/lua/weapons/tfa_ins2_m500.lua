@@ -370,7 +370,7 @@ SWEP.Attachments = {
 	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[9] = { atts = { "ins2_fg_grip" }, order = 4 },
 	[6] = { atts = { "ins2_ub_laser" }, order = 5 },
-	[3] = { atts = { "sg_slug", "sg_bird" }, order = 6 },
+	[3] = { atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 6 },
 }
 SWEP.MuzzleAttachmentSilenced = 2
 SWEP.AttachmentDependencies = {}

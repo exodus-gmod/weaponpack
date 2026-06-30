@@ -196,7 +196,7 @@ SWEP.SprintAnimation = {
 }
 SWEP.Attachments={[1]={atts={"re9_msbg500_aim"}, order = 1 },
 		  [2]={atts={ "r6s_muzzle_2", "r6s_flashhider_2"}, order = 2},
-		  [3] = { atts = { "sg_slug", "sg_bird" }, order = 4 },
+		  [3] = { atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 4 },
           [4] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 }
 SWEP.MuzzleAttachment = "muzzle"

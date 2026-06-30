@@ -93,7 +93,7 @@ SWEP.Primary.KickHorizontal      = 0.5                       -- This is the maxi
 SWEP.Primary.StaticRecoilFactor  = 1                     -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 
 -- Firing Cone Related
-SWEP.Primary.Spread              = .15                       -- This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.Spread              = .05                       -- This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
 SWEP.Primary.IronAccuracy        = .00001                     -- Ironsight accuracy, should be the same for shotguns
 
 -- Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
@@ -371,7 +371,7 @@ SWEP.Attachments = {
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
 	[5] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" } },
 	[4] = { atts = { "ins2_fg_grip" } },
-	[6] = { atts = { "am_match", "am_magnum", "am_gib_snpr", "tfa_mb_penrnd" } },
+	[6] = { atts = { "am_match", "am_magnum_snpr", "am_gib_snpr", "tfa_mb_penrnd" } },
 }
 
 SWEP.AttachmentDependencies = {	

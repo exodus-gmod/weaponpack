@@ -322,7 +322,7 @@ SWEP.VElements = nil
 SWEP.WElements = nil --Export from SWEP Creation Kit.  For each item that can/will be toggled, set active=false in its individual table
 
 SWEP.Attachments = {
-	[2] = { offset = { 0, 0 }, atts = { "am_match_dmr", "am_magnum", "am_gib_dmr" }, order = 4 },
+	[2] = { offset = { 0, 0 }, atts = { "am_match_dmr", "am_magnum_dmr", "am_gib_dmr" }, order = 4 },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	[4] = { offset = { 0, 0 }, atts = { "ins2_mag_speedloader" }, order = 3 },
 	[5] = { offset = { 0, 0 }, atts = { "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },

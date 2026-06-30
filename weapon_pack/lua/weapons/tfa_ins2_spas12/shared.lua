@@ -325,7 +325,7 @@ SWEP.WElements = {
 }
 SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },
-	[2] = { atts = { "sg_slug", "sg_bird" }, order = 3 },
+	[2] = { atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 3 },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	--[MDL_ATTACHMENT] = = { offset = { 0, 0 }, atts = { "si_eotech" }, sel = 0 }
 	--Sorry for kind-of copying your syntax, Spy, but it makes it easier on the users and you did an excellent job.  The internal code's all mine anyways.

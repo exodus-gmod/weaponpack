@@ -313,7 +313,7 @@ SWEP.Attachments = {
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
 	[5] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" } },
 	[4] = { atts = { "ins2_mag_speedloader" } },
-	[6] = { atts = { "am_match_dmr", "am_magnum", "am_gib_dmr"} },
+	[6] = { atts = { "am_match_dmr", "am_magnum_dmr", "am_gib_dmr"} },
 }
 
 SWEP.AttachmentDependencies = {}

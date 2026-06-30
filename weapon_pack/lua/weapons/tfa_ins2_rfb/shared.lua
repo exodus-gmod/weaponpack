@@ -78,7 +78,7 @@ SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
 SWEP.Primary.KickHorizontal = 0.15 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
-SWEP.Primary.Spread = .15 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.Spread = .04 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
 SWEP.Primary.IronAccuracy = .00001 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
 SWEP.Primary.SpreadMultiplierMax = 0--How far the spread can expand when you shoot. Example val: 2.5
@@ -378,7 +378,7 @@ SWEP.WElements = {
 
 SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
-	[2] = { offset = { 0, 0 }, atts = { "am_match_dmr", "am_magnum", "am_gib_dmr" }, order = 6 },
+	[2] = { offset = { 0, 0 }, atts = { "am_match_dmr", "am_magnum_dmr", "am_gib_dmr" }, order = 6 },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[7] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x", "ins2_si_mosin", "ins2_si_mx4" }, order = 1 },
 	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip" }, order = 4 },

@@ -227,9 +227,9 @@ SWEP.WElements = {
 SWEP.Attachments = {
 	[2] = { atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" } },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
-	[1] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds" --[[, "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x"]] } },
+	[1] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds" } },
 	[4] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight" } },
-	[6] = { atts = { "sg_slug", "sg_bird" } },
+	[6] = { atts = { "sg_slug", "sg_bird", "sg_flech" } },
 }
 
 SWEP.LaserSightModAttachment = 1

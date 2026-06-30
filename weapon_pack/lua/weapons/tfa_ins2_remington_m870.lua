@@ -108,7 +108,7 @@ SWEP.Primary.StaticRecoilFactor    = 1                      -- Amount of recoil 
 
 -- Firing Cone Related
 SWEP.Primary.Spread                = .025                      -- This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
-SWEP.Primary.IronAccuracy          = .00001                       -- Ironsight accuracy, should be the same for shotguns
+SWEP.Primary.IronAccuracy          = .025                       -- Ironsight accuracy, should be the same for shotguns
 
 -- Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
 SWEP.Primary.SpreadMultiplierMax   = 0                       -- How far the spread can expand when you shoot. Example val: 2.5
@@ -409,7 +409,7 @@ SWEP.Attachments = {
 	[6] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" } },
 	[4] = { atts = { "remington_870_foregrip" } },
 	[7] = { atts = {  "remington_870_nostock" } },
-	[8] = { atts = { "sg_slug", "sg_bird" } },
+	[8] = { atts = { "sg_slug", "sg_bird", "sg_flech" } },
 }
 
 SWEP.AttachmentDependencies = {	

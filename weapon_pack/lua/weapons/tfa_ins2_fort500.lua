@@ -291,7 +291,7 @@ SWEP.Attachments = {
 	[4] = { offset = { 0, 0 }, atts = { "fas2tfa_ks23_short", "fas2tfa_ks23_7rnd" }, order = 4 },
 	[3] = { offset = { 0, 0 }, atts = { "fas2tfa_ks23_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
 	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
-	[5] = { atts = { "sg_slug", "sg_bird" }, order = 5 },
+	[5] = { atts = { "sg_slug", "sg_bird", "sg_flech" }, order = 5 },
 }
 
 SWEP.MuzzleAttachmentSilenced = 1
