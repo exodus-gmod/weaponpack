@@ -87,7 +87,7 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 			["Spread"] = function( wep, stat ) return stat * 1.25 end,
 			["MinRangeStartFalloff"] = function(wep, stat) return stat + 10 end,
 			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
-		}
+		},
 	},
 })
 

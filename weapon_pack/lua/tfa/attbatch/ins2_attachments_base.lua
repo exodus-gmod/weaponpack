@@ -11,16 +11,16 @@ TFA.Attachments.RegisterFromTable("ins2_br_heavy", {
 	ShortName = "HBR",
 
 	WeaponTable = {
-		Primary = {
-			KickUp = function( wep, stat ) return stat * 0.9 end,
-			KickHorizontal = function( wep, stat ) return stat * 0.9 end,
+		["Primary"] = {
+			["KickUp"] = function( wep, stat ) return stat * 0.9 end,
+			["KickHorizontal"] = function( wep, stat ) return stat * 0.9 end,
 			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 1.15 end,
-			Damage = function ( wep, stat) return stat * 1 end,
+			["Damage"] = function ( wep, stat) return stat * 1 end,
 		},
-		IronSightTime = function ( wep, stat) return stat * 1.4 end,
-		MoveSpeed = function( wep, stat ) return stat * 0.95 end,
-		IronSightsMoveSpeed = function( wep, stat ) return stat * 0.95 end,
-	}
+		["IronSightTime"] = function ( wep, stat) return stat * 1.4 end,
+		["MoveSpeed"] = function( wep, stat ) return stat * 0.95 end,
+		["IronSightsMoveSpeed"] = function( wep, stat ) return stat * 0.95 end,
+	},
 })
 
 TFA.Attachments.RegisterFromTable("ins2_br_light", {
@@ -34,16 +34,16 @@ TFA.Attachments.RegisterFromTable("ins2_br_light", {
 	ShortName = "LBR",
 
 	WeaponTable = {
-		Primary = {
-			KickUp = function( wep, stat ) return stat * 1.1 end,
-			KickHorizontal = function( wep, stat ) return stat * 1.1 end,
+		["Primary"] = {
+			["KickUp"] = function( wep, stat ) return stat * 1.1 end,
+			["KickHorizontal"] = function( wep, stat ) return stat * 1.1 end,
 			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 0.9 end,
-			Damage = function ( wep, stat) return stat * 1 end,
+			["Damage"] = function ( wep, stat) return stat * 1 end,
 		},
-		IronSightTime = function ( wep, stat) return stat * 0.85 end,
-		MoveSpeed = function( wep, stat ) return stat * 1.05 end,
-		IronSightsMoveSpeed = function( wep, stat ) return stat * 1.05 end,
-	}
+		["IronSightTime"] = function ( wep, stat) return stat * 0.85 end,
+		["MoveSpeed"] = function( wep, stat ) return stat * 1.05 end,
+		["IronSightsMoveSpeed"] = function( wep, stat ) return stat * 1.05 end,
+	},
 })
 
 TFA.Attachments.RegisterFromTable("ins2_br_supp", {
@@ -67,16 +67,16 @@ TFA.Attachments.RegisterFromTable("ins2_br_supp", {
 			suppressor = { active = true },
 			standard_barrel = { active = false },
 		},
-		Primary = {
+		["Primary"] = {
 			["MinRangeStartFalloff"] = function(wep,stat) return stat * 0.85 end,
-			Spread = function(wep,stat) return stat * 0.9 end,
-			KickHorizontal = function(wep,stat) return stat * 1 end,
-			Sound = function(wep,stat) return wep.Primary.SilencedSound or stat end
+			["Spread"] = function(wep,stat) return stat * 0.9 end,
+			["KickHorizontal"] = function(wep,stat) return stat * 1 end,
+			["Sound"] = function(wep,stat) return wep.Primary.SilencedSound or stat end
 		},
-		IronSightTime = function(wep,stat) return stat * 1.3 end,
-		MuzzleFlashEffect = "tfa_muzzleflash_silenced",
-		MuzzleAttachmentMod = function(wep,stat) return wep.MuzzleAttachmentSilenced or stat end,
-		Silenced = true,
+		["IronSightTime"] = function(wep,stat) return stat * 1.3 end,
+		["MuzzleFlashEffect"] = "tfa_muzzleflash_silenced",
+		["MuzzleAttachmentMod"] = function(wep,stat) return wep.MuzzleAttachmentSilenced or stat end,
+		["Silenced"] = true,
 	},
 
 	Attach = function(self, wep)
@@ -312,4 +312,52 @@ TFA.Attachments.RegisterFromTable("ins2_ub_laser", {
 			elem.translucent = true
 		end
 	end
+})
+
+TFA.Attachments.RegisterFromTable("ins2_stock_ergo", {
+	Name = "Ergonomic Stock",
+	ShortName = "ERGSK",
+	Description = {
+		TFA.Attachments.Colors["+"], "Faster ADS Speed",
+		TFA.Attachments.Colors["+"], "Faster Movement Speed",
+		TFA.Attachments.Colors["-"], "10% more recoil",
+		TFA.Attachments.Colors["-"], "15% more spread"
+	},
+	Icon = "entities/ar15_att_moe_s.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["KickUp"] = function ( wep, stat ) return stat * 1.1 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.1 end,
+			["Spread"] = function( wep, stat ) return stat * 1.15 end,
+		},
+		["IronSightTime"] = function(wep, stat) return stat * 0.8 end,
+		["MoveSpeed"] = function(wep, stat) return stat * 1.05 end,
+		["IronSightsMoveSpeed"] = function(wep, stat) return stat * 1.05 end,
+	},
+})
+
+TFA.Attachments.RegisterFromTable("ins2_stock_recoil", {
+	Name = "Heavy Stock",
+	ShortName = "HVYSK",
+	Description = {
+		TFA.Attachments.Colors["+"], "Reduced Recoil by 15%",
+		TFA.Attachments.Colors["+"], "Reduced Spread by 10%",
+		TFA.Attachments.Colors["-"], "Slower ADS Speed",
+		TFA.Attachments.Colors["-"], "Slower Movement Speed"
+	},
+	Icon = "entities/ar15_att_m16_s.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["KickUp"] = function ( wep, stat ) return stat * 0.85 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 0.85 end,
+			["Spread"] = function( wep, stat ) return stat * 0.9 end,
+		},
+		["IronSightTime"] = function(wep, stat) return stat * 1.4 end,
+		["MoveSpeed"] = function(wep, stat) return stat * 0.95 end,
+		["IronSightsMoveSpeed"] = function(wep, stat) return stat * 0.95 end,
+	},
 })
