@@ -305,7 +305,7 @@ TFA.Attachments.RegisterFromTable("br_supp", {
 		["Primary"] = {
 			["Spread"] = function(wep,stat) return stat * 0.9 end,
 			["KickHorizontal"] = function(wep,stat) return stat * 1 end,
-            ["Range"] = function(wep,stat) return stat * 0.85 end,
+            ["MinRangeStartFalloff"] = function(wep,stat) return stat * 0.85 end,
 			["Sound"] = function(wep,stat) return wep.Primary.SilencedSound or stat end
 		},
 		["IronSightTime"] = function(wep,stat) return stat * 1.3 end,

@@ -14,7 +14,7 @@ TFA.Attachments.RegisterFromTable("ins2_br_heavy", {
 		Primary = {
 			KickUp = function( wep, stat ) return stat * 0.9 end,
 			KickHorizontal = function( wep, stat ) return stat * 0.9 end,
-			Range = function ( wep, stat) return stat * 1.15 end,
+			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 1.15 end,
 			Damage = function ( wep, stat) return stat * 1 end,
 		},
 		IronSightTime = function ( wep, stat) return stat * 1.4 end,
@@ -37,7 +37,7 @@ TFA.Attachments.RegisterFromTable("ins2_br_light", {
 		Primary = {
 			KickUp = function( wep, stat ) return stat * 1.1 end,
 			KickHorizontal = function( wep, stat ) return stat * 1.1 end,
-			Range = function ( wep, stat) return stat * 0.9 end,
+			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 0.9 end,
 			Damage = function ( wep, stat) return stat * 1 end,
 		},
 		IronSightTime = function ( wep, stat) return stat * 0.85 end,
@@ -68,7 +68,7 @@ TFA.Attachments.RegisterFromTable("ins2_br_supp", {
 			standard_barrel = { active = false },
 		},
 		Primary = {
-			Range = function(wep,stat) return stat * 0.85 end,
+			["MinRangeStartFalloff"] = function(wep,stat) return stat * 0.85 end,
 			Spread = function(wep,stat) return stat * 0.9 end,
 			KickHorizontal = function(wep,stat) return stat * 1 end,
 			Sound = function(wep,stat) return wep.Primary.SilencedSound or stat end
