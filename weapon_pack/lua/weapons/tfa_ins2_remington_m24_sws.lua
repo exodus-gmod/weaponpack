@@ -100,7 +100,7 @@ SWEP.Primary.KickHorizontal      = 0.53                       -- This is the max
 SWEP.Primary.StaticRecoilFactor  = 1                      -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 
 -- Firing Cone Related
-SWEP.Primary.Spread              = .05                      -- This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.Spread              = .085                      -- This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
 SWEP.Primary.IronAccuracy        = .00001                      -- Ironsight accuracy, should be the same for shotguns
 
 -- Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.

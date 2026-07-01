@@ -35,7 +35,7 @@ ATTACHMENT.WeaponTable = {
 		["IronAccuracy"] = function(wep,stat) return stat * 1.1 end,
 		["Spread"] = function(wep,stat) return stat * 1.1 end,
 		
-		["Range"] = function(wep,stat) return stat * 0.85 end,
+		["MinRangeStartFalloff"] = function(wep,stat) return stat * 0.85 end,
 
 		["ClipSize"] = function(wep,stat) return stat - 2 end,
 	},

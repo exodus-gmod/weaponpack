@@ -24,7 +24,7 @@ ATTACHMENT.WeaponTable = {
 		["MoveSpeed"] = function(wep, stat) return stat * 0.95 end,
 		["IronSightsMoveSpeed"] = function(wep, stat) return stat * 0.95 end,
 
-		["Range"] = function(wep, stat) return stat * 1.2 end,
+		["MinRangeStartFalloff"] = function(wep, stat) return stat * 1.2 end,
 	},
 	["IronSightTime"] = function(wep, stat) return stat * 1.2 end,
 	["MuzzleAttachmentMod"] = function(wep, stat) return wep.MuzzleAttachmentExt or stat end,

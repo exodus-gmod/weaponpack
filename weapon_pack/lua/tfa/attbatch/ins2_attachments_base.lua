@@ -284,8 +284,8 @@ TFA.Attachments.RegisterFromTable("ins2_ub_laser", {
 	Name = CLIENT and "#insurgency_weapon_upgrade_lasersight" or "Laser",
 	Description = {
 		"#insurgency_weapon_upgrade_lasersight_desc",
-		TFA.AttachmentColors["+"], "Significantly lowers spread",
-		TFA.AttachmentColors["-"], "Significantly raises iron sight accuracy"
+		TFA.AttachmentColors["+"], "Slightly lowers spread", "Improves ADS Speed",
+		TFA.AttachmentColors["-"], "Visible Laser", "Slows down ADS Movement"
 	},
 	Icon = "entities/ins2_att_ub_laser.png",
 	ShortName = "LASR",
@@ -300,16 +300,17 @@ TFA.Attachments.RegisterFromTable("ins2_ub_laser", {
 			laser_beam = { active = true },
 		},
 		Primary = {
-			Spread = function(wep,stat) return stat - 0.025 end,
-			IronAccuracy = function(wep,stat) return stat + 0.025 end
+			Spread = function(wep,stat) return stat - 0.01 end,
 		},
 		LaserSightAttachment = function(wep,stat) return wep.LaserSightModAttachment end,
+		IronSightTime = function(wep, stat) return stat * 0.85 end,
+		IronSightsMoveSpeed = function (wep, stat) return stat * 0.95 end,
 		LaserSightAttachmentWorld = function(wep,stat) return wep.LaserSightModAttachmentWorld or wep.LaserSightModAttachment end
 	},
 	Attach = function(self, wep)
 		local elem = wep:GetStatRaw("VElements.laser_beam")
 		if elem then
-			elem.translucent = true
+			elem.translucent = false
 		end
 	end
 })

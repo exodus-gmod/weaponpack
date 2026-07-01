@@ -4,7 +4,7 @@ TFA.Attachments.RegisterFromTable("am_gib", {
 	Name = "High Grain Ammunition",
 	ShortName = "HGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "2 more damage",
+		TFA.Attachments.Colors["+"], "3 more damage",
 		TFA.Attachments.Colors["-"], "20% more recoil",
 		TFA.Attachments.Colors["-"], "-50 RPM"
 	},
@@ -26,7 +26,7 @@ TFA.Attachments.RegisterFromTable("am_gib_dmr", {
 	Name = "High Grain Ammunition",
 	ShortName = "HGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "10 more damage",
+		TFA.Attachments.Colors["+"], "12 more damage",
 		TFA.Attachments.Colors["-"], "20% more recoil",
 		TFA.Attachments.Colors["-"], "-50 RPM",
 	},
@@ -48,7 +48,7 @@ TFA.Attachments.RegisterFromTable("am_gib_snpr", {
 	Name = "High Grain Ammuntion",
 	ShortName = "HGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "15 more damage",
+		TFA.Attachments.Colors["+"], "18 more damage",
 		TFA.Attachments.Colors["-"], "20% more recoil",
 		TFA.Attachments.Colors["-"], "-25 RPM",
 	},
@@ -72,33 +72,10 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 	Name = " AP Ammunition",
 	ShortName = "APA",
 	Description = {
-		TFA.Attachments.Colors["+"], "Increased Range",
+		TFA.Attachments.Colors["+"], "Increased Range by 15m",
 		TFA.Attachments.Colors["+"], "Improved Fall Off",
 		TFA.Attachments.Colors["-"], "5% more recoil",
-		TFA.Attachments.Colors["-"], "25% more spread"
-	},
-	Icon = "entities/tfa_ammo_match.png",
-	TFADataVersion = TFA.LatestDataVersion,
-
-	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
-		["Primary"] = {
-			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
-			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
-			["Spread"] = function( wep, stat ) return stat * 1.25 end,
-			["MinRangeStartFalloff"] = function(wep, stat) return stat + 10 end,
-			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
-		},
-	},
-})
-
-TFA.Attachments.RegisterFromTable("am_magnum_dmr", {
-	Name = " AP Ammunition",
-	ShortName = "APA",
-	Description = {
-		TFA.Attachments.Colors["+"], "Increased Range",
-		TFA.Attachments.Colors["+"], "Improved Fall Off",
-		TFA.Attachments.Colors["-"], "5% more recoil",
-		TFA.Attachments.Colors["-"], "25% more spread"
+		TFA.Attachments.Colors["-"], "15% more spread"
 	},
 	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -110,18 +87,18 @@ TFA.Attachments.RegisterFromTable("am_magnum_dmr", {
 			["Spread"] = function( wep, stat ) return stat * 1.25 end,
 			["MinRangeStartFalloff"] = function(wep, stat) return stat + 15 end,
 			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
-		}
+		},
 	},
 })
 
-TFA.Attachments.RegisterFromTable("am_magnum_snpr", {
+TFA.Attachments.RegisterFromTable("am_magnum_dmr", {
 	Name = " AP Ammunition",
 	ShortName = "APA",
 	Description = {
-		TFA.Attachments.Colors["+"], "Increased Range",
+		TFA.Attachments.Colors["+"], "Increased Range by 20m",
 		TFA.Attachments.Colors["+"], "Improved Fall Off",
 		TFA.Attachments.Colors["-"], "5% more recoil",
-		TFA.Attachments.Colors["-"], "25% more spread"
+		TFA.Attachments.Colors["-"], "15% more spread"
 	},
 	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -133,6 +110,29 @@ TFA.Attachments.RegisterFromTable("am_magnum_snpr", {
 			["Spread"] = function( wep, stat ) return stat * 1.25 end,
 			["MinRangeStartFalloff"] = function(wep, stat) return stat + 20 end,
 			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
+		}
+	},
+})
+
+TFA.Attachments.RegisterFromTable("am_magnum_snpr", {
+	Name = " AP Ammunition",
+	ShortName = "APA",
+	Description = {
+		TFA.Attachments.Colors["+"], "Increased Range by 25m",
+		TFA.Attachments.Colors["+"], "Improved Fall Off",
+		TFA.Attachments.Colors["-"], "5% more recoil",
+		TFA.Attachments.Colors["-"], "15% more spread"
+	},
+	Icon = "entities/tfa_ammo_match.png",
+	TFADataVersion = TFA.LatestDataVersion,
+
+	WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
+		["Primary"] = {
+			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
+			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
+			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["MinRangeStartFalloff"] = function(wep, stat) return stat + 25 end,
+			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
 			["MaxFalloff"] = function(wep, stat) return 12 end,
 		}
 	},
@@ -142,9 +142,9 @@ TFA.Attachments.RegisterFromTable("am_match", {
 	Name = "Low Grain Ammunition",
 	ShortName = "LGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "15% tighter spread",
+		TFA.Attachments.Colors["+"], "10% tighter spread",
 		"15% lower recoil","+50 RPM",
-		TFA.Attachments.Colors["-"], "-2 Damage",
+		TFA.Attachments.Colors["-"], "-3 Damage",
 	},
 	Icon = "entities/tfa_ammo_magnum.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -152,7 +152,7 @@ TFA.Attachments.RegisterFromTable("am_match", {
 	WeaponTable = {
 		Primary = {
             Damage = function( wep, stat ) return stat -2 end,
-			Spread = function( wep, stat ) return stat * 0.85 end,
+			Spread = function( wep, stat ) return stat * 0.9 end,
 			RPM = function ( wep, stat) return stat + 50 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
 			KickHorizontal = function( wep, stat ) return stat * 0.85 end
@@ -164,9 +164,9 @@ TFA.Attachments.RegisterFromTable("am_match_dmr", {
 	Name = "Low Grain Ammunition",
 	ShortName = "LGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "15% tighter spread",
+		TFA.Attachments.Colors["+"], "10% tighter spread",
 		"15% lower recoil","+50 RPM",
-		TFA.Attachments.Colors["-"], "-10 Damage",
+		TFA.Attachments.Colors["-"], "-12 Damage",
 	},
 	Icon = "entities/tfa_ammo_magnum.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -174,7 +174,7 @@ TFA.Attachments.RegisterFromTable("am_match_dmr", {
 	WeaponTable = {
 		Primary = {
             Damage = function( wep, stat ) return stat - 10 end,
-			Spread = function( wep, stat ) return stat * 0.85 end,
+			Spread = function( wep, stat ) return stat * 0.9 end,
 			RPM = function ( wep, stat) return stat + 50 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
 			KickHorizontal = function( wep, stat ) return stat * 0.85 end
@@ -186,9 +186,9 @@ TFA.Attachments.RegisterFromTable("am_match_snpr", {
 	Name = "Low Grain Ammunition",
 	ShortName = "LGA",
 	Description = {
-		TFA.Attachments.Colors["+"], "15% tighter spread",
+		TFA.Attachments.Colors["+"], "10% tighter spread",
 		"15% lower recoil","+25 RPM",
-		TFA.Attachments.Colors["-"], "-15 Damage",
+		TFA.Attachments.Colors["-"], "-18 Damage",
 	},
 	Icon = "entities/tfa_ammo_magnum.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -196,7 +196,7 @@ TFA.Attachments.RegisterFromTable("am_match_snpr", {
 	WeaponTable = {
 		Primary = {
             Damage = function( wep, stat ) return stat -15 end,
-			Spread = function( wep, stat ) return stat * 0.85 end,
+			Spread = function( wep, stat ) return stat * 0.9 end,
 			RPM = function ( wep, stat) return stat + 25 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
 			KickHorizontal = function( wep, stat ) return stat * 0.85 end
@@ -208,8 +208,8 @@ TFA.Attachments.RegisterFromTable("sg_slug", {
 	Name = "Slug Ammunition",
 	ShortName = "Slug",
 	Description = {
-		TFA.Attachments.Colors["+"], "Much lower spread",
-		TFA.Attachments.Colors["+"], "Double range",
+		TFA.Attachments.Colors["+"], "Perfectly Accurate ADS",
+		TFA.Attachments.Colors["+"], "Increased Range to 40m",
 		TFA.Attachments.Colors["-"], "15% less damage",
 		TFA.Attachments.Colors["-"], "15% More Recoil",
 		"One pellet"
@@ -260,7 +260,7 @@ TFA.Attachments.RegisterFromTable("sg_flech", {
 	ShortName = "flch",
 	Description = {
 		TFA.Attachments.Colors["+"], "Improved Aim Accuracy",
-		TFA.Attachments.Colors["+"], "Increased Damage",
+		TFA.Attachments.Colors["+"], "45% More Damage",
 		TFA.Attachments.Colors["-"], "-4 Pellets",
 		TFA.Attachments.Colors["-"], "10% More Recoil",
 	},
@@ -283,7 +283,7 @@ TFA.Attachments.RegisterFromTable("br_supp", {
 	Name = "Suppressor",
 	Description = {
 		TFA.Attachments.Colors["+"], "Less firing noise",
-        TFA.Attachments.Colors["+"], "Slightly Reduced Spread",
+        TFA.Attachments.Colors["+"], "10% Tighter Spread",
 		TFA.Attachments.Colors["-"], "Slower ADS speed",
 		TFA.Attachments.Colors["-"], "15% less range"
 	},

@@ -10,7 +10,7 @@ ATTACHMENT.Icon = "entities/ins2_att_gp25.png" --Revers to label, please give it
 ATTACHMENT.ShortName = "GL"
 
 ATTACHMENT.Ent = "hl2_nade_fml"
-ATTACHMENT.Damage = 250
+ATTACHMENT.Damage = 150
 ATTACHMENT.DefaultModel = "models/weapons/tfa_ins2/upgrades/a_projectile_gp25.mdl"
 ATTACHMENT.Velocity = 76.5 * 39.370 * 4 / 3 --76.5 M/s * Meters to Inches * Inches to Hammer Units
 ATTACHMENT.Ammo = "smg1_grenade"
@@ -20,8 +20,8 @@ ATTACHMENT.DefaultClip = 3
 ATTACHMENT.Delay = 0.3
 ATTACHMENT.Sound = Sound("weapons/ar2/ar2_altfire.wav")
 
-ATTACHMENT.RecoilV = -5
-ATTACHMENT.RecoilH = -2.5
+ATTACHMENT.RecoilV = 0
+ATTACHMENT.RecoilH = 0
 
 ATTACHMENT.WeaponTable = {
 	["VElements"] = {

@@ -19,7 +19,7 @@ ATTACHMENT.WeaponTable = {
 	},
 	["Primary"] = {
                 ["Sound"] = function( wep, stat) return wep.Primary.Sound_SIL or stat end, --Silenced sound
-                ["Range"] = function( wep, stat ) return stat * 0.85 end,
+                ["MinRangeStartFalloff"] = function( wep, stat ) return stat * 0.85 end,
                 ["KickUp"] = function( wep, stat ) return stat * 0.95 end,
 		["IronSightTime"] = function( wep, stat ) return stat * 1.35 end,
                 ["KickHorizontal"] = function( wep, stat ) return stat * 0.95 end,

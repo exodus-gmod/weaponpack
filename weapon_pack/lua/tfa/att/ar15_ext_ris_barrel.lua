@@ -27,7 +27,7 @@ ATTACHMENT.WeaponTable = {
 		["ATTACH_Muzzle"] = { scale = Vector(0.7, 0.7, 0.7), pos = Vector(14, -1.4, 0.75), angle = Angle(0, 180, 0) },
 	},
 	["Primary"] = {
-		["Range"] = function(wep,stat) return stat * 1.1 end,
+		["MinRangeStartFalloff"] = function(wep,stat) return stat * 1.1 end,
 		["Spread"] = function(wep,stat) return stat + 0.015 end,
 	},
 	["MoveSpeed"] = function(wep,stat) return stat * 0.95 end,

@@ -10,7 +10,7 @@ ATTACHMENT.Icon = "entities/ins2_att_m203.png" --Revers to label, please give it
 ATTACHMENT.ShortName = "GL"
 
 ATTACHMENT.Ent = "hl2_nade_fml"
-ATTACHMENT.Damage = 120
+ATTACHMENT.Damage = 150
 ATTACHMENT.DefaultModel = "models/weapons/tfa_ins2/upgrades/a_projectile_m203.mdl"
 ATTACHMENT.Velocity = 76 * 39.370 * 4 / 3 --76.5 M/s * Meters to Inches * Inches to Hammer Units
 ATTACHMENT.Ammo = "smg1_grenade"

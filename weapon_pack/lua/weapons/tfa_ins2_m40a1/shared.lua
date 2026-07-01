@@ -83,7 +83,7 @@ SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
 SWEP.Primary.KickHorizontal = 0.55 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
-SWEP.Primary.Spread = .05 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.Spread = .085 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
 SWEP.Primary.IronAccuracy = .00001 -- Ironsight accuracy, should be the same for shotguns
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
 SWEP.Primary.SpreadMultiplierMax = 0--How far the spread can expand when you shoot. Example val: 2.5
