@@ -13,7 +13,7 @@ TFA.Attachments.RegisterFromTable("am_gib", {
 
 	WeaponTable = {
 		Primary = {
-			Damage = function( wep, stat ) return stat + 2 end,
+			Damage = function( wep, stat ) return stat + 3 end,
 			RPM = function( wep, stat ) return stat - 50 end,
 			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.2 end,
@@ -35,7 +35,7 @@ TFA.Attachments.RegisterFromTable("am_gib_dmr", {
 
 	WeaponTable = {
 		Primary = {
-			Damage = function( wep, stat ) return stat + 10 end,
+			Damage = function( wep, stat ) return stat + 12 end,
 			RPM = function( wep, stat ) return stat - 50 end,
 			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.2 end,
@@ -58,7 +58,7 @@ TFA.Attachments.RegisterFromTable("am_gib_snpr", {
 	WeaponTable = {
 		Primary = {
 			RPM = function( wep, stat ) return stat - 25 end,
-			Damage = function( wep, stat ) return stat + 15 end,
+			Damage = function( wep, stat ) return stat + 18 end,
 			IronAccuracy = function( wep, stat ) return stat * 1 end,
 			KickUp = function( wep, stat ) return stat * 1.2 end,
 			KickHorizontal = function( wep, stat ) return stat * 1.2 end
@@ -75,7 +75,7 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 		TFA.Attachments.Colors["+"], "Increased Range by 15m",
 		TFA.Attachments.Colors["+"], "Improved Fall Off",
 		TFA.Attachments.Colors["-"], "5% more recoil",
-		TFA.Attachments.Colors["-"], "15% more spread"
+		TFA.Attachments.Colors["-"], "15% wider spread"
 	},
 	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -84,7 +84,7 @@ TFA.Attachments.RegisterFromTable("am_magnum", {
 		["Primary"] = {
 			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
 			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
-			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["Spread"] = function( wep, stat ) return stat * 1.15 end,
 			["MinRangeStartFalloff"] = function(wep, stat) return stat + 15 end,
 			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
 		},
@@ -98,7 +98,7 @@ TFA.Attachments.RegisterFromTable("am_magnum_dmr", {
 		TFA.Attachments.Colors["+"], "Increased Range by 20m",
 		TFA.Attachments.Colors["+"], "Improved Fall Off",
 		TFA.Attachments.Colors["-"], "5% more recoil",
-		TFA.Attachments.Colors["-"], "15% more spread"
+		TFA.Attachments.Colors["-"], "15% wider spread"
 	},
 	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -107,7 +107,7 @@ TFA.Attachments.RegisterFromTable("am_magnum_dmr", {
 		["Primary"] = {
 			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
 			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
-			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["Spread"] = function( wep, stat ) return stat * 1.15 end,
 			["MinRangeStartFalloff"] = function(wep, stat) return stat + 20 end,
 			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
 		}
@@ -121,7 +121,7 @@ TFA.Attachments.RegisterFromTable("am_magnum_snpr", {
 		TFA.Attachments.Colors["+"], "Increased Range by 25m",
 		TFA.Attachments.Colors["+"], "Improved Fall Off",
 		TFA.Attachments.Colors["-"], "5% more recoil",
-		TFA.Attachments.Colors["-"], "15% more spread"
+		TFA.Attachments.Colors["-"], "15% wider spread"
 	},
 	Icon = "entities/tfa_ammo_match.png",
 	TFADataVersion = TFA.LatestDataVersion,
@@ -130,7 +130,7 @@ TFA.Attachments.RegisterFromTable("am_magnum_snpr", {
 		["Primary"] = {
 			["KickUp"] = function ( wep, stat ) return stat * 1.05 end,
 			["KickHorizontal"] = function ( wep, stat ) return stat * 1.05 end,
-			["Spread"] = function( wep, stat ) return stat * 1.25 end,
+			["Spread"] = function( wep, stat ) return stat * 1.15 end,
 			["MinRangeStartFalloff"] = function(wep, stat) return stat + 25 end,
 			["FalloffByMeter"] = function(wep, stat) return stat - 0.2 end,
 			["MaxFalloff"] = function(wep, stat) return 12 end,
@@ -151,7 +151,7 @@ TFA.Attachments.RegisterFromTable("am_match", {
 
 	WeaponTable = {
 		Primary = {
-            Damage = function( wep, stat ) return stat -2 end,
+            Damage = function( wep, stat ) return stat -3 end,
 			Spread = function( wep, stat ) return stat * 0.9 end,
 			RPM = function ( wep, stat) return stat + 50 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
@@ -173,7 +173,7 @@ TFA.Attachments.RegisterFromTable("am_match_dmr", {
 
 	WeaponTable = {
 		Primary = {
-            Damage = function( wep, stat ) return stat - 10 end,
+            Damage = function( wep, stat ) return stat - 12 end,
 			Spread = function( wep, stat ) return stat * 0.9 end,
 			RPM = function ( wep, stat) return stat + 50 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
@@ -195,7 +195,7 @@ TFA.Attachments.RegisterFromTable("am_match_snpr", {
 
 	WeaponTable = {
 		Primary = {
-            Damage = function( wep, stat ) return stat -15 end,
+            Damage = function( wep, stat ) return stat -18 end,
 			Spread = function( wep, stat ) return stat * 0.9 end,
 			RPM = function ( wep, stat) return stat + 25 end,
 			KickUp = function( wep, stat ) return stat * 0.85 end,
