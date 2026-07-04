@@ -93,8 +93,8 @@ SWEP.Primary.KickHorizontal = 0.1 -- This is the maximum sideways recoil (no rea
 SWEP.Primary.StaticRecoilFactor = 1
 
 --Firing Cone Related
-SWEP.Primary.Spread = .025 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
-SWEP.Primary.IronAccuracy = .025 -- Ironsight accuracy, should be the same for shotguns
+SWEP.Primary.Spread = .015 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
+SWEP.Primary.IronAccuracy = .015 -- Ironsight accuracy, should be the same for shotguns
 
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
 SWEP.Primary.SpreadMultiplierMax = 0--How far the spread can expand when you shoot. Example val: 2.5
