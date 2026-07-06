@@ -44,15 +44,15 @@ hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage )
 
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
-SWEP.Primary.Force = nil --Force value, leave nil to autocalc
+SWEP.Primary.Force = 0 --Force value, leave nil to autocalc
 SWEP.Primary.Knockback = 0 --Autodetected if nil; this is the velocity kickback
-SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
-SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
+SWEP.Primary.HullSize = 5 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
+SWEP.Primary.NumShots = 4 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = true -- Automatic/Semi Auto
 SWEP.Primary.RPM = 1250 -- This is in Rounds Per Minute / RPM
 SWEP.Primary.DryFireDelay = nil --How long you have to wait after firing your last shot before a dryfire animation can play.  Leave nil for full empty attack length.  Can also use SWEP.StatusLength[ ACT_VM_BLABLA ]
 SWEP.Primary.BurstDelay = nil -- Delay between bursts, leave nil to autocalculate
-SWEP.FiresUnderwater = true
+SWEP.FiresUnderwater = false
 
 SWEP.RTScopeAttachment = 1
 SWEP.ScopeAngleTransforms = {}
@@ -82,7 +82,7 @@ SWEP.FireModeName = nil --Change to a text value to override it
 SWEP.Primary.ClipSize = 250 -- This is the size of a clip
 SWEP.Primary.DefaultClip = 1250 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
 SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, include pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, and AirboatGun.
-SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
+SWEP.Primary.AmmoConsumption = 4 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = true --Disable round-in-the-chamber
 
@@ -97,7 +97,7 @@ SWEP.Primary.Spread = .015 --This is hip-fire acuracy.  Less is more (1 is horri
 SWEP.Primary.IronAccuracy = .015 -- Ironsight accuracy, should be the same for shotguns
 
 --Unless you can do this manually, autodetect it.  If you decide to manually do these, uncomment this block and remove this line.
-SWEP.Primary.SpreadMultiplierMax = 0--How far the spread can expand when you shoot. Example val: 2.5
+SWEP.Primary.SpreadMultiplierMax = 0 --How far the spread can expand when you shoot. Example val: 2.5
 SWEP.Primary.SpreadIncrement = 0 --What percentage of the modifier is added on, per shot.  Example val: 1/3.5
 SWEP.Primary.SpreadRecovery = 0 --How much the spread recovers, per second. Example val: 3
 
