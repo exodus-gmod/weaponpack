@@ -13,8 +13,8 @@ local Material = Material
 local ProjectedTexture = ProjectedTexture
 local math = math
 
-SWEP.LaserDistance = 12 * 50 -- default 50 feet
-SWEP.LaserDistanceVisual = 12 * 4 --default 4 feet
+SWEP.LaserDistance = 12 * 100 -- default 50 feet
+SWEP.LaserDistanceVisual = 12 * 100 --default 4 feet
 
 local function IsHolstering(wep)
 	if IsValid(wep) and TFA.Enum.HolsterStatus[wep:GetStatus()] then return true end
