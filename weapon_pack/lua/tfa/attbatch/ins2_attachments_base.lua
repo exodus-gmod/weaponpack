@@ -28,16 +28,16 @@ TFA.Attachments.RegisterFromTable("ins2_br_light", {
 	Description = {
 		"A lightweight barrel made of aluminum.",
 		TFA.AttachmentColors["+"], "5% Increased Movement Speed", "Faster ADS Speed",
-		TFA.AttachmentColors["-"], "10% Less Range", "Increases Recoil by 10%",
+		TFA.AttachmentColors["-"], "15% Less Range", "Increases Recoil by 15%",
 	},
 	Icon = "entities/ins2_att_br_heavy.png",
 	ShortName = "LBR",
 
 	WeaponTable = {
 		["Primary"] = {
-			["KickUp"] = function( wep, stat ) return stat * 1.1 end,
-			["KickHorizontal"] = function( wep, stat ) return stat * 1.1 end,
-			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 0.9 end,
+			["KickUp"] = function( wep, stat ) return stat * 1.15 end,
+			["KickHorizontal"] = function( wep, stat ) return stat * 1.15 end,
+			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 0.85 end,
 			["Damage"] = function ( wep, stat) return stat * 1 end,
 		},
 		["IronSightTime"] = function ( wep, stat) return stat * 0.85 end,

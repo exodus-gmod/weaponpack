@@ -209,7 +209,7 @@ TFA.Attachments.RegisterFromTable("sg_slug", {
 	ShortName = "Slug",
 	Description = {
 		TFA.Attachments.Colors["+"], "Perfectly Accurate ADS",
-		TFA.Attachments.Colors["+"], "Increased Range to 40m",
+		TFA.Attachments.Colors["+"], "Increased Range by 40m",
 		TFA.Attachments.Colors["-"], "15% less damage",
 		TFA.Attachments.Colors["-"], "15% More Recoil",
 		"One pellet"
@@ -225,7 +225,7 @@ WeaponTable = { -- The place where you change the stats (CACHED STATS ONLY!)
 			["KickHorizontal"] = function ( wep, stat ) return stat * 1.15 end,
 			["IronAccuracy"] = function( wep, stat ) return math.max( stat - 0.025 ) end,
 			["MaxFalloff"] = function( wep, stat ) return 15 end,
-			["MinRangeStartFalloff"] = function(wep, stat) return 40 end,
+			["MinRangeStartFalloff"] = function(wep, stat) return stat + 40 end,
 			["FalloffByMeter"] = function(wep, stat) return 0.5 end,
 		}
 	},

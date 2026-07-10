@@ -15,7 +15,8 @@ TFA.Attachments.RegisterFromTable("ins2_si_2xrds", {
 			scope_2xrds = { active = true },
 		},
 		Secondary = {
-			ScopeZoom = function( wep, val ) return 2 end
+			ScopeZoom = function( wep, val ) return 2 end,
+			IronSightsTime = function(wep, stat) return stat * 1.25 end,
 		},
 		INS2_SightVElement = "scope_2xrds",
 		INS2_SightSuffix = "2XRDS"
@@ -35,7 +36,8 @@ TFA.Attachments.RegisterFromTable("ins2_si_c79", {
 			scope_c79 = { active = true },
 		},
 		Secondary = {
-			ScopeZoom = function( wep, val ) return 3.4 end
+			ScopeZoom = function( wep, val ) return 3.4 end,
+			IronSightsTime = function(wep, val) return stat * 1.3 end,
 		},
 		INS2_SightVElement = "scope_c79",
 		INS2_SightSuffix = "C79"
@@ -55,7 +57,8 @@ TFA.Attachments.RegisterFromTable("ins2_si_mosin", {
 			scope_mosin = { active = true },
 		},
 		Secondary = {
-			ScopeZoom = function(wep, val) return 7 end
+			ScopeZoom = function(wep, val) return 7 end,
+			IronSightsTime = function(wep, val) return stat * 1.45 end,
 		},
 		INS2_SightVElement = "scope_mosin",
 		INS2_SightSuffix = "Mosin"
@@ -75,7 +78,8 @@ TFA.Attachments.RegisterFromTable("ins2_si_mx4", {
 			scope_mx4 = { active = true },
 		},
 		Secondary = {
-			ScopeZoom = function(wep, val) return 8.7 end
+			ScopeZoom = function(wep, val) return 8.7 end,
+			IronSightsTime = function(wep, val) return stat * 1.5 end,
 		},
 		INS2_SightVElement = "scope_mx4",
 		INS2_SightSuffix = "MX4"
@@ -95,7 +99,8 @@ TFA.Attachments.RegisterFromTable("ins2_si_po4x", {
 			scope_po4x = { active = true },
 		},
 		Secondary = {
-			ScopeZoom = function( wep, val ) return 4 end
+			ScopeZoom = function( wep, val ) return 4 end,
+			IronSightsTime = function(wep, val) return stat * 1.4 end,
 		},
 		INS2_SightVElement = "scope_po4x",
 		INS2_SightSuffix = "PO4X"
@@ -178,7 +183,7 @@ TFA.Attachments.RegisterFromTable("ins2_si_kobra", {
 		Secondary = {
 			IronFOV = function( wep, val ) return wep.Secondary.IronFOV_Kobra or val * 1 end
 		},
-		IronSightTime = function( wep, val ) return val * 1.1 end,
+		IronSightTime = function( wep, val ) return val * 1.15 end,
 		INS2_SightVElement = "sight_kobra",
 	}
 })
@@ -203,7 +208,7 @@ TFA.Attachments.RegisterFromTable("ins2_si_rds", {
 		Secondary = {
 			IronFOV = function( wep, val ) return wep.Secondary.IronFOV_RDS or val * 1 end
 		},
-		IronSightTime = function( wep, val ) return val * 1.15 end,
+		IronSightTime = function( wep, val ) return val * 1.2 end,
 		INS2_SightVElement = "sight_rds",
 	}
 })
