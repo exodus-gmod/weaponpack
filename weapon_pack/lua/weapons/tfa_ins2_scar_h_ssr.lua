@@ -30,7 +30,7 @@ SWEP.Primary.SoundEchoTable = {
 	[256] = Sound("TFA_MWR_G3.TailOutside")
 }
 
-SWEP.Primary.Damage                = 40
+SWEP.Primary.Damage                = 41
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
