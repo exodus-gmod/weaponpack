@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\v_models\ar16\sightdot_d"
+	"$color" "[1 1 1]"
+	"$selfillum" "1"
+    "$nocull"    "1"
+}
+
+        
