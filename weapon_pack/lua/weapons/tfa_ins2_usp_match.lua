@@ -172,6 +172,10 @@ SWEP.data.ironsights = 1 --Enable Ironsights
 SWEP.Secondary.IronFOV = 75 -- How much you 'zoom' in. Less is more!  Don't have this be <= 0.  A good value for ironsights is like 70.
 SWEP.IronSightsPos = Vector(-1.525, 1, 0.275)
 SWEP.IronSightsAng = Vector(-0.223, 0.036, 0)
+
+SWEP.IronSightsPos_RMR = Vector( -1.57, 0.28, -0.125)
+SWEP.IronSightsAng_RMR = Vector(0, 0, 0)
+
 --[[INSPECTION]]--
 SWEP.InspectPos = nil--Vector(0,0,0) --Replace with a vector, in style of ironsights position, to be used for inspection
 SWEP.InspectAng = nil--Vector(0,0,0) --Replace with a vector, in style of ironsights angle, to be used for inspection
@@ -270,10 +274,11 @@ SWEP.ViewModelBoneMods = {
 
 
 SWEP.Attachments = {
-	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },
-	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
-	[3] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 4 },
-	[6] = { offset = { 0, 0 }, atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }, order = 3 },
+	[1] = { offset = { 0, 0 }, atts = {"ins2_eft_rmr"}, order = 1},
+	[2] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_boost" }, order = 2 },
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
+	[4] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 5 },
+	[5] = { offset = { 0, 0 }, atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }, order = 4 },
 }
 SWEP.AttachmentDependencies = {}
 SWEP.AttachmentExclusions = {}
@@ -283,7 +288,8 @@ SWEP.VElements = {
 	["laser"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_laser_cz75a.mdl", bone = "A_Underbarrel", rel = "", pos = Vector(-1.5, 0, -0.1), angle = Angle(0, 0, 0), size = Vector(0.7, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
 	["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "LaserPistol", rel = "laser", pos = Vector(0, -0.2, -0.4), angle = Angle(0, 0, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = false },
 	["flashlight"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_laser_cz75a.mdl", bone = "A_Underbarrel", rel = "", pos = Vector(-1.5, 0, -0.1), angle = Angle(0, 0, 0), size = Vector(0.7, 0.75, 0.75), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
-
+	["sight_rmr"] = { type = "Model", model = "models/weapons/tfa_eft/upgrades/v_rmr.mdl", bone = "Slide", rel = "", pos = Vector(-0.01835, -2, 0.5), angle = Angle(0, 180, 0), size = Vector(0.85, 0.95, 0.95), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bonemerge = false, active = false, bodygroup = {} },
+				["sight_rmr_lens"] = (TFA.EFTC and TFA.EFTC.GetHoloSightReticle) and TFA.EFTC.GetHoloSightReticle("sight_rmr") or nil,
 }
 
 SWEP.WElements = {

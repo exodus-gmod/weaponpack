@@ -89,6 +89,29 @@ TFA.Attachments.RegisterFromTable("ins2_br_supp", {
 		wep:SetSilenced(wep.Silenced)
 	end
 })
+TFA.Attachments.RegisterFromTable("ins2_br_boost", {
+	Name = "Muzzle Booster",
+	Description = {
+		"A muzzle attachment that boosts muzzle velocity and power.",
+		TFA.AttachmentColors["+"], "Increases Range by 10%", "1 more damage",
+		TFA.AttachmentColors["-"], "-50 RPM", "Increases Recoil by 15%", "Slightly Slower ADS Speed"
+	},
+	Icon = "entities/comprifle.png",
+	ShortName = "MZBSTR",
+
+	WeaponTable = {
+		["Primary"] = {
+			["KickUp"] = function( wep, stat ) return stat * 1.15 end,
+			["KickHorizontal"] = function( wep, stat ) return stat * 1.15 end,
+			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 1.1 end,
+			["Damage"] = function ( wep, stat) return stat + 1 end,
+			["RPM"] = function ( wep, stat) return stat - 50 end,
+		},
+		["IronSightTime"] = function ( wep, stat) return stat * 1.2 end,
+		["MoveSpeed"] = function( wep, stat ) return stat * 1 end,
+		["IronSightsMoveSpeed"] = function( wep, stat ) return stat * 1 end,
+	},
+})
 
 TFA.Attachments.RegisterFromTable("ins2_fg_gp25", {
 	Base = "ins2_gl_base",

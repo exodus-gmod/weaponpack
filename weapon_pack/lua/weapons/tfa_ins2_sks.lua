@@ -89,7 +89,7 @@ SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.
 SWEP.Primary.RangeFalloff = 1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
 SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
-SWEP.Primary.MinRangeStartFalloff = 65 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MinRangeStartFalloff = 90 -- How long will bullet travel in Meters before starting to lose damage?
 SWEP.Primary.MaxFalloff         = 12 -- Maximal amount of damage to be lost
 
 --Penetration Related
@@ -347,7 +347,7 @@ SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
 	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[3] = { offset = { 0, 0 }, atts = { "am_match_dmr", "am_magnum_dmr", "am_gib_dmr" }, order = 6 },
-	[7] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x", "ins2_si_mosin" }, order = 1 },
+	[7] = { offset = { 0, 0 }, atts = { "ins2_si_2xrds", "ins2_si_c79", "ins2_si_mosin" }, order = 1 },
 	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip" }, order = 4 },
 	[9] = { offset = { 0, 0 }, atts = { "ins2_ub_laser" }, order = 5 },
 }

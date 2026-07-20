@@ -108,7 +108,7 @@ SWEP.Primary.Range               = 1000        -- The distance the bullet can tr
 SWEP.Primary.RangeFalloff        = 1                         -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
 SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
-SWEP.Primary.MinRangeStartFalloff = 55 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MinRangeStartFalloff = 75 -- How long will bullet travel in Meters before starting to lose damage?
 SWEP.Primary.MaxFalloff         = 12 -- Maximal amount of damage to be lost
 -- Penetration Related
 SWEP.MaxPenetrationCounter       = 0                           -- The maximum number of ricochets.  To prevent stack overflows.
@@ -594,7 +594,7 @@ SWEP.InspectAng    = Vector(15, 30.5, 15)
 
 SWEP.Attachments = {
 		
-	[1] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x", "ins2_si_mx4" } },
+	[1] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79" } },
 	[2] = { atts = { "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_supp" } },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
 	[5] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" } },

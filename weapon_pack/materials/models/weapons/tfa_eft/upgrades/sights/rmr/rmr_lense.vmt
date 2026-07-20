@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"			"models/weapons/tfa_eft/upgrades/scopes/MRS/mrs_lense"
-	"$bumpmap"			"models/weapons/tfa_eft/upgrades/scopes/MRS/mrs_lense_nm"
+	"$basetexture"			"models/weapons/tfa_eft/upgrades/sights/rmr/rmr_lense_dm"
+	"$bumpmap" "dev/bump_normal"
 	"normalmapalphaenvmapmask"	"1"
 	"$model" 				"1"
 	"$translucent" 			"1"
@@ -17,8 +17,8 @@
 		"TFA_INS2_IronsightVectorResult"
 		{
 			"resultVar"		"$envmaptint"
-			"ResultDefault"	"5.0 1.5 0.0"
-			"ResultZoomed"	"0.5 0.15 0.0"
+			"ResultDefault"	"2 2 0"
+			"ResultZoomed"	"1 1 0"
 		}
 	}
 }

@@ -21,7 +21,7 @@ SWEP.Type = "Israeli 9x19mm Automatic Sub Machine Gun"
 SWEP.Primary.Sound = Sound("TFA_INS2_UZI.1")
 SWEP.Primary.SilencedSound = Sound("TFA_INS2_UZI.2")
 SWEP.Primary.PenetrationMultiplier = 20 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 28 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 31 -- Damage, in standard damage points.
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
@@ -313,7 +313,7 @@ SWEP.WElements = {
 }
 
 SWEP.Attachments = {
-[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },
+[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_boost" }, order = 1 },
 	[2] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 4 },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	[8] = { offset = { 0, 0 }, atts = { "ins2_ub_laser" }, order = 3 }

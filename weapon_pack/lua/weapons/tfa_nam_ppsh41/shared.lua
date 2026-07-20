@@ -143,5 +143,5 @@ SWEP.Attachments = {
                         [2] = { offset = { 0, 0 }, atts = { "tfa_nam_sling" }, order = 3 },
                         [3] = { offset = { 0, 0 }, atts = { "ins2_mag_drum_75rd" }, order = 4 },
 						[4] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
-						[5] = { offset = { 0, 0 }, atts = { "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },
+						[5] = { offset = { 0, 0 }, atts = { "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_boost" }, order = 1 },
 }

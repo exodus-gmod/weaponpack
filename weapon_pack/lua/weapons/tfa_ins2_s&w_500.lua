@@ -105,7 +105,7 @@ SWEP.Primary.RangeFalloff        = 1                        -- The percentage of
 
 SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
 SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
-SWEP.Primary.MinRangeStartFalloff = 40 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MinRangeStartFalloff = 50 -- How long will bullet travel in Meters before starting to lose damage?
 SWEP.Primary.MaxFalloff         = 10 -- Maximal amount of damage to be lost
 
 -- Penetration Related

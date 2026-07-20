@@ -44,25 +44,25 @@ TFA.Attachments.RegisterFromTable("ins2_si_c79", {
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_si_mosin", {
-	Base = "ins2_scope_base",
-	Name = CLIENT and "#insurgency_weapon_upgrade_scope_mosin" or "7X Scope",
-	Description = { "#insurgency_weapon_upgrade_scope_mosin_desc", TFA.AttachmentColors["="], "7x zoom", TFA.AttachmentColors["-"], "higher zoom time", TFA.AttachmentColors["-"], "10% slower aimed walking" },
-	Icon = "entities/ins2_si_mosin.png",
-	ShortName = "MOSN",
-	WeaponTable = {
-		VElements = {
-			scope_mosin = { active = true, ins2_sightanim_idle = "scope_idle", ins2_sightanim_iron = "scope_zoom" },
-		},
-		WElements = {
-			scope_mosin = { active = true },
-		},
-		Secondary = {
-			ScopeZoom = function(wep, val) return 7 end,
-			IronSightsTime = function(wep, val) return stat * 1.45 end,
-		},
-		INS2_SightVElement = "scope_mosin",
-		INS2_SightSuffix = "Mosin"
-	}
+    Base = "ins2_scope_base",
+    Name = CLIENT and "#insurgency_weapon_upgrade_scope_mosin" or "7X Scope",
+    Description = { "#insurgency_weapon_upgrade_scope_mosin_desc", TFA.AttachmentColors["="], "7x zoom", TFA.AttachmentColors["-"], "higher zoom time", TFA.AttachmentColors["-"], "10% slower aimed walking" },
+    Icon = "entities/ins2_si_mosin.png",
+    ShortName = "MOSN",
+    WeaponTable = {
+        VElements = {
+            scope_mosin = { active = true, ins2_sightanim_idle = "scope_idle", ins2_sightanim_iron = "scope_zoom" },
+        },
+        WElements = {
+            scope_mosin = { active = true },
+        },
+        Secondary = {
+            ScopeZoom = function(wep, val) return 7 end,
+            IronSightsTime = function(wep, val) return stat * 1.45 end,
+        },
+        INS2_SightVElement = "scope_mosin",
+        INS2_SightSuffix = "Mosin"
+    }
 })
 TFA.Attachments.RegisterFromTable("ins2_si_mx4", {
 	Base = "ins2_scope_base",
@@ -83,27 +83,6 @@ TFA.Attachments.RegisterFromTable("ins2_si_mx4", {
 		},
 		INS2_SightVElement = "scope_mx4",
 		INS2_SightSuffix = "MX4"
-	}
-})
-TFA.Attachments.RegisterFromTable("ins2_si_po4x", {
-	Base = "ins2_scope_base",
-	Name = CLIENT and "#insurgency_weapon_upgrade_po4x24" or "PO 4x24P",
-	Description = { "#insurgency_weapon_upgrade_po4x24_desc", TFA.AttachmentColors["="], "4x zoom", TFA.AttachmentColors["-"], "higher zoom time",  TFA.AttachmentColors["-"], "5% slower aimed walking" },
-	Icon = "entities/ins2_si_po4x.png",
-	ShortName = "PO4X",
-	WeaponTable = {
-		VElements = {
-			scope_po4x = { active = true, ins2_sightanim_idle = "po_idle", ins2_sightanim_iron = "po_zoom" },
-		},
-		WElements = {
-			scope_po4x = { active = true },
-		},
-		Secondary = {
-			ScopeZoom = function( wep, val ) return 4 end,
-			IronSightsTime = function(wep, val) return stat * 1.4 end,
-		},
-		INS2_SightVElement = "scope_po4x",
-		INS2_SightSuffix = "PO4X"
 	}
 })
 

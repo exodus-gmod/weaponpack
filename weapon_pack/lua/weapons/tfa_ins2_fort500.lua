@@ -287,7 +287,7 @@ SWEP.WElements = {
 	["suppressor"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/w_sil_sec1.mdl", bone = "ATTACH_Muzzle", rel = "ref", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = true, active = false },
 }
 SWEP.Attachments = {
-	[1] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x", "ins2_si_mosin", "ins2_si_mx4" }, order = 1 },
+	[1] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds" }, order = 1 },
 	[4] = { offset = { 0, 0 }, atts = { "fas2tfa_ks23_short", "fas2tfa_ks23_7rnd" }, order = 4 },
 	[3] = { offset = { 0, 0 }, atts = { "fas2tfa_ks23_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
 	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },

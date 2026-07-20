@@ -289,11 +289,12 @@ SWEP.InspectAng   = Vector(20, 35, 0)
 --[[ ATTACHMENTS ]]--
 
 SWEP.Attachments = {
-	[1] = { atts = { "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_supp", } },
-	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
-	[3] = { atts = { "ins2_ub_laser", "ins2_laser_flashlight_x400", "ins2_ub_flashlight1", "ins2_eft_lastac2" } },
-	[4] = { atts = { "ins2_mag_ext_fnp45" } },
-	[7] = { atts = { "am_match", "am_magnum", "am_gib", "tfa_mb_penrnd" } },
+	[1] = {atts = { "ins2_eft_rmr"}},
+	[2] = { atts = { "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_supp", "ins2_br_boost" } },
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
+	[4] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" } },
+	[5] = { atts = { "ins2_mag_ext_fnp45" } },
+	[6] = { atts = { "am_match", "am_magnum", "am_gib" } },
 }
 
 SWEP.AttachmentDependencies = {	

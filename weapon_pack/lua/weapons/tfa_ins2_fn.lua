@@ -296,6 +296,9 @@ SWEP.IronSightsAng_C79    = Vector(0, 0, 0)
 SWEP.IronSightsPos_PO4X   = Vector(-2.225, -0.08, -0.135)
 SWEP.IronSightsAng_PO4X   = Vector(0, 0, 0)
 
+SWEP.IronSightsPos_RMR = Vector( -1.8774, 0.28, 0.3525)
+SWEP.IronSightsAng_RMR = Vector(0, 0, 0)
+
 
 --[[SPRINTING]]--
 
@@ -310,10 +313,11 @@ SWEP.InspectAng   = Vector(13, 35, 15)
 --[[ATTACHMENTS]]--
 
 SWEP.Attachments = {
-	[1] = { atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2", "ins2_eft_osprey" }},
-	[3] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }},
-	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
-	[4] = { atts = { "am_match", "am_magnum", "am_gib" } },
+	[1] = { atts = { "ins2_eft_rmr"}},
+	[2] = { atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_boost" }},
+	[4] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }},
+	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  } },
+	[5] = { atts = { "am_match", "am_magnum", "am_gib" } },
 }
 
 SWEP.AttachmentDependencies = {	
@@ -345,6 +349,8 @@ SWEP.VElements = {
 	["laser"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_flashlight_m9.mdl", bone = "A_Suppressor", rel = "", pos = Vector(0, -0.75, -1), angle = Angle(0, 90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
 	["laser_beam"] = { type = "Model", model = "models/tfa/lbeam.mdl", bone = "A_Beam", rel = "laser", pos = Vector(-1, -0, -0.5), angle = Angle(0, 0, 0), size = Vector(2, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
 	["flashlight"] = { type = "Model", model = "models/weapons/tfa_ins2/upgrades/a_flashlight_m9.mdl", bone = "A_Suppressor", rel = "", pos = Vector(0, -0.75, -1), angle = Angle(0, 90, 0), size = Vector(0.7, 0.7, 0.7), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, bonemerge = false, active = false },
+	["sight_rmr"] = { type = "Model", model = "models/weapons/tfa_eft/upgrades/v_rmr.mdl", bone = "Slide", rel = "", pos = Vector(-0.02, -2.1, 0.3), angle = Angle(0, 180, 0), size = Vector(0.85, 0.95, 0.95), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bonemerge = false, active = false, bodygroup = {} },
+				["sight_rmr_lens"] = (TFA.EFTC and TFA.EFTC.GetHoloSightReticle) and TFA.EFTC.GetHoloSightReticle("sight_rmr") or nil,
 }
 
 SWEP.WElements = {

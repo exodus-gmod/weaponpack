@@ -113,7 +113,7 @@ SWEP.IronSightsAng_MX4 = Vector(0, 0, 0)
 SWEP.Secondary.IronFOV_MX4 = 65
 
 SWEP.Attachments = {
-	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp_dual", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },	
+	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp_dual", "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_boost" }, order = 1 },	
 	[2] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
 	[3] = { offset = { 0, 0 }, atts = { "am_magnum", "am_match", "am_gib" }, order = 3 },		
 }

@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/killicons/l4d2_m320"
+	"$translucent" 1
+}

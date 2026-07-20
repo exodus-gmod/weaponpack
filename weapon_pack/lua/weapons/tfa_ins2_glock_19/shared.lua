@@ -182,8 +182,9 @@ SWEP.IronSightsPos_RMR = Vector(-1.975, 0.5, 0.2)
 SWEP.IronSightsAng_RMR = Vector(0, 0, 0)
 
 SWEP.Attachments = {
-						[2] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 4 },
-						[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 2 },
-                        [4] = { offset = { 0, 0 }, atts = { "ins2_ub_laser", "ins2_ub_flashlight2" }, order = 3 },
-                        [6] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 1 },
+						[1] = { offset = { 0, 0 }, atts = { "ins2_eft_rmr"}, order = 1},
+						[2] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 5 },
+						[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
+                        [4] = { offset = { 0, 0 }, atts = { "ins2_ub_laser", "ins2_ub_flashlight2" }, order = 4 },
+                        [6] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2", "ins2_br_boost" }, order = 2 },
 }

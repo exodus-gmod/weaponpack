@@ -3,7 +3,7 @@ SWEP.Category				= "EXR - Assault Rifles" --The category.  Please, just choose s
 SWEP.Manufacturer = "FN Herstal" --Gun Manufactrer (e.g. Hoeckler and Koch )
 SWEP.Author				= "Commando - Edit by Lucho" --Author Tooltip
 SWEP.Contact				= "http://steamcommunity.com/id/svennebananguy/" --Contact Info Tooltip
-SWEP.Purpose				= "A robust and heavy assault rifle chambered in 5.56. Used in multiplier military groups." --Purpose Tooltip
+SWEP.Purpose				= "A robust and heavy assault rifle chambered in 5.56. Used in multiplie military groups." --Purpose Tooltip
 SWEP.Instructions				= "" --Instructions Tooltip
 SWEP.Spawnable				= true --Can you, as a normal user, spawn this?
 SWEP.AdminSpawnable			= true --Can an adminstrator spawn this?  Does not tie into your admin mod necessarily, unless its coded to allow for GMod's default ranks somewhere in its code.  Evolve and ULX should work, but try to use weapon restriction rather than these.
@@ -21,7 +21,7 @@ SWEP.Type = "Belgian 5.56x45mm Automatic Assault Rifle"
 SWEP.Primary.Sound = Sound("TFA_INS2_SCARL.1") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("TFA_INS2_SCARL.2")
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 35 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 36 -- Damage, in standard damage points.
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
@@ -88,7 +88,7 @@ SWEP.Primary.Range = 1000 -- The distance the bullet can travel in source units.
 SWEP.Primary.RangeFalloff = 1 -- The percentage of the range the bullet damage starts to fall off at.  Set to 0.8, for example, to start falling off after 80% of the range.
 SWEP.Primary.FalloffMetricBased = true -- Set to true if you set up values below
 SWEP.Primary.FalloffByMeter     = 0.5 -- How much damage points will bullet loose when travel
-SWEP.Primary.MinRangeStartFalloff = 40 -- How long will bullet travel in Meters before starting to lose damage?
+SWEP.Primary.MinRangeStartFalloff = 60 -- How long will bullet travel in Meters before starting to lose damage?
 SWEP.Primary.MaxFalloff         = 10 -- Maximal amount of damage to be lost
 
 --Penetration Related
@@ -385,7 +385,7 @@ SWEP.Attachments = {
 	[1] = { offset = { 0, 0 }, atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
 	[2] = { offset = { 0, 0 }, atts = { "am_match", "am_magnum", "am_gib" }, order = 6 },
 	[3] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
-	[6] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79", "ins2_si_po4x" }, order = 1 },
+	[6] = { offset = { 0, 0 }, atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79" }, order = 1 },
 	[8] = { offset = { 0, 0 }, atts = { "ins2_fg_grip"}, order = 4 },
 	[9] = { offset = { 0, 0 }, atts = { "ins2_ub_laser", "ins2_ub_flashlight1" }, order = 5 },
 	[10] = {atts = { "ag36_si_canted_rmr" }},
