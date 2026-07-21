@@ -94,7 +94,7 @@ TFA.Attachments.RegisterFromTable("ins2_br_boost", {
 	Description = {
 		"A muzzle attachment that boosts muzzle velocity and power.",
 		TFA.AttachmentColors["+"], "Increases Range by 10%", "1 more damage",
-		TFA.AttachmentColors["-"], "-50 RPM", "Increases Recoil by 15%", "Slightly Slower ADS Speed"
+		TFA.AttachmentColors["-"], "-25 RPM", "Increases Recoil by 15%", "Slightly Slower ADS Speed"
 	},
 	Icon = "entities/comprifle.png",
 	ShortName = "MZBSTR",
@@ -105,7 +105,7 @@ TFA.Attachments.RegisterFromTable("ins2_br_boost", {
 			["KickHorizontal"] = function( wep, stat ) return stat * 1.15 end,
 			["MinRangeStartFalloff"] = function ( wep, stat) return stat * 1.1 end,
 			["Damage"] = function ( wep, stat) return stat + 1 end,
-			["RPM"] = function ( wep, stat) return stat - 50 end,
+			["RPM"] = function ( wep, stat) return stat - 25 end,
 		},
 		["IronSightTime"] = function ( wep, stat) return stat * 1.2 end,
 		["MoveSpeed"] = function( wep, stat ) return stat * 1 end,
@@ -182,9 +182,9 @@ TFA.Attachments.RegisterFromTable("ins2_mag_drum_75rd", {
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_ext_carbine_30rd", {
 	Base = "ins2_mag_ext_base",
-	Name = CLIENT and "#insurgency_weapon_upgrade_magazine_extended" or "Extended Magazine",
+	Name = "Extended Magazine",
 	Description = {
-		TFA.AttachmentColors["+"], "Increases magazine capacity to 30 rounds."
+		TFA.AttachmentColors["+"], "Increases magazine capacity by 15 Rounds."
 	},
 	Icon = "entities/ins2_att_mag_ext_carbine_30rd.png",
 	ShortName = "MAG+",
@@ -197,17 +197,19 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_carbine_30rd", {
 			reload_empty = reloadAnimFunc("ext", "base_reload_empty"),
 		},
 		Primary = {
-			ClipSize = function(wep, val)
-				return wep.Primary.ClipSize_ExtCarbine or 30
+			ClipSize = function(wep, stat)
+				return stat + 15
 			end,
 		},
+		MoveSpeed = function (wep,stat) return stat * 0.90 end,
+		IronSightsMoveSpeed = function (wep, stat) return stat * 0.90 end,
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_ext_pistol", {
 	Base = "ins2_mag_ext_base",
 	Name = CLIENT and "#insurgency_weapon_upgrade_magazine_extended" or "Extended Magazine",
 	Description = {
-		TFA.AttachmentColors["+"], "Increases magazine capacity by 25%.",
+		TFA.AttachmentColors["+"], "Increases magazine capacity by 5 rounds.",
 		TFA.AttachmentColors["-"], ""
 	},
 	Icon = "entities/ins2_att_mag_ext_pistol.png",
@@ -221,17 +223,18 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_pistol", {
 			reload_empty = reloadAnimFunc("extmag", "base_reload_empty"),
 		},
 		Primary = {
-			ClipSize = function(wep, stat) return stat * 1.25
+			ClipSize = function(wep, stat) return stat + 5
 			end,
 		},
-		HolsterTime = function (wep,stat) return stat * 1.45 end,
+		MoveSpeed = function (wep,stat) return stat * 0.95 end,
+		IronSightsMoveSpeed = function (wep, stat) return stat * 0.95 end,
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_ext_rifle_30rd", {
 	Base = "ins2_mag_ext_base",
-	Name = CLIENT and "#insurgency_weapon_upgrade_magazine_extended" or "Extended Magazine",
+	Name = "Extended Magazine",
 	Description = {
-		TFA.AttachmentColors["+"], "Increases magazine capacity to 30 rounds."
+		TFA.AttachmentColors["+"], "Increases magazine capacity by 10 rounds."
 	},
 	Icon = "entities/ins2_att_mag_ext_rifle_30rd.png",
 	ShortName = "MAG+",
@@ -244,10 +247,12 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_rifle_30rd", {
 			reload_empty = reloadAnimFunc("ext", "base_reload_empty"),
 		},
 		Primary = {
-			ClipSize = function(wep, val)
-				return wep.Primary.ClipSize_ExtRifle or 30
+			ClipSize = function(wep, stat)
+				return stat + 10
 			end,
 		},
+		MoveSpeed = function (wep,stat) return stat * 0.90 end,
+		IronSightsMoveSpeed = function (wep, stat) return stat * 0.90 end,
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_speedloader", {

@@ -1,13 +1,5 @@
 local suffix = "blitz"
 local Replacements = {
-
-	["ins2_si_rds"] = {
-		["name"] = "CompM4s Aimpoint",
-		["modelReplacement"] = {"models/weapons/tfa_ins2/upgrades/a_optic_aimpoint","models/weapons/upblitz/a_optic_aimpoint_m4"},
-		["modelReplacementWorld"] = {"models/weapons/tfa_ins2/upgrades/w_aimpoint","models/weapons/upblitz/w_aimpoint_m4"},
-		["element"] = "sight_rds",
-		["icon"] = "entities/ins2_si_m4s_" .. suffix .. ".png"
-	},
 	
 }
 

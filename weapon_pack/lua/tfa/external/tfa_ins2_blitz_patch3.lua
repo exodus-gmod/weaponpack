@@ -1,12 +1,6 @@
 local suffix = "blitz3"
 local Replacements = {
-	["ins2_si_kobra"] = {
-		["name"] = "OKP-7",
-		["modelReplacement"] = {"models/weapons/tfa_ins2/upgrades/a_optic_kobra","models/weapons/upblitz/a_optic_okp7"},
-		["modelReplacementWorld"] = {"models/weapons/tfa_ins2/upgrades/w_kobra","models/weapons/upblitz/w_opk7"},
-		["element"] = "sight_kobra",
-		["icon"] = "entities/ins2_si_okp7_" .. suffix .. ".png"
-	},
+	
 }
 
 local HSR = function() return nil end

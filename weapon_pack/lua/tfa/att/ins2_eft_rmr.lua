@@ -8,8 +8,8 @@ ATTACHMENT.ShortName   = "RMR"
 ATTACHMENT.Icon        = "entities/eft_rmr.png" 
 
 ATTACHMENT.Description = { 
-    TFA.AttachmentColors["+"], "5% Higher zoom", 
-    TFA.AttachmentColors["-"], "7.5% Higher zoom time", 
+    TFA.AttachmentColors["+"], "Accurate Reflex Sight", 
+    TFA.AttachmentColors["-"], "Higher zoom time", 
 }
 
 ATTACHMENT.WeaponTable = {
@@ -46,7 +46,7 @@ ATTACHMENT.WeaponTable = {
 	
 	["IronSightsPos"] = function( wep, val ) return wep.IronSightsPos_RMR or val end,
 	["IronSightsAng"] = function( wep, val ) return wep.IronSightsAng_RMR or val end,
-	["IronSightTime"] = function( wep, val ) return val * 1.075 end,
+	["IronSightTime"] = function( wep, val ) return val * 1.67 end,
 	
 	["EFT_SightVElement"] = "sight_rmr",
 }

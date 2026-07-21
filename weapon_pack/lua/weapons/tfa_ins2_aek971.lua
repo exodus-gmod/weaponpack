@@ -495,9 +495,10 @@ SWEP.Attachments = {
 	[1] = { atts = { "ins2_br_supp", "r6s_muzzle_2", "r6s_flashhider_2" }, order = 2 },
 	[2] = { atts = { "ins2_si_kobra", "ins2_si_eotech", "ins2_si_rds", "ins2_si_2xrds", "ins2_si_c79" }, order = 1},
 	[3] = { atts = { "ins2_ub_laser", "ins2_ub_flashlight" }, order = 5},
-	[6] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
+	[7] = { offset = { 0, 0 }, atts = { "ins2_br_heavy", "ins2_br_light"  }, order = 3 },
 	[4] = { atts = { "ins2_fg_grip" }, order = 4},
-	[5] = { atts = { "am_match", "am_magnum", "am_gib" }, order = 6 },
+	[5] = { atts = { "am_match", "am_magnum", "am_gib" }, order = 7 },
+	--[6] = {atts = { "ins2_mag_ext_carbine_30rd"}, order = 6}
 }
 SWEP.AttachmentDependencies = {}
 SWEP.AttachmentExclusions = {}

@@ -141,6 +141,8 @@ TFA.Attachments.RegisterFromTable("ins2_si_eotech", {
 		INS2_SightVElement = "sight_eotech",
 	}
 })
+
+--- Change this
 TFA.Attachments.RegisterFromTable("ins2_si_kobra", {
 	Base = "ins2_si_base",
 	Name = CLIENT and "#insurgency_weapon_upgrade_kobra" or "Kobra Reflex Sight",
@@ -166,6 +168,7 @@ TFA.Attachments.RegisterFromTable("ins2_si_kobra", {
 		INS2_SightVElement = "sight_kobra",
 	}
 })
+
 TFA.Attachments.RegisterFromTable("ins2_si_rds", {
 	Base = "ins2_si_base",
 	Name = CLIENT and "#insurgency_weapon_upgrade_aimpoint" or "Aimpoint CompM2",
