@@ -55,7 +55,6 @@ SWEP.Primary.DamageType            = nil                      -- See DMG enum.  
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Velocity              = 936                      -- Bullet Velocity in m/s
 SWEP.Primary.NumShots              = 1                        -- The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
-SWEP.HeadshotMultiplier = 3.75
 SWEP.Primary.Force                 = nil                      -- Force value, leave nil to autocalc
 SWEP.Primary.Knockback             = nil                      -- Autodetected if nil; this is the velocity kickback
 SWEP.Primary.HullSize              = 0                        -- Big bullets, increase this value.  They increase the hull size of the hitscan bullet.

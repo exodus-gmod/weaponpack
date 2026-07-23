@@ -1,0 +1,19 @@
+"VertexLitGeneric" 
+{
+	"$basetexture" "models\tfa_ins2_wpns\v_models\mg25\mg25_diff"
+	"$bumpmap" "models\tfa_ins2_wpns\v_models\mg25\mg25_ddn"
+	"$phongExponentTexture" "models\tfa_ins2_wpns\v_models\mg25\mg25_spec"
+	"$color2" "[.7 .7 .7]"
+
+    "$phong" 			        "1"
+	"$phongalbedotint" 			"1"	
+	"$phongtint" 				"[.6 .8 1]"
+    "$phongboost" 			    ".1"
+    "$phongfresnelranges" 		"[1 8 6]"
+
+	"$normalmapalphaphongmask"  "0"
+
+	"$envmap"					"env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"				"[0.002 0.002 0.002]"
+}

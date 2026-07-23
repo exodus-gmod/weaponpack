@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"models\weapons\g28_casboi\g28_crosshair"
+	"$translucent" 	"1"
+}

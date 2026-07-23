@@ -67,7 +67,7 @@ SWEP.DefaultFireMode = "" --Default to auto or whatev
 SWEP.FireModeName = nil --Change to a text value to override it
 --Ammo Related
 SWEP.Primary.ClipSize = 100 -- This is the size of a clip
-SWEP.Primary.DefaultClip = 500 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
+SWEP.Primary.DefaultClip = 400 -- This is the number of bullets the gun gives you, counting a clip as defined directly above.
 SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, include pistol, 357, smg1, ar2, buckshot, slam, SniperPenetratedRound, and AirboatGun.
 SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
