@@ -403,37 +403,10 @@ function SWEP:Think2(...)
 				self:SendViewModelAnim(ACT_VM_DEPLOYED_OUT)
 				self.Bipod = 0
 				self:SetNextCurTime(70/38)
+				end
 			end
-		end
-		if !self:ToBipod(self.Owner) and self.Bipod == 1 and self:IsPlayingAnim() == true then
-			self:SendViewModelAnim(ACT_VM_DEPLOYED_OUT)
-			self.Bipod = 0
-			self:SetNextCurTime(70/38)
-		end
-		if self.Bipod == 1 then
-			if self.Owner:EyeAngles().x > 10 then
-				self.Owner:SetEyeAngles(Angle(10, self.Owner:EyeAngles().y, self.Owner:EyeAngles().roll))
-			end
-			if self.Owner:EyeAngles().x < -10 then
-				self.Owner:SetEyeAngles(Angle(-10, self.Owner:EyeAngles().y, self.Owner:EyeAngles().roll))
-			end
-			self.Primary_TFA.KickUp = 0.0525
-			self.Primary_TFA.KickDown = 0.02
-			self.Primary_TFA.KickHorizontal = 0.02
-			self.Primary_TFA.StaticRecoilFactor = 0.8
-			self.MoveSpeed = 0.0000000001
-			self.IronSightsMoveSpeed = 0.0000000001
-		else
-			self.OldY = self.Owner:EyeAngles().y
-			self.Primary_TFA.KickUp = 0.525
-			self.Primary_TFA.KickDown = 0.2
-			self.Primary_TFA.KickHorizontal = 0.2
-			self.Primary_TFA.StaticRecoilFactor = 0.4
-			self.MoveSpeed = 0.75
-			self.IronSightsMoveSpeed = 0.64
-		end
+		BaseClass.Think2(self,...)
 	end
-	BaseClass.Think2(self,...)
 end
 
 function SWEP:ChooseShootAnim(...)

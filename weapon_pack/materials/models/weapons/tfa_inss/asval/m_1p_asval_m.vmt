@@ -1,0 +1,34 @@
+"VertexLitGeneric"
+{
+	"$basetexture"              "models\weapons\tfa_inss\asval\T_1P_ASVAL_D"
+	"$bumpmap"                  "models\weapons\tfa_inss\asval\T_1P_ASVAL_N"
+	"$phongexponenttexture"     "models\weapons\tfa_inss\asval\T_1P_ASVAL_M"
+	"$color2"					"[0.35 0.35 0.35]"
+	"$translucent"				"1"
+	"$basemapalphaenvmapmask"   "1"
+	
+	"$detail"				    "detail\metal_detail_01"
+    "$detailscale"              "1.72"
+   	"$detailblendfactor" 	    "0.8"
+   	"$detailblendmode"		    "0"
+	
+	"$phong"					"1"
+	"$phongexponent"			"120"
+	"$phongboost"				"70"
+	"$phongfresnelranges"	    "[0.5 0.8 0.65]"
+	"$phongalbedotint" 			"1"
+	"$phongalbedoboost" 		"50"
+	
+	"$envmap"					"env_cubemap"
+	"$envmaptint"				"[ .015 .015 .015 ]"
+	"$envmapfresnel"			"1"
+	"$normalmapalphaenvmapmask" "1"
+	"$normalmapalphaphongmask"  "1"
+
+	"$rimlight"					"1"
+	"$rimlightexponent"			"130"	
+	"$rimlightboost"			"0.1"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}

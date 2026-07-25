@@ -17,7 +17,7 @@ SWEP.Slot					= 1			                        -- Slot in the weapon selection menu
 SWEP.SlotPos				= 1			                    -- Position in the slot
 SWEP.AutoSwitchTo			= false		                        -- Auto switch to if we pick it up
 SWEP.AutoSwitchFrom			= false		                        -- Auto switch from if you pick up a better weapon
-SWEP.Weight					= 25			                    -- This controls how "good" the weapon is for autopickup.
+SWEP.Weight					= 21			                    -- This controls how "good" the weapon is for autopickup.
 SWEP.Type                   = "Machine Pistol"
 
 if TFA then

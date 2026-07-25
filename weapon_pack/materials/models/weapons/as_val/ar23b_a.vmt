@@ -1,0 +1,27 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 			    "models\weapons\as_val\ar23b_a"
+	"$bumpmap" 			        "models\weapons\as_val\ar23b_a_n"
+	"$PhongExponentTexture"     "models\weapons\as_val\ar23b_a_e"
+    "$nocull" 				    "1"
+	
+    "$phong" 			        "1"
+    "$phongboost" 			    "1"
+    "$phongalbedotint"			"1"
+    "$phongalbedoboost"		    "33"
+    "$phongfresnelranges" 		"[1.6 3.3 6.7]"
+	
+	"$envmap" 			        "env_cubemap"
+    "$envmapfresnel" 			"1"
+	"$normalmapalphaenvmapmask" "1"
+	"$normalmapalphaphongmask"  "1"
+    "$envmapFresnelMinMaxExp"	"[0 .4 1]"
+    "$envmaptint" 			    "[.005 .005 .0075]"
+	
+	"$rimlight"					"1"
+	"$rimlightexponent"			"150"	
+	"$rimlightboost"			"0.1"
+	"$rimmask"					"1"
+	
+    "$ambientocclusion"         "1"
+}
