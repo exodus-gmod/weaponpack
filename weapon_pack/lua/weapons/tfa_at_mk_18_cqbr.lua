@@ -72,7 +72,7 @@ SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, includ
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.13 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.153 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
 SWEP.Primary.KickHorizontal = 0.087 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
@@ -252,13 +252,21 @@ SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, 
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = {
-	["base_reload"] = 65 / 30,
-	["base_reload_empty"] = 69 / 30,
-	["foregrip_reload"] = 65 / 30,
-	["foregrip_reload_empty"] = 69 / 30,
+	--["base_reload"] = 2,
+	--["foregrip_reload"] = 2,
 } --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 3,
+	["foregrip_reload"] = 2.5,
+	["base_reload_empty"] = 2.5,
+	["foregrip_reload_empty"] = 2.5,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.35,
+	["foregrip_reload"] = 1.35,
+	["base_reload_empty"] = 3,
+	["foregrip_reload_empty"] = 3,
+} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation

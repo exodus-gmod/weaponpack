@@ -72,7 +72,7 @@ SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, includ
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.137 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.138 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
 SWEP.Primary.KickHorizontal = 0.093 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.

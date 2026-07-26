@@ -199,9 +199,14 @@ SWEP.InspectAng = Vector(22.386, 34.417, 5)
 
 --[[ANIMATION]]--
 SWEP.StatusLengthOverride = {
-	[ACT_VM_RELOAD] = 74 / 30,
-	[ACT_VM_RELOAD_EMPTY] = 99 / 30,
-} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+	["base_reload"]       = 2.2,
+	["base_reload_empty"]  = 2,
+} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+
+SWEP.SequenceRateOverride = {
+	["base_reload"]       = 1.2,
+	["base_reload_empty"]  = 1.2,
+}
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only

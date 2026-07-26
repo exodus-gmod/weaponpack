@@ -4,7 +4,7 @@ end
 
 ATTACHMENT.Name = "Suppressor"
 --ATTACHMENT.ID = "base" -- normally this is just your filename
-ATTACHMENT.Description = { TFA.AttachmentColors["+"], "Less firing noise", TFA.AttachmentColors["+"], "-5% Recoil", TFA.AttachmentColors["-"], "-15% range", "Slower ADS Speed" }
+ATTACHMENT.Description = { TFA.AttachmentColors["+"], "Less firing noise", TFA.AttachmentColors["+"], "Slightly Reduced Spread", TFA.AttachmentColors["-"], "-15% range", "Slower ADS Speed" }
 ATTACHMENT.Icon = "entities/ins2_att_br_supp.png" --Revers to label, please give it an icon though!  This should be the path to a png, like "entities/tfa_ammo_match.png"
 ATTACHMENT.ShortName = "SUPP"
 
@@ -29,9 +29,9 @@ ATTACHMENT.WeaponTable = {
 	["IronSightsAng"] = Vector(-.2, 0.015, 0),
 	["Primary"] = {
 		["Primary"] = {
-			["KickUp"] = function(wep,stat) return stat * 0.95 end,
-			["KickHorizontal"] = function(wep,stat) return stat * 0.95 end,
-            ["Range"] = function(wep,stat) return stat * 0.85 end,
+			["Spread"] = function(wep,stat) return stat * 0.9 end,
+			["KickHorizontal"] = function(wep,stat) return stat * 1 end,
+            ["MinRangeStartFalloff"] = function(wep,stat) return stat * 0.85 end,
 		},
 		["IronSightTime"] = function(wep,stat) return stat * 1.3 end,
 		["Sound"] = function(wep,stat) return wep.Primary.SilencedSound or stat end,

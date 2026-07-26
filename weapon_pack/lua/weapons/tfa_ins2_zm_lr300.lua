@@ -74,9 +74,9 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp = 0.127 -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp = 0.155 -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown = 0 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.081 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickHorizontal = 0.083 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .035 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
@@ -229,13 +229,19 @@ SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, 
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = {
-	["base_reload"] = 65 / 30,
-	["base_reload_empty"] = 69 / 30,
-	["foregrip_reload"] = 65 / 30,
-	["foregrip_reload_empty"] = 69 / 30,
+	--["base_reload"] = 65 / 30,
+	--["base_reload_empty"] = 69 / 30,
+	--["foregrip_reload"] = 65 / 30,
+	--["foregrip_reload_empty"] = 69 / 30,
 } --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.9,
+	["foregrip_reload"] = 2.4,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.25,
+	["foregrip_reload"] = 1.25,
+} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 
 SWEP.ProceduralHoslterEnabled = nil

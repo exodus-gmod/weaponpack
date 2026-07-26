@@ -90,7 +90,7 @@ SWEP.DisableChambering             = false                     -- Disable round-
 SWEP.CanJam                        = false
 
 -- Recoil Related
-SWEP.Primary.KickUp                = 0.175                     -- This is the maximum upwards recoil (rise)
+SWEP.Primary.KickUp                = 0.12                     -- This is the maximum upwards recoil (rise)
 SWEP.Primary.KickDown              = 0                     -- This is the maximum downwards recoil (skeet)
 SWEP.Primary.KickHorizontal        = 0.088                     -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor    = 1                      -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
@@ -171,13 +171,13 @@ SWEP.Bodygroups_V   = nil
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = {
-	["base_reload"]       = 65 / 30,
-	["base_reloadempty"]  = 95 / 30,
+	["base_reload"]       = 1.2,
+	["base_reloadempty"]  = 2.3,
 } -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
 
 SWEP.SequenceRateOverride = {
-	["base_reload"]       = 1,
-	["base_reloadempty"]  = 1,
+	["base_reload"]       = 1.2,
+	["base_reloadempty"]  = 1.2,
 	["sprint_in"]         = 1.5,
 	["sprint_out"]        = 1.5,
 } -- Like above but changes animation length to a target

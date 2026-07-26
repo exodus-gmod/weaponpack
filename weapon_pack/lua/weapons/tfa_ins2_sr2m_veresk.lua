@@ -171,13 +171,13 @@ SWEP.Bodygroups_V   = nil
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = {
-	["base_reload"]       = 62 / 30,
-	["base_reload_empty"] = 110 / 30,
+	["base_reload"]       = 2,
+	["base_reload_empty"]  = 2,
 } -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
 
 SWEP.SequenceRateOverride = {
-	["base_reload"]       = 1,
-	["base_reloadempty"]  = 1,
+	["base_reload"]       = 1.2,
+	["base_reload_empty"]  = 1.2,
 	["empty_sprint"]      = 0.8,
 } -- Like above but changes animation length to a target
 

@@ -227,15 +227,17 @@ SWEP.ProceduralReloadTime = 1 --Procedural reload time?
 SWEP.IronSightHoldTypeOverride = "" --This variable overrides the ironsights holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 
-SWEP.StatusLengthOverride = {
-	["base_reload"] = 69 / 30,
-	["base_reload_empty"] = 64 / 30,
-	["foregrip_reload"] = 69 / 30,
-	["foregrip_reload_empty"] = 64 / 30,
-} 
 --[[ANIMATION]]--
+SWEP.StatusLengthOverride = {
+	["base_reload"]       = 2.2,
+	["base_reload_empty"]  = 2,
+} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+
+SWEP.SequenceRateOverride = {
+	["base_reload"]       = 1.2,
+	["base_reload_empty"]  = 1.2,
+}
 SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation

@@ -47,7 +47,7 @@ SWEP.Primary.Knockback = nil --Autodetected if nil; this is the velocity kickbac
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = true -- Automatic/Semi Auto
-SWEP.Primary.RPM = 1200 -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM = 1100 -- This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Semi = nil -- RPM for semi-automatic or burst fire.  This is in Rounds Per Minute / RPM
 SWEP.Primary.RPM_Burst = nil -- RPM for burst fire, overrides semi.  This is in Rounds Per Minute / RPM
 SWEP.Primary.DryFireDelay = nil --How long you have to wait after firing your last shot before a dryfire animation can play.  Leave nil for full empty attack length.  Can also use SWEP.StatusLength[ ACT_VM_BLABLA ]
@@ -74,8 +74,8 @@ SWEP.Primary.AmmoConsumption = 1 --Ammo consumed per shot
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
 SWEP.Primary.KickUp = 0 -- This is the maximum upwards recoil (rise)
-SWEP.Primary.KickDown = 0.126 -- This is the maximum downwards recoil (skeet)
-SWEP.Primary.KickHorizontal = 0.083 -- This is the maximum sideways recoil (no real term)
+SWEP.Primary.KickDown = 0.123 -- This is the maximum downwards recoil (skeet)
+SWEP.Primary.KickHorizontal = 0.084 -- This is the maximum sideways recoil (no real term)
 SWEP.Primary.StaticRecoilFactor = 1 --Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 --Firing Cone Related
 SWEP.Primary.Spread = .03 --This is hip-fire acuracy.  Less is more (1 is horribly awful, .0001 is close to perfect)
@@ -244,10 +244,16 @@ SWEP.ProceduralReloadTime = 1 --Procedural reload time?
 SWEP.IronSightHoldTypeOverride = "" --This variable overrides the ironsights holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 --[[ANIMATION]]--
+SWEP.StatusLengthOverride = {
+	["base_reload"]       = 2.2,
+	["base_reload_empty"]  = 2,
+} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
 
-SWEP.StatusLengthOverride = {} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+SWEP.SequenceRateOverride = {
+	["base_reload"]       = 1.2,
+	["base_reload_empty"]  = 1.2,
+}
 SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation

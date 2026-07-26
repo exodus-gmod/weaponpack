@@ -81,9 +81,9 @@ SWEP.Primary.AmmoConsumption    = 1 -- Ammo consumed per shot
 SWEP.DisableChambering  = true -- Disable round-in-the-chamber
 
 -- Recoil Related
-SWEP.Primary.KickUp 			= 0.326
+SWEP.Primary.KickUp 			= 0.334
 SWEP.Primary.KickDown 			= 0
-SWEP.Primary.KickHorizontal 	= 0.189
+SWEP.Primary.KickHorizontal 	= 0.215
 SWEP.Primary.StaticRecoilFactor = 1 -- Amount of recoil to directly apply to EyeAngles.  Enter what fraction or percentage (in decimal form) you want.  This is also affected by a convar that defaults to 0.5.
 
 ----------------- Spread stats

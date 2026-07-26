@@ -71,7 +71,7 @@ SWEP.Primary.Ammo = "ar2" -- What kind of ammo.  Options, besides custom, includ
 --Pistol, buckshot, and slam like to ricochet. Use AirboatGun for a light metal peircing shotgun pellets
 SWEP.DisableChambering = false --Disable round-in-the-chamber
 --Recoil Related
-SWEP.Primary.KickUp				= 0.134
+SWEP.Primary.KickUp				= 0.144
 SWEP.Primary.KickDown 			= 0
 SWEP.Primary.KickHorizontal		= 0.09
 SWEP.Primary.StaticRecoilFactor = 1
@@ -247,8 +247,14 @@ SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, 
 SWEP.StatusLengthOverride = {
 
 } --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation

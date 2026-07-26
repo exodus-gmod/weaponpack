@@ -20,7 +20,7 @@ SWEP.Weight				= 20			-- This controls how "good" the weapon is for autopickup.
 SWEP.Primary.Sound = Sound("TFA_INS2.SW659.1") -- This is the sound of the weapon, when you shoot.
 SWEP.Primary.SilencedSound = Sound("TFA_INS2.SW659.2") -- This is the sound of the weapon, when silenced.
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
-SWEP.Primary.Damage = 37 -- Damage, in standard damage points.
+SWEP.Primary.Damage = 34 -- Damage, in standard damage points.
 local scale_table = {
     [HITGROUP_HEAD]     = 2,
     [HITGROUP_CHEST]    = 1,
@@ -47,7 +47,7 @@ SWEP.Primary.Knockback = nil --Autodetected if nil; this is the velocity kickbac
 SWEP.Primary.HullSize = 0 --Big bullets, increase this value.  They increase the hull size of the hitscan bullet.
 SWEP.Primary.NumShots = 1 --The number of shots the weapon fires.  SWEP.Shotgun is NOT required for this to be >1.
 SWEP.Primary.Automatic = false -- Automatic/Semi Auto
-SWEP.Primary.RPM = 450 -- This is in Rounds Per Minute / RPM
+SWEP.Primary.RPM = 500 -- This is in Rounds Per Minute / RPM
 SWEP.Primary.BurstDelay = nil -- Delay between bursts, leave nil to autocalculate
 SWEP.FiresUnderwater = false
 --Miscelaneous Sounds

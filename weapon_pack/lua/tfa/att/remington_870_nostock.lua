@@ -31,7 +31,10 @@ ATTACHMENT.WeaponTable = {
 	
 	["MoveSpeed"] = function(wep,stat) return stat * 1.1 end,
 	["IronSightsMoveSpeed"] = function(wep,stat) return stat * 1.1 end,
-	["ShellTime"] = function(wep,stat) return stat * 0.95 end,
+	["ShellTime"] = function(wep,stat) return stat * 0.9 end,
+	["SequenceRateOverride"] = {
+		["base_reload_insert"] = 0.9
+	},
 	["IronSightTime"] = function(wep, val) return val * 0.6 end,
 }
 

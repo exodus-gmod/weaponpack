@@ -141,6 +141,17 @@ SWEP.Offset = {
 
 SWEP.ThirdPersonReloadDisable = false --Disable third person reload?  True disables.
 --[[SPRINTING]]--
+
+SWEP.StatusLengthOverride = {
+	["base_reload"]       = 2.2,
+	["base_reload_empty"]  = 2,
+} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+
+SWEP.SequenceRateOverride = {
+	["base_reload"]       = 1.2,
+	["base_reload_empty"]  = 1.2,
+}
+
 SWEP.RunSightsPos = SWEP.VMPos
 SWEP.RunSightsAng = SWEP.VMAng
 SWEP.SafetyPos = Vector(0, -7.428, -5.353)

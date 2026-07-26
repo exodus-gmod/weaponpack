@@ -108,6 +108,17 @@ SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but con
 SWEP.Idle_Mode = TFA.Enum.IDLE_BOTH --TFA.Enum.IDLE_DISABLED = no idle, TFA.Enum.IDLE_LUA = lua idle, TFA.Enum.IDLE_ANI = mdl idle, TFA.Enum.IDLE_BOTH = TFA.Enum.IDLE_ANI + TFA.Enum.IDLE_LUA
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only
 
+SWEP.StatusLengthOverride = {
+	["base_reload"]       = 2.2,
+	["base_reload_empty"]  = 2.9,
+} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+
+SWEP.SequenceRateOverride = {
+	["base_reload"]       = 1.2,
+	["base_reload_empty"]  = 1.2,
+}
+
+
 SWEP.SprintAnimation = {
 	["loop"] = {
 		["type"] = TFA.Enum.ANIMATION_SEQ, --Sequence or act
