@@ -96,6 +96,20 @@ SWEP.ProceduralHolsterTime = 0.15
 SWEP.ProceduralHolsterPos = Vector(3, 0, -5)
 SWEP.ProceduralHolsterAng = Vector(-40, -30, 10)
 
+SWEP.StatusLengthOverride = {
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceLengthOverride = {
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceRateOverride = {
+	["base_draw"] = 1,
+	["base_reload"] = 1.25,
+	["base_reload_empty"] = 1.25,
+}
+
 -- Enter iron sight info and bone mod info below
 SWEP.SightsPos = Vector(1.161, 1.1, 2.479)
 SWEP.SightsAng = Vector(0.136, 0, 30)

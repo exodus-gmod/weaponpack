@@ -159,17 +159,19 @@ SWEP.CenteredAng    = nil                                      -- The viewmodel 
 SWEP.Bodygroups_V   = {}
 
 --[ ANIMATION ]--
-SWEP.StatusLengthOverride = {                                  -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-	[ACT_VM_RELOAD]       = 48 / 30,
-	[ACT_VM_RELOAD_EMPTY] = 70 / 30
-} 
-
-SWEP.SequenceRateOverride = { 	
-    [ACT_VM_RELOAD]       = 0.99,
-	[ACT_VM_RELOAD_EMPTY] = 0.99
-} 
-
-SWEP.SequenceLengthOverride   = {}                             -- Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.StatusLengthOverride = {
+	["base_draw"] = 0.5,
+	["base_reload"] = 2,
+}
+SWEP.SequenceLengthOverride = {
+	["base_draw"] = 0.5,
+	["base_reload"] = 2,
+}
+SWEP.SequenceRateOverride = {
+	["base_draw"] = 1,
+	["base_reload"] = 1.15,
+	["base_reload_empty"] = 1.15,
+}                   -- Changes both the status delay and the nextprimaryfire of a given animation
 
 SWEP.Sights_Mode              = TFA.Enum.LOCOMOTION_HYBRID     -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 

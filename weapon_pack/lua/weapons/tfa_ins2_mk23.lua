@@ -161,9 +161,18 @@ SWEP.AllowViewAttachment = true --Allow the view to sway based on weapon attachm
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = {
-	[ACT_VM_RELOAD] = 60 / 30,
-	[ACT_VM_RELOAD_EMPTY] = 60 / 30
-} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceLengthOverride = {
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceRateOverride = {
+	["base_draw"] = 1,
+	["base_reload"] = 1.25,
+	["base_reload_empty"] = 1.25,
+}
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only

@@ -148,13 +148,59 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_base", {
 		WElements = { mag = { active = false } },
 	},
 	Attach = function(self, wep)
-		if not wep:GetIsFirstDeploy() then
-			wep:Unload()
-		end
-	end,
+    if CLIENT then return end
+    timer.Simple(0.01, function()
+        if IsValid(wep) then
+            local current_clip = wep:Clip1()
+            local new_max = wep:GetStat("Primary.ClipSize")
+            local owner = wep:GetOwner()
+
+            if current_clip > new_max then
+                -- Decreased size: Clamp the current clip to the lower max capacity
+                wep:SetClip1(new_max)
+            elseif current_clip < new_max and IsValid(owner) then
+                -- Increased size: Calculate the difference and pull from reserves
+                local needed = new_max - current_clip
+                local reserve = owner:GetAmmoCount(wep:GetPrimaryAmmoType())
+                local give = math.min(needed, reserve)
+
+                if give > 0 then
+                    wep:SetClip1(current_clip + give)
+                    owner:RemoveAmmo(give, wep:GetPrimaryAmmoType())
+                end
+            end
+        end
+    end)
+end,
 	Detach = function(self, wep)
-		wep:Unload()
-	end,
+    if CLIENT then return end
+    timer.Simple(0.01, function()
+        if IsValid(wep) then
+            local current_clip = wep:Clip1()
+            local new_max = wep:GetStat("Primary.ClipSize")
+            local owner = wep:GetOwner()
+
+            if current_clip > new_max then
+                -- Decreased size: Refund extra bullets back into reserve ammo
+                if IsValid(owner) then
+                    local overflow = current_clip - new_max
+                    owner:GiveAmmo(overflow, wep:GetPrimaryAmmoType(), true)
+                end
+                wep:SetClip1(new_max)
+            elseif current_clip < new_max and IsValid(owner) then
+                -- Increased size: Pull ammo to top off the mag if possible
+                local needed = new_max - current_clip
+                local reserve = owner:GetAmmoCount(wep:GetPrimaryAmmoType())
+                local give = math.min(needed, reserve)
+
+                if give > 0 then
+                    wep:SetClip1(current_clip + give)
+                    owner:RemoveAmmo(give, wep:GetPrimaryAmmoType())
+                end
+            end
+        end
+    end)
+end,
 })
 
 TFA.Attachments.RegisterFromTable("ins2_mag_drum_75rd", {
@@ -184,7 +230,8 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_carbine_30rd", {
 	Base = "ins2_mag_ext_base",
 	Name = "Extended Magazine",
 	Description = {
-		TFA.AttachmentColors["+"], "Increases magazine capacity by 15 Rounds."
+		TFA.AttachmentColors["+"], "Increases magazine capacity by 15 Rounds.",
+		TFA.AttachmentColors["-"], "Slower Reload Speed", "Slower Movement Speed"
 	},
 	Icon = "entities/ins2_att_mag_ext_carbine_30rd.png",
 	ShortName = "MAG+",
@@ -201,8 +248,18 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_carbine_30rd", {
 				return stat + 15
 			end,
 		},
-		MoveSpeed = function (wep,stat) return stat * 0.90 end,
-		IronSightsMoveSpeed = function (wep, stat) return stat * 0.90 end,
+		MoveSpeed = function (wep,stat) return stat * 0.95 end,
+		IronSightsMoveSpeed = function (wep, stat) return stat * 0.95 end,
+		StatusLengthOverride = {
+		["base_reload"] = 2,
+		},
+		SequenceLengthOverride = {
+		["base_reload"] = 2,
+		},
+		SequenceRateOverride = {
+		["base_reload"] = 0.8,
+		["base_reload_empty"] = 0.75,
+		},
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_ext_pistol", {
@@ -210,7 +267,7 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_pistol", {
 	Name = CLIENT and "#insurgency_weapon_upgrade_magazine_extended" or "Extended Magazine",
 	Description = {
 		TFA.AttachmentColors["+"], "Increases magazine capacity by 5 rounds.",
-		TFA.AttachmentColors["-"], ""
+		TFA.AttachmentColors["-"], "Slower Reload Speed", "Slower Movement Speed"
 	},
 	Icon = "entities/ins2_att_mag_ext_pistol.png",
 	ShortName = "MAG+",
@@ -228,13 +285,24 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_pistol", {
 		},
 		MoveSpeed = function (wep,stat) return stat * 0.95 end,
 		IronSightsMoveSpeed = function (wep, stat) return stat * 0.95 end,
+		StatusLengthOverride = {
+		["base_reload"] = 2,
+		},
+		SequenceLengthOverride = {
+		["base_reload"] = 2,
+		},
+		SequenceRateOverride = {
+		["base_reload"] = 0.75,
+		["base_reload_empty"] = 0.75,
+		},
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_ext_rifle_30rd", {
 	Base = "ins2_mag_ext_base",
 	Name = "Extended Magazine",
 	Description = {
-		TFA.AttachmentColors["+"], "Increases magazine capacity by 10 rounds."
+		TFA.AttachmentColors["+"], "Increases magazine capacity by 10 rounds.",
+		TFA.AttachmentColors["-"], "Slower Reload Speed", "Slower Movement Speed"
 	},
 	Icon = "entities/ins2_att_mag_ext_rifle_30rd.png",
 	ShortName = "MAG+",
@@ -251,8 +319,18 @@ TFA.Attachments.RegisterFromTable("ins2_mag_ext_rifle_30rd", {
 				return stat + 10
 			end,
 		},
-		MoveSpeed = function (wep,stat) return stat * 0.90 end,
-		IronSightsMoveSpeed = function (wep, stat) return stat * 0.90 end,
+		MoveSpeed = function (wep,stat) return stat * 0.95 end,
+		IronSightsMoveSpeed = function (wep, stat) return stat * 0.95 end,
+		StatusLengthOverride = {
+		["base_reload"] = 2,
+		},
+		SequenceLengthOverride = {
+		["base_reload"] = 2,
+		},
+		SequenceRateOverride = {
+		["base_reload"] = 0.75,
+		["base_reload_empty"] = 0.75,
+		},
 	}
 })
 TFA.Attachments.RegisterFromTable("ins2_mag_speedloader", {

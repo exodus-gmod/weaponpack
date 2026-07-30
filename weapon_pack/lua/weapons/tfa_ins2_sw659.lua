@@ -194,11 +194,18 @@ SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, 
 --[[ANIMATION]]--
 
 SWEP.StatusLengthOverride = {
-	[ACT_VM_RELOAD] = 58 / 30,
-	[ACT_VM_RELOAD_EMPTY] = 58 / 30
-} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-SWEP.SequenceLengthOverride = {} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {}
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceLengthOverride = {
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceRateOverride = {
+	["base_draw"] = 1,
+	["base_reload"] = 1.25,
+	["base_reload_empty"] = 1.25,
+}
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only

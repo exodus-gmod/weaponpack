@@ -171,28 +171,19 @@ SWEP.AllowViewAttachment      = true                            -- Allow the vie
 
 --[[ANIMATION]]--
 
-SWEP.StatusLengthOverride     = {
-	["base_reload"]           = 69 / 30,
-	["base_reload_empty"]     = 114 / 30,
-	["foregrip_reload"]       = 69 / 30,
-	["foregrip_reload_empty"] = 114 / 30,
-	["gl_reload"]             = 69 / 30,
-	["gl_reload_empty"]       = 114 / 30,
-	["glsetup_reload"]        = 38 / 30,
-
-} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-
-SWEP.SequenceRateOverride     = {
-	["base_reload"]           = 1,
-	["base_reloadempty"]      = 1,
-	["foregrip_reload"]       = 1,
-	["foregrip_reloadempty"]  = 1,
-	["sprint_in"]           = 2,
-    ["sprint_in_empty"]     = 2,
-	
-} -- Like above but changes animation length to a target
-
-SWEP.SequenceLengthOverride     = {}                           -- Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.StatusLengthOverride = {
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceLengthOverride = {
+	["base_draw"] = 0.1,
+	["base_reload"] = 2,
+}
+SWEP.SequenceRateOverride = {
+	["base_draw"] = 1,
+	["base_reload"] = 1.25,
+	["base_reload_empty"] = 1.25,
+}
 SWEP.SequenceRateOverrideScaled = {}                           -- Like above but scales animation length rather than being absolute
 
 SWEP.Sights_Mode   = TFA.Enum.LOCOMOTION_HYBRID                -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
