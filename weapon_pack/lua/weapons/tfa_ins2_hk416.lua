@@ -235,13 +235,20 @@ SWEP.Blowback_Shell_Effect = "RifleShellEject"--Which shell effect to use
 SWEP.DoProceduralReload = false--Animate first person reload using lua?
 SWEP.ProceduralReloadTime = 1 --Procedural reload time?
 
-SWEP.StatusLengthOverride = {
-	["base_reload"] = 81 / 30,
-	["base_reload_empty"] = 86 / 30,
-	["foregrip_reload"] = 81 / 30,
-	["foregrip_reload_empty"] = 86 / 30,
-}
-
+--SWEP.StatusLengthOverride = {
+	--["base_reload"] = 81 / 30,
+	--["base_reload_empty"] = 86 / 30,
+	--["foregrip_reload"] = 81 / 30,
+	--["foregrip_reload_empty"] = 86 / 30,
+--}
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
 SWEP.IronSightHoldTypeOverride = "" --This variable overrides the ironsights holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 

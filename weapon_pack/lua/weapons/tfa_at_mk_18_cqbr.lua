@@ -258,14 +258,14 @@ SWEP.StatusLengthOverride = {
 SWEP.SequenceLengthOverride = {
 	["base_reload"] = 3,
 	["foregrip_reload"] = 2.5,
-	["base_reload_empty"] = 2.5,
-	["foregrip_reload_empty"] = 2.5,
+	["base_reload_empty"] = 1,
+	["foregrip_reload_empty"] = 1,
 } --Changes both the status delay and the nextprimaryfire of a given animation
 SWEP.SequenceRateOverride = {
 	["base_reload"] = 1.35,
 	["foregrip_reload"] = 1.35,
-	["base_reload_empty"] = 3,
-	["foregrip_reload_empty"] = 3,
+	["base_reload_empty"] = 10,
+	["foregrip_reload_empty"] = 10,
 } --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
 

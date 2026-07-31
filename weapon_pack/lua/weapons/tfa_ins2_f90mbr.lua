@@ -189,12 +189,14 @@ SWEP.InspectPos = Vector(10, -6, -3.5)
 SWEP.InspectAng = Vector(20, 40, 10)
 
 --[[ANIMATION]]--
-SWEP.StatusLengthOverride = {
-	["base_reload"] = 76 / 30,
-	["base_reloadempty"] = 86 / 30,
-	["foregrip_reload"] = 76 / 30,
-	["foregrip_reloadempty"] = 86 / 30,
-} --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only

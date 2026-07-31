@@ -10,8 +10,8 @@ SWEP.DrawCrosshairIS = false --Draw the crosshair in ironsights?
 SWEP.PrintName				= "AS-VAL"		-- Weapon name (Shown on HUD)
 SWEP.Slot				= 2			-- Slot in the weapon selection menu.  Subtract 1, as this starts at 0.
 SWEP.SlotPos				= 1			-- Position in the slot
-SWEP.AutoSwitchTo			= true		-- Auto switch to if we pick it up
-SWEP.AutoSwitchFrom			= true		-- Auto switch from if you pick up a better weapon
+SWEP.AutoSwitchTo			= false		-- Auto switch to if we pick it up
+SWEP.AutoSwitchFrom			= false		-- Auto switch from if you pick up a better weapon
 SWEP.Weight				= 30			-- This controls how "good" the weapon is for autopickup.
 SWEP.Primary.Velocity   = 295           -- Bullet Velocity in m/s
 
@@ -19,6 +19,25 @@ SWEP.Primary.Velocity   = 295           -- Bullet Velocity in m/s
 SWEP.Primary.Sound			= Sound("TFA_INSS.ASVAL.1")		-- Script that calls the primary fire sound
 SWEP.Primary.PenetrationMultiplier = 1 --Change the amount of something this gun can penetrate through
 SWEP.Primary.Damage = 28 -- Damage, in standard damage points.
+local scale_table = {
+    [HITGROUP_HEAD]     = 2,
+    [HITGROUP_CHEST]    = 1,
+    [HITGROUP_STOMACH]  = 1,
+    [HITGROUP_LEFTARM]  = 3.5,
+    [HITGROUP_RIGHTARM] = 3.5,
+    [HITGROUP_LEFTLEG]  = 3.5,
+    [HITGROUP_RIGHTLEG] = 3.5,
+}
+
+local function ScaleDamage(ent, hitgroup, dmginfo)
+    local scale = scale_table[hitgroup]
+    if not IsValid( ent ) or not scale then return end
+    dmginfo:ScaleDamage( scale )
+end
+
+hook.Add( "ScaleNPCDamage", "AdjustLimbDamageNPC", ScaleDamage )
+hook.Add( "ScalePlayerDamage", "AdjustLimbDamagePlayer", ScaleDamage)
+
 SWEP.Primary.DamageTypeHandled = true --true will handle damagetype in base
 SWEP.Primary.DamageType = nil --See DMG enum.  This might be DMG_SHOCK, DMG_BURN, DMG_BULLET, etc.  Leave nil to autodetect.  DMG_AIRBOAT opens doors.
 SWEP.Primary.Force = nil --Force value, leave nil to autocalc
@@ -213,25 +232,14 @@ SWEP.IronSightHoldTypeOverride = "" --This variable overrides the ironsights hol
 SWEP.SprintHoldTypeOverride = "" --This variable overrides the sprint holdtype, choosing it instead of something from the above tables.  Change it to "" to disable.
 --[[ANIMATION]]--
 
-SWEP.StatusLengthOverride = {
-	["base_reload"] = 117 / 32,
-	["base_reload_empty"] = 177 / 32,
-	["base_reload_speed"] = 92 / 32,
-	["base_reload_empty_speed"] = 129 / 32,
-	["foregrip_reload"] = 92 / 32,
-	["foregrip_reload_empty"] = 129 / 32,
-}
- --Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
 SWEP.SequenceLengthOverride = {
-	["base_reload"] = 117 / 32,
-	["base_reload_empty"] = 177 / 32,
-	["base_reload_speed"] = 92 / 32,
-	["base_reload_empty_speed"] = 129 / 32,
-	["foregrip_reload"] = 92 / 32,
-	["foregrip_reload_empty"] = 129 / 32,
-	} --Changes both the status delay and the nextprimaryfire of a given animation
-SWEP.SequenceRateOverride = {} --Like above but changes animation length to a target
-SWEP.SequenceRateOverrideScaled = {} --Like above but scales animation length rather than being absolute
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a targetbeing absolute
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI -- ANI = mdl, HYBRID = ani + lua, Lua = lua only

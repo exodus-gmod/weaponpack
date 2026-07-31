@@ -178,25 +178,14 @@ SWEP.AllowViewAttachment      = true                            -- Allow the vie
 
 --[[ANIMATION]]--
 
-SWEP.StatusLengthOverride     = {
-	["base_reload"]           = 69 / 30,
-	["base_reload_empty"]     = 114 / 30,
-	["foregrip_reload"]       = 69 / 30,
-	["foregrip_reload_empty"] = 114 / 30,
-	["gl_reload"]             = 69 / 30,
-	["gl_reload_empty"]       = 114 / 30,
-	["glsetup_reload"]        = 38 / 30,
-
-} -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-
-SWEP.SequenceRateOverride     = {
-	["base_reload"]           = 1,
-	["base_reloadempty"]      = 1,
-	["foregrip_reload"]       = 1,
-	["foregrip_reloadempty"]  = 1,
-} -- Like above but changes animation length to a target
-
-SWEP.SequenceLengthOverride     = {}                           -- Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
 SWEP.SequenceRateOverrideScaled = {}                           -- Like above but scales animation length rather than being absolute
 
 SWEP.Sights_Mode                = TFA.Enum.LOCOMOTION_HYBRID   -- ANI = mdl, HYBRID = lua but continue idle, Lua = stop mdl animation

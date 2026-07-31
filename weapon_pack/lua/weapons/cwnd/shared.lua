@@ -102,6 +102,16 @@ SWEP.ProceduralHoslterEnabled = true
 SWEP.ProceduralHolsterTime = 0.35
 SWEP.ProceduralHolsterPos = Vector(3, 0, -5)
 SWEP.ProceduralHolsterAng = Vector(-40, -30, 10)
+
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
+
 --[[PROJECTILES]]--
 SWEP.ProjectileEntity = nil --Entity to shoot
 SWEP.ProjectileVelocity = 0 --Entity to shoot's velocity

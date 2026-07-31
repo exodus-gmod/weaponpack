@@ -131,6 +131,15 @@ SWEP.Offset = {
 	Scale = 0.9
 } --Procedural world model animation, defaulted for CS:S purposes.
 
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
+
 SWEP.VElements = {
         ["sights_folded"] = { type = "Model", model = "models/weapons/upgrades/v_mk47mutant_sights.mdl", bone = "b_wpn", rel = "", pos = Vector(-2.609, 0, 0), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = true, bonemerge = true },
         ["mag"] = { type = "Model", model = "models/weapons/upgrades/v_mk47mutant_mag.mdl", bone = "b_wpn", rel = "", pos = Vector(-2.609, 0, 0), angle = Angle(0, 0, 0), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {}, active = true, bonemerge = true },

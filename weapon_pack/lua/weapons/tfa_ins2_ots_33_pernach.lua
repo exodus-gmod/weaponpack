@@ -155,17 +155,14 @@ SWEP.Bodygroups_V   = {}
 
 --[ ANIMATION ]--
 
-SWEP.SequenceLengthOverride = {}                                -- Changes both the status delay and the nextprimaryfire of a given animation
-
-SWEP.SequenceRateOverride   = {
-	[ACT_VM_RELOAD]         = 1.1,
-	[ACT_VM_RELOAD_EMPTY]   = 1.1
-}
-
-SWEP.StatusLengthOverride   = {                                 -- Changes the status delay of a given animation; only used on reloads.  Otherwise, use SequenceLengthOverride or one of the others
-	[ACT_VM_RELOAD]         = 65 / 30,
-	[ACT_VM_RELOAD_EMPTY]   = 87 / 30
-} 
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
 
 SWEP.ProceduralHoslterEnabled = nil
 SWEP.ProceduralHolsterTime    = 0.3

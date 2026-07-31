@@ -224,15 +224,23 @@ SWEP.InspectPos = Vector(5, -5.619, -2.787)
 SWEP.InspectAng = Vector(22.386, 34.417, 5)
 
 --[[ANIMATION]]--
-SWEP.StatusLengthOverride = {
-	["base_reload"] = 85 / 30,
-	["base_reload_empty"] = 77 / 30,
-	["foregrip_reload"] = 85 / 30,
-	["foregrip_reload_empty"] = 77 / 30,
-	["gl_reload"] = 85 / 30,
-	["gl_reload_empty"] = 77 / 30,
-	["glsetup_reload"] = 85 / 30
-}
+--SWEP.StatusLengthOverride = {
+	--["base_reload"] = 85 / 30,
+	--["base_reload_empty"] = 77 / 30,
+	--["foregrip_reload"] = 85 / 30,
+	--["foregrip_reload_empty"] = 77 / 30,
+	--["gl_reload"] = 85 / 30,
+	--["gl_reload_empty"] = 77 / 30,
+	--["glsetup_reload"] = 85 / 30
+--}
+SWEP.SequenceLengthOverride = {
+	["base_reload"] = 2.8,
+	["foregrip_reload"] = 2.6,
+} --Changes both the status delay and the nextprimaryfire of a given animation
+SWEP.SequenceRateOverride = {
+	["base_reload"] = 1.15,
+	["foregrip_reload"] = 1.15,
+} --Like above but changes animation length to a target
 
 SWEP.Sights_Mode = TFA.Enum.LOCOMOTION_HYBRID
 SWEP.Sprint_Mode = TFA.Enum.LOCOMOTION_ANI
